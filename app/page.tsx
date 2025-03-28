@@ -32,7 +32,7 @@ export default function Home() {
               Computer Science Engineering Student
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Currently pursuing my Bachelor's degree at PES University, RR Campus
+              Currently pursuing my Bachelor&apos;s degree at PES University, RR Campus
             </p>
             <div className="flex gap-4">
               <a
