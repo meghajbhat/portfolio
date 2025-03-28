@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
@@ -62,11 +60,11 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">Get in Touch</h2>
           <p className="text-gray-300 mb-8">
-            I'm always open to new opportunities and collaborations.
+            I&apos;m always open to new opportunities and collaborations.
           </p>
           <div className="flex justify-center gap-6">
             <a
-              href="meghajbhat@gmail.com"
+              href="mailto:meghajbhat@gmail.com"
               className="px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition-colors"
             >
               Email Me
