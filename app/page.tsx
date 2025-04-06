@@ -88,31 +88,68 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-4xl px-6">
-          <h2 className="section-title">Featured Projects</h2>
+          <h2 className="section-title">Projects</h2>
           <div className="grid grid-cols-1 gap-6">
-            <div className="skill-card">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold gradient-text">Patient Records Management System</h3>
-                <div className="text-sm text-gray-600">MySQL, Python, HTML, Flask</div>
+            {[
+              {
+                title: "Patient Records Management System",
+                tech: "MySQL, Python, HTML, Flask",
+                description: "A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.",
+                link: "https://github.com/meghajbhat/patient-records"
+              },
+              {
+                title: "Speech Coach",
+                tech: "Python, NodeJS, MongoDB, React, HTML, CSS",
+                description: "Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. Features include real-time communication to text conversion and multilingual support.",
+                link: "https://github.com/meghajbhat/speech-coach"
+              },
+              {
+                title: "University Admission Chatbot",
+                tech: "Python, JSON, pkl, h5, AIML",
+                description: "This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information to help streamline the admission process for students.",
+                link: "https://github.com/meghajbhat/admission-chatbot"
+              },
+              {
+                title: "Music Playlist Generator",
+                tech: "C",
+                description: "The code defines three main data structures: Song, Playlist, and User. A Song structure holds information about a single song, while a Playlist structure manages a linked list of songs. The User structure encapsulates user information, including a playlist and a stack for played songs.",
+                link: "https://github.com/meghajbhat/playlist-generator"
+              },
+              {
+                title: "Photo Editor",
+                tech: "OpenCV, Tkinter, Python",
+                description: "This project aims to provide users with a seamless and intuitive platform for easy photo modification. It enables users to enhance their photos effortlessly by adding filters and cropping images. Featuring a user-friendly interface and a wide array of customization options, this platform is designed to transform how individuals engage with and modify their photos.",
+                link: "https://github.com/meghajbhat/photo-editor"
+              },
+              {
+                title: "Dining Cost Estimator for Two",
+                tech: "Python",
+                description: "This project aims to develop a sophisticated predictive model to estimate the average dinner costs at restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions. This project was undertaken during my college hackathon, Epoch, showcasing our commitment to practical, data-driven solutions.",
+                link: "https://github.com/meghajbhat/dining-cost-estimator"
+              },
+              {
+                title: "Calendar + Timetable",
+                tech: "C++",
+                description: "This project aims to create a comprehensive calendar and timetable for academic studies, designed to help users organize their schedules efficiently. It will provide clear guidance on what tasks to complete, when to complete them, and the specific subjects to focus on. By breaking down the workload into manageable segments, this tool will help users stay motivated and ensure they complete their tasks within the specified timeframe.",
+                link: "https://github.com/meghajbhat/academic-calendar"
+              }
+            ].map((project) => (
+              <div key={project.title} className="skill-card transform hover:scale-[1.02] transition-transform">
+                <div className="flex justify-between items-start mb-4">
+                  <Link href={project.link} target="_blank" className="group">
+                    <h3 className="text-xl font-semibold gradient-text group-hover:underline">{project.title}</h3>
+                  </Link>
+                  <div className="text-sm text-gray-600">{project.tech}</div>
+                </div>
+                <p className="text-gray-600">{project.description}</p>
+                <div className="mt-4">
+                  <Link href={project.link} target="_blank" className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
+                    <FaGithub className="mr-2" />
+                    View Project
+                  </Link>
+                </div>
               </div>
-              <p className="text-gray-600">A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.</p>
-            </div>
-
-            <div className="skill-card">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold gradient-text">Speech Coach</h3>
-                <div className="text-sm text-gray-600">Python, NodeJS, MongoDB, React, HTML, CSS</div>
-              </div>
-              <p className="text-gray-600">Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. Features include real-time communication to text conversion and multilingual support.</p>
-            </div>
-
-            <div className="skill-card">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold gradient-text">University Admission Chatbot</h3>
-                <div className="text-sm text-gray-600">Python, JSON, pkl, h5, AIML</div>
-              </div>
-              <p className="text-gray-600">This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information to help streamline the admission process for students.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -246,25 +283,75 @@ export default function Home() {
 
             <div className="skill-card">
               <h3 className="text-xl font-semibold gradient-text mb-4">Certifications</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: "Get Started With Jira Work Management", org: "Atlassian" },
-                  { name: "Introduction to Generative AI for Software Development", org: "Coursera" },
-                  { name: "Pandas", org: "KAGGLE" },
-                  { name: "Intro To Machine Learning", org: "KAGGLE" },
-                  { name: "What is Data Science?", org: "Coursera" },
-                  { name: "GDSC", org: "PESU" },
-                  { name: "ChatGPT and AI Tools", org: "Skill Nation" },
-                  { name: "Introduction to OpenCV Using Python", org: "PESU IO" },
-                  { name: "Getting Started With Python", org: "Coursera" }
+                  {
+                    name: "Get Started With Jira Work Management",
+                    org: "Atlassian",
+                    link: "/certificates/jira",
+                    date: "March 2024"
+                  },
+                  {
+                    name: "Introduction to Generative AI for Software Development",
+                    org: "Coursera",
+                    link: "/certificates/gen-ai",
+                    date: "February 2024"
+                  },
+                  {
+                    name: "Pandas",
+                    org: "KAGGLE",
+                    link: "/certificates/pandas",
+                    date: "January 2024"
+                  },
+                  {
+                    name: "Intro To Machine Learning",
+                    org: "KAGGLE",
+                    link: "/certificates/ml-intro",
+                    date: "December 2023"
+                  },
+                  {
+                    name: "What is Data Science?",
+                    org: "Coursera",
+                    link: "/certificates/data-science",
+                    date: "November 2023"
+                  },
+                  {
+                    name: "GDSC",
+                    org: "PESU",
+                    link: "/certificates/gdsc",
+                    date: "October 2023"
+                  },
+                  {
+                    name: "ChatGPT and AI Tools",
+                    org: "Skill Nation",
+                    link: "/certificates/chatgpt",
+                    date: "September 2023"
+                  },
+                  {
+                    name: "Introduction to OpenCV Using Python",
+                    org: "PESU IO",
+                    link: "/certificates/opencv",
+                    date: "August 2023"
+                  },
+                  {
+                    name: "Getting Started With Python",
+                    org: "Coursera",
+                    link: "/certificates/python",
+                    date: "July 2023"
+                  }
                 ].map((cert) => (
-                  <div key={cert.name} className="flex items-start space-x-2">
-                    <FaCertificate className="text-emerald-600 mt-1 flex-shrink-0" />
+                  <Link 
+                    key={cert.name} 
+                    href={cert.link}
+                    className="flex items-start space-x-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                  >
+                    <FaCertificate className="text-emerald-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <div>
-                      <p className="font-medium text-gray-800">{cert.name}</p>
+                      <p className="font-medium text-gray-800 group-hover:text-emerald-600 transition-colors">{cert.name}</p>
                       <p className="text-sm text-gray-600">{cert.org}</p>
+                      <p className="text-xs text-gray-500 mt-1">{cert.date}</p>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
