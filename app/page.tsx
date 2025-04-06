@@ -2,6 +2,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaCode, FaArrowRight } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
+
+// Initialize EmailJS
+emailjs.init("-UCnHkBHJrirqj0Kf")
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -438,31 +442,34 @@ export default function Home() {
             <form 
               onSubmit={async (e) => {
                 e.preventDefault();
-                const formData = new FormData(e.currentTarget);
-                const data = {
-                  name: formData.get('name'),
-                  email: formData.get('email'),
-                  message: formData.get('message')
-                };
-
+                const form = e.currentTarget;
+                const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+                
                 try {
-                  // You can replace this with your actual email service endpoint
-                  const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                  });
+                  submitButton.disabled = true;
+                  submitButton.innerHTML = 'Sending...';
 
-                  if (response.ok) {
-                    alert('Message sent successfully! I will get back to you soon.');
-                    e.currentTarget.reset();
-                  } else {
-                    throw new Error('Failed to send message');
-                  }
+                  await emailjs.sendForm(
+                    'service_26jkwhf',
+                    'template_8eret0p',
+                    form,
+                    '-UCnHkBHJrirqj0Kf'
+                  );
+
+                  alert('Message sent successfully! I will get back to you soon.');
+                  form.reset();
                 } catch (error) {
-                  alert('Please email me directly at meghajbhat@gmail.com');
+                  console.error('Error sending email:', error);
+                  alert('Failed to send message. Please try again or email me directly at meghajbhat@gmail.com');
+                } finally {
+                  submitButton.disabled = false;
+                  submitButton.innerHTML = `
+                    <span class="relative z-10 flex items-center gap-2">
+                      Send Message
+                      <span class="transform rotate-90 group-hover:translate-x-1 transition-transform">✈️</span>
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  `;
                 }
               }}
               className="space-y-6"
@@ -474,7 +481,7 @@ export default function Home() {
                 </label>
                 <input 
                   type="text" 
-                  name="name"
+                  name="from_name"
                   placeholder="Your name" 
                   required
                   minLength={2}
@@ -488,7 +495,7 @@ export default function Home() {
                 </label>
                 <input 
                   type="email" 
-                  name="email"
+                  name="from_email"
                   placeholder="Your email" 
                   required
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -511,7 +518,7 @@ export default function Home() {
               </div>
               <button 
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-bold py-4 px-8 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 relative overflow-hidden group"
+                className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-bold py-4 px-8 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 relative overflow-hidden group disabled:opacity-50"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Send Message
