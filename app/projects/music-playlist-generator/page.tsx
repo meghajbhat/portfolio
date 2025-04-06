@@ -35,6 +35,17 @@ export default function MusicPlaylistGeneratorProject() {
             </Link>
           </div>
 
+          {/* Hero Image */}
+          <div className="mb-12">
+            <div className="relative aspect-[16/9] w-2/3 mx-auto rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/projects/music-playlist.png"
+                alt="Music Playlist Generator Interface"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
           <div className="flex gap-8">
             {/* Vertical Navigation */}
             <div className="w-64 flex-shrink-0">

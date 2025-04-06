@@ -78,4 +78,23 @@
     @apply w-2 h-2 rounded-full;
     background: var(--primary-gradient);
   }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle 1s linear forwards;
 } 
