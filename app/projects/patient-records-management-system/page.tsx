@@ -35,6 +35,17 @@ export default function PatientRecordsProject() {
             </Link>
           </div>
 
+          {/* Hero Image */}
+          <div className="mb-12">
+            <div className="relative aspect-[21/9] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/projects/patient-records.png"
+                alt="Patient Records Management System Interface"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
           <div className="flex gap-8">
             {/* Vertical Navigation */}
             <div className="w-64 flex-shrink-0">

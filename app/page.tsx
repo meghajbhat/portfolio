@@ -94,24 +94,37 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/patient-records-management-system" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Patient Records Management System</h3>
-                  <p className="text-gray-700 mb-4">
-                    A comprehensive web-based healthcare management system built with Python Flask. Features include patient records management, appointment scheduling, prescription tracking, and billing management.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
-                    <Link
-                      href="https://github.com/meghajbhat/Patient-Records-Management-System"
-                      target="_blank"
-                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <FaGithub className="mr-2" />
-                      View on GitHub
-                    </Link>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/patient-records.png" 
+                          alt="Patient Records Management System" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Patient Records Management System</h3>
+                      <p className="text-gray-700 mb-4">
+                        A comprehensive web-based healthcare management system built with Python Flask. Features include patient records management, appointment scheduling, prescription tracking, and billing management.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                        <Link
+                          href="https://github.com/meghajbhat/Patient-Records-Management-System"
+                          target="_blank"
+                          className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaGithub className="mr-2" />
+                          View on GitHub
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -121,24 +134,37 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/university-admission-chatbot" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">University Admission Chatbot</h3>
-                  <p className="text-gray-700 mb-4">
-                    An intelligent chatbot powered by AIML and TensorFlow that assists prospective students with admission inquiries, course information, and campus details.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
-                    <Link
-                      href="https://github.com/meghajbhat/University-Admission-Chatbot"
-                      target="_blank"
-                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <FaGithub className="mr-2" />
-                      View on GitHub
-                    </Link>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/admission-chatbot.png" 
+                          alt="University Admission Chatbot" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">University Admission Chatbot</h3>
+                      <p className="text-gray-700 mb-4">
+                        An intelligent chatbot powered by AIML and TensorFlow that assists prospective students with admission inquiries, course information, and campus details.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                        <Link
+                          href="https://github.com/meghajbhat/University-Admission-Chatbot"
+                          target="_blank"
+                          className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaGithub className="mr-2" />
+                          View on GitHub
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -148,24 +174,37 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/simple-chatbot" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Simple Chatbot</h3>
-                  <p className="text-gray-700 mb-4">
-                    A modern chatbot implementation using OpenAI's GPT-3.5-turbo model. Features client-server architecture with HTTP communication, OpenAI API integration, and a user-friendly command-line interface.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
-                    <Link
-                      href="https://github.com/meghajbhat/simple-chatbot"
-                      target="_blank"
-                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <FaGithub className="mr-2" />
-                      View on GitHub
-                    </Link>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/simple-chatbot.png" 
+                          alt="Simple Chatbot" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Simple Chatbot</h3>
+                      <p className="text-gray-700 mb-4">
+                        A modern chatbot implementation using OpenAI's GPT-3.5-turbo model. Features client-server architecture with HTTP communication, OpenAI API integration, and a user-friendly command-line interface.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                        <Link
+                          href="https://github.com/meghajbhat/simple-chatbot"
+                          target="_blank"
+                          className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaGithub className="mr-2" />
+                          View on GitHub
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -175,24 +214,37 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/music-playlist-generator" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Music Playlist Generator</h3>
-                  <p className="text-gray-700 mb-4">
-                    A C-based music management system with YouTube integration. Features include playlist creation, song discovery, and advanced playback controls.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
-                    <Link
-                      href="https://github.com/meghajbhat/Music-Playlist-Generator"
-                      target="_blank"
-                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <FaGithub className="mr-2" />
-                      View on GitHub
-                    </Link>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/music-playlist.png" 
+                          alt="Music Playlist Generator" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Music Playlist Generator</h3>
+                      <p className="text-gray-700 mb-4">
+                        A C-based music management system with YouTube integration. Features include playlist creation, song discovery, and advanced playback controls.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                        <Link
+                          href="https://github.com/meghajbhat/Music-Playlist-Generator"
+                          target="_blank"
+                          className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaGithub className="mr-2" />
+                          View on GitHub
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -202,15 +254,28 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/photo-editor" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Photo Editor</h3>
-                  <p className="text-gray-700 mb-4">
-                    A feature-rich photo editing application with filters, effects, and basic image manipulation tools.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/photo-editor.png" 
+                          alt="Photo Editor" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Photo Editor</h3>
+                      <p className="text-gray-700 mb-4">
+                        A feature-rich photo editing application with filters, effects, and basic image manipulation tools.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -220,15 +285,28 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/calendar-timetable" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Calendar + Timetable</h3>
-                  <p className="text-gray-700 mb-4">
-                    A comprehensive calendar and timetable management application for organizing schedules and events.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/calendar.png" 
+                          alt="Calendar and Timetable" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Calendar + Timetable</h3>
+                      <p className="text-gray-700 mb-4">
+                        A comprehensive calendar and timetable management application for organizing schedules and events.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -238,15 +316,28 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/dining-cost-estimator" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Dining Cost Estimator for Two</h3>
-                  <p className="text-gray-700 mb-4">
-                    An application to estimate and split dining costs between two people, with features for tax and tip calculation.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/dining.png" 
+                          alt="Dining Cost Estimator" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Dining Cost Estimator for Two</h3>
+                      <p className="text-gray-700 mb-4">
+                        An application to estimate and split dining costs between two people, with features for tax and tip calculation.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -256,15 +347,28 @@ export default function Home() {
             <div className="group">
               <Link href="/projects/speech-coach" className="block">
                 <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Speech Coach</h3>
-                  <p className="text-gray-700 mb-4">
-                    An interactive application designed to help improve public speaking skills through practice and feedback.
-                  </p>
-                  <div className="flex gap-4">
-                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
-                      <span className="mr-2">View Details</span>
-                      <FaArrowRight />
-                    </span>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-full md:w-1/3">
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
+                        <img 
+                          src="/images/projects/speech.png" 
+                          alt="Speech Coach" 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Speech Coach</h3>
+                      <p className="text-gray-700 mb-4">
+                        An interactive application designed to help improve public speaking skills through practice and feedback.
+                      </p>
+                      <div className="flex gap-4">
+                        <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                          <span className="mr-2">View Details</span>
+                          <FaArrowRight />
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
