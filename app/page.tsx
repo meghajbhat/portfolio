@@ -5,35 +5,21 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaCode, FaAward, FaCertifica
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f8f9fa]">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <span className="text-xl font-bold gradient-text">MB</span>
-            <div className="flex space-x-2">
-              <a href="#" className="nav-link">Home</a>
-              <a href="#experience" className="nav-link">Experience</a>
-              <a href="#projects" className="nav-link">Projects</a>
-              <a href="#skills" className="nav-link">Skills</a>
-              <a href="#education" className="nav-link">Education</a>
-              <a href="#certifications" className="nav-link">Certifications</a>
-              <a href="#achievements" className="nav-link">Achievements</a>
-              <a href="#contact" className="nav-link">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center space-y-6">
-            <h1 className="text-5xl font-bold mb-4 gradient-text">Megha Bhat</h1>
-            <p className="text-xl text-gray-600">Computer Science Student at PES University</p>
-            <p className="text-lg text-gray-700">CGPA: 7.47/10</p>
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto max-w-4xl px-6">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6 gradient-text">
+              Hi, I'm Megha Bhat
+            </h1>
+            <p className="text-xl text-gray-600 mb-4">
+              A passionate software developer specializing in AI/ML and web development
+            </p>
+            <p className="text-lg text-gray-700 mb-4">Computer Science Student at PES University</p>
+            <p className="text-lg text-gray-700 mb-8">CGPA: 7.47/10</p>
             
-            <div className="flex justify-center space-x-6 mt-8">
+            <div className="flex justify-center space-x-6">
               <Link href="https://github.com/meghajbhat" target="_blank" 
                 className="contact-link">
                 <FaGithub size={24} />
