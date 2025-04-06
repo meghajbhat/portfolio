@@ -27,28 +27,6 @@ export default function NexusExperience() {
 
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4">
-              <img 
-                src="/images/projects/profile.jpg" 
-                alt="Megha Bhat" 
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <span className="text-xl font-bold gradient-text">Megha Bhat</span>
-            </div>
-            <div className="flex space-x-6">
-              <Link href="/" className="nav-link">HOME</Link>
-              <Link href="/#projects" className="nav-link">PROJECTS</Link>
-              <Link href="/#skills" className="nav-link">SKILLS</Link>
-              <Link href="/#education" className="nav-link">EDUCATION</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Back Button */}
       <div className="fixed top-24 left-6 z-40">
         <Link href="/#experience" className="inline-flex items-center text-gray-600 hover:text-gray-800">
