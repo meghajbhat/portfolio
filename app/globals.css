@@ -174,14 +174,29 @@
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-10px) rotate(1deg);
+    transform: translateY(-20px) scale(1.2);
   }
-  100% {
-    transform: translateY(0px) rotate(0deg);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: perspective(1000px) rotateX(60deg) rotateZ(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(60deg) rotateZ(360deg);
   }
 }
 

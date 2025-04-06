@@ -212,7 +212,7 @@ export default function Home() {
               }} className="w-full">
                 <div className="group flex items-center gap-4 cursor-pointer">
                   <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                    <img src="/images/projects/cdsaml-logo.png" alt="CDSAML" className="w-8 h-8 object-contain" />
+                    <img src="/images/projects/pes-logo.png" alt="CDSAML" className="w-8 h-8 object-contain" />
                   </div>
                   <div className="text-left">
                     <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Research Intern - CDSAML</h3>
@@ -553,9 +553,67 @@ export default function Home() {
               </button>
             </form>
 
-            {/* 3D Globe */}
+            {/* Interactive 3D Animation */}
             <div className="relative aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-full animate-spin-slow"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-64 h-64">
+                  {/* Floating particles */}
+                  <div className="absolute inset-0">
+                    {Array.from({ length: 20 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-2 h-2 bg-emerald-400 rounded-full"
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`,
+                          animation: `float ${5 + Math.random() * 5}s linear infinite`,
+                          animationDelay: `${-Math.random() * 5}s`,
+                        }}
+                      />
+                    ))}
+                  </div>
+                  
+                  {/* Main sphere */}
+                  <div 
+                    className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-sm"
+                    style={{
+                      transform: 'perspective(1000px) rotateX(60deg) rotateZ(0deg)',
+                      animation: 'rotate 20s linear infinite',
+                    }}
+                  >
+                    {/* Grid lines */}
+                    {Array.from({ length: 8 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute inset-0 border-2 border-emerald-500/20 rounded-full"
+                        style={{
+                          transform: `rotateY(${(i * 22.5)}deg)`,
+                        }}
+                      />
+                    ))}
+                    
+                    {/* Orbiting elements */}
+                    {Array.from({ length: 3 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute inset-0"
+                        style={{
+                          animation: `orbit ${10 + i * 5}s linear infinite`,
+                        }}
+                      >
+                        <div 
+                          className="absolute w-4 h-4 bg-emerald-400 rounded-full shadow-lg shadow-emerald-400/50"
+                          style={{
+                            top: '0%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
