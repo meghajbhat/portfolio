@@ -585,10 +585,9 @@ export default function Home() {
                     <div class="fixed top-4 right-4 bg-[#1A2333] border border-emerald-500/30 rounded-lg p-4 shadow-lg max-w-md z-50">
                       <div class="flex items-start gap-4">
                         <div class="flex-1">
-                          <h3 class="font-medium text-white mb-1">New Contact Form Message from ${formData.get('from_name')}</h3>
-                          <p class="text-gray-400 text-sm mb-2">${formData.get('from_email')}</p>
-                          <p class="text-gray-400 text-sm mb-2">${formData.get('message')}</p>
-                          <p class="text-emerald-400">Email: meghajbhat@gmail.com</p>
+                          <h3 class="font-medium text-white mb-1">A message by {{from_name}} has been received. Kindly respond at your earliest convenience.</h3>
+                          <p class="text-gray-400 mb-4">{{message}}</p>
+                          <p class="text-gray-400">Email: {{from_email}}</p>
                         </div>
                       </div>
                     </div>
