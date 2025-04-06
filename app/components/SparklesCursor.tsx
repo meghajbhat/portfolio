@@ -6,11 +6,19 @@ interface Sparkle {
   x: number
   y: number
   createdAt: number
+  color: string
 }
 
 export default function SparklesCursor() {
   const [sparkles, setSparkles] = useState<Sparkle[]>([])
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  const colors = [
+    'url(#sparkleGradient1)',
+    'url(#sparkleGradient2)',
+    'url(#sparkleGradient3)',
+    'url(#sparkleGradient4)'
+  ]
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -21,7 +29,8 @@ export default function SparklesCursor() {
         id: Date.now(),
         x: e.clientX,
         y: e.clientY,
-        createdAt: Date.now()
+        createdAt: Date.now(),
+        color: colors[Math.floor(Math.random() * colors.length)]
       }
 
       setSparkles(prevSparkles => [...prevSparkles, newSparkle])
@@ -47,7 +56,7 @@ export default function SparklesCursor() {
       {sparkles.map(sparkle => (
         <div
           key={sparkle.id}
-          className="absolute w-2 h-2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute w-4 h-4 transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: sparkle.x,
             top: sparkle.y,
@@ -55,25 +64,58 @@ export default function SparklesCursor() {
         >
           <div className="animate-sparkle">
             <svg
-              width="8"
-              height="8"
-              viewBox="0 0 8 8"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="absolute"
             >
-              <circle cx="4" cy="4" r="4" fill="url(#sparkleGradient)" />
+              <circle cx="8" cy="8" r="8" fill={sparkle.color} />
               <defs>
                 <radialGradient
-                  id="sparkleGradient"
+                  id="sparkleGradient1"
                   cx="0"
                   cy="0"
                   r="1"
                   gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(4 4) rotate(90) scale(4)"
+                  gradientTransform="translate(8 8) rotate(90) scale(8)"
                 >
                   <stop stopColor="#14b8a6" />
                   <stop offset="1" stopColor="#14b8a6" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="sparkleGradient2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                >
+                  <stop stopColor="#6c5ce7" />
+                  <stop offset="1" stopColor="#6c5ce7" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="sparkleGradient3"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                >
+                  <stop stopColor="#00b894" />
+                  <stop offset="1" stopColor="#00b894" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="sparkleGradient4"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                >
+                  <stop stopColor="#e84393" />
+                  <stop offset="1" stopColor="#e84393" stopOpacity="0" />
                 </radialGradient>
               </defs>
             </svg>

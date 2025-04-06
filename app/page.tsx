@@ -56,30 +56,37 @@ export default function Home() {
 
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-white">
-        <div className="container mx-auto max-w-4xl px-6">
-          <h2 className="section-title">Experience</h2>
-          <div className="space-y-6">
-            <div className="skill-card">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold gradient-text">CDSAML | Research Intern</h3>
-                  <p className="text-gray-600">Bengaluru, India</p>
+        <div className="container mx-auto px-4">
+          <h2 className="section-title text-4xl font-bold mb-12 text-center">Experience</h2>
+          <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+            <div className="skill-card hover:shadow-lg transition-shadow">
+              <Link href="/experience/cdsaml" className="block p-6">
+                <h3 className="text-2xl font-semibold mb-2 gradient-text">Research Intern at CDSAML</h3>
+                <p className="text-gray-600 mb-4">Jan 2024 - Present</p>
+                <p className="text-gray-700 mb-4">
+                  Working on measuring and reducing hallucinations in Large Language Models, focusing on improving model reliability and accuracy.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">LLMs</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">NLP</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Research</span>
                 </div>
-                <p className="text-gray-600">July 2024 – August 2024</p>
-              </div>
-              <p className="text-gray-700 mb-4">Project: Measuring and Reducing Hallucinations in LLMs</p>
-              <p className="text-gray-600">Generated 10,000 hallucinated samples each for QA, dialogue, and summarization tasks using HotpotQA, OpenDialKG, and CNN/Daily Mail datasets. Designed both one-pass(one-turn) and conversational(multi-turn) methods to induce hallucinations using the general code, React and Chain Of Verification processes.</p>
+              </Link>
             </div>
 
-            <div className="skill-card">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold gradient-text">NEXUS | AIML Intern</h3>
-                  <p className="text-gray-600">Bengaluru, India</p>
+            <div className="skill-card hover:shadow-lg transition-shadow">
+              <Link href="/experience/nexus" className="block p-6">
+                <h3 className="text-2xl font-semibold mb-2 gradient-text">Summer Intern at Nexus Info</h3>
+                <p className="text-gray-600 mb-4">June 2023 - July 2023</p>
+                <p className="text-gray-700 mb-4">
+                  Developed AI/ML projects including chatbots and a disease prediction system, gaining hands-on experience with real-world applications.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Python</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">AI</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">ML</span>
                 </div>
-                <p className="text-gray-600">May 2024 – June 2024</p>
-              </div>
-              <p className="text-gray-600">Spent the month working on 2 foundational AIML projects making a (i) chatbot and (ii)chatbot specifically designed for university admissions FAQ's.</p>
+              </Link>
             </div>
           </div>
         </div>
