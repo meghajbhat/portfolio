@@ -175,7 +175,12 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-8">
             {/* Left Column - Company List */}
             <div className="col-span-4 space-y-8">
-              <button onClick={() => document.getElementById('cdsaml-details')?.classList.remove('hidden') && document.getElementById('nexus-details')?.classList.add('hidden')} className="w-full">
+              <button onClick={() => {
+                const cdsamlDetails = document.getElementById('cdsaml-details');
+                const nexusDetails = document.getElementById('nexus-details');
+                if (cdsamlDetails) cdsamlDetails.classList.remove('hidden');
+                if (nexusDetails) nexusDetails.classList.add('hidden');
+              }} className="w-full">
                 <div className="group flex items-center gap-4 cursor-pointer">
                   <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
                     <img src="/images/projects/cdsaml-logo.png" alt="CDSAML" className="w-8 h-8 object-contain" />
@@ -187,7 +192,12 @@ export default function Home() {
                 </div>
               </button>
 
-              <button onClick={() => document.getElementById('nexus-details')?.classList.remove('hidden') && document.getElementById('cdsaml-details')?.classList.add('hidden')} className="w-full">
+              <button onClick={() => {
+                const cdsamlDetails = document.getElementById('cdsaml-details');
+                const nexusDetails = document.getElementById('nexus-details');
+                if (nexusDetails) nexusDetails.classList.remove('hidden');
+                if (cdsamlDetails) cdsamlDetails.classList.add('hidden');
+              }} className="w-full">
                 <div className="group flex items-center gap-4 cursor-pointer">
                   <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
                     <img src="/images/projects/nexus-logo.png" alt="Nexus Info" className="w-8 h-8 object-contain" />
