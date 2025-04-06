@@ -27,16 +27,29 @@ export default function Home() {
     <main className="min-h-screen bg-[#0B1121] text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute w-full h-full">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+        {/* Navigation */}
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B1121]/80 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between py-4">
+              <Link href="/" className="flex items-center gap-4">
+                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                  Megha Bhat
+                </span>
+              </Link>
+              <div className="hidden md:flex items-center gap-8">
+                <Link href="#about" className="text-gray-400 hover:text-emerald-400 transition-colors">About</Link>
+                <Link href="#education" className="text-gray-400 hover:text-emerald-400 transition-colors">Education</Link>
+                <Link href="#experience" className="text-gray-400 hover:text-emerald-400 transition-colors">Work</Link>
+                <Link href="#skills" className="text-gray-400 hover:text-emerald-400 transition-colors">Skills</Link>
+                <Link href="#projects" className="text-gray-400 hover:text-emerald-400 transition-colors">Projects</Link>
+                <Link href="#contact" className="text-gray-400 hover:text-emerald-400 transition-colors">Contact</Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </nav>
 
         <div className="container mx-auto px-4 py-32">
-          <div className="max-w-5xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto">
             <h1 className="text-7xl font-bold mb-6">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
@@ -44,10 +57,10 @@ export default function Home() {
               </span>
             </h1>
             <h2 className="text-3xl font-medium text-gray-400 mb-12">Computer Science student at PES University</h2>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 mb-12 max-w-2xl">
               Exploring the intersection of technology and creativity. Passionate about building innovative solutions and learning new technologies.
             </p>
-            <div className="flex items-center justify-center gap-6">
+            <div className="flex items-center gap-6">
               <a 
                 href="https://github.com/meghajbhat" 
                 target="_blank" 
@@ -75,13 +88,14 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-32 relative">
+      <section id="about" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-5xl font-bold mb-16 text-center">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">ABOUT ME</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              About Me
+              About.
             </span>
-          </h2>
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="relative w-full max-w-lg mx-auto perspective-1000">
