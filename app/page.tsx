@@ -102,10 +102,10 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-32 relative">
+      <section id="education" className="py-24 relative">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">WHAT I HAVE STUDIED SO FAR</h2>
-          <h1 className="text-8xl font-bold text-center mb-24">
+          <h1 className="text-8xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
               Education.
             </span>
@@ -116,7 +116,7 @@ export default function Home() {
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-emerald-500/20"></div>
 
             {/* PES University */}
-            <div className="relative mb-32">
+            <div className="relative mb-20">
               <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
                   <img src="/images/projects/pes-logo.png" alt="PES University" className="w-10 h-10 object-contain" />
@@ -131,7 +131,7 @@ export default function Home() {
             </div>
 
             {/* BASE PU College */}
-            <div className="relative mb-32">
+            <div className="relative mb-20">
               <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
                   <img src="/images/projects/base-logo.png" alt="BASE PU College" className="w-10 h-10 object-contain" />
@@ -175,45 +175,70 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-8">
             {/* Left Column - Company List */}
             <div className="col-span-4 space-y-8">
-              <div className="group flex items-center gap-4 cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/projects/cdsaml-logo.png" alt="CDSAML" className="w-8 h-8 object-contain" />
+              <button onClick={() => document.getElementById('cdsaml-details')?.classList.remove('hidden') && document.getElementById('nexus-details')?.classList.add('hidden')} className="w-full">
+                <div className="group flex items-center gap-4 cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                    <img src="/images/projects/cdsaml-logo.png" alt="CDSAML" className="w-8 h-8 object-contain" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Research Intern - CDSAML</h3>
+                    <p className="text-gray-400">CDSAML</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Research Intern - CDSAML</h3>
-                  <p className="text-gray-400">CDSAML</p>
-                </div>
-              </div>
+              </button>
 
-              <div className="group flex items-center gap-4 cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/projects/nexus-logo.png" alt="Nexus Info" className="w-8 h-8 object-contain" />
+              <button onClick={() => document.getElementById('nexus-details')?.classList.remove('hidden') && document.getElementById('cdsaml-details')?.classList.add('hidden')} className="w-full">
+                <div className="group flex items-center gap-4 cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                    <img src="/images/projects/nexus-logo.png" alt="Nexus Info" className="w-8 h-8 object-contain" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">AIML Intern</h3>
+                    <p className="text-gray-400">Nexus Info</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Software Development Intern</h3>
-                  <p className="text-gray-400">Nexus Info</p>
-                </div>
-              </div>
+              </button>
             </div>
 
             {/* Right Column - Experience Details */}
             <div className="col-span-8">
-              <div className="bg-[#0B1121] rounded-2xl p-8">
+              <div id="cdsaml-details" className="bg-[#0B1121] rounded-2xl p-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Research Intern - CDSAML</h2>
-                <p className="text-emerald-400 text-lg mb-4">CDSAML</p>
-                <p className="text-gray-400 mb-6">2023 - Present</p>
+                <p className="text-emerald-400 text-lg mb-4">Bengaluru, India</p>
+                <p className="text-gray-400 mb-6">July 2024 – August 2024</p>
+                <p className="text-2xl font-bold text-white mb-4">Project: Measuring and Reducing Hallucinations in LLMs</p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3 text-gray-400">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Worked on measuring and reducing hallucinations in LLMs, focusing on improving model accuracy and reliability.</span>
+                    <span>Generated 10,000 hallucinated samples each for QA, dialogue, and summarization tasks using HotpotQA, OpenDialKG, and CNN/Daily Mail datasets.</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-400">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Developed and implemented software solutions, gaining hands-on experience in real-world projects.</span>
+                    <span>Designed both one-pass(one-turn) and conversational(multi-turn) methods to induce hallucinations.</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-400">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Collaborated with team members to optimize model performance and reduce computational costs.</span>
+                    <span>Implemented general code, React and Chain Of Verification processes for hallucination reduction.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div id="nexus-details" className="bg-[#0B1121] rounded-2xl p-8 hidden">
+                <h2 className="text-3xl font-bold text-white mb-4">AIML Intern - Nexus Info</h2>
+                <p className="text-emerald-400 text-lg mb-4">Bengaluru, India</p>
+                <p className="text-gray-400 mb-6">May 2024 – June 2024</p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-gray-400">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Developed a general-purpose chatbot using advanced AIML techniques.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-400">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Created a specialized chatbot for university admissions FAQ's.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-400">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span>Implemented two foundational AIML projects during the internship period.</span>
                   </li>
                 </ul>
               </div>
