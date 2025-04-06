@@ -36,7 +36,7 @@ export default function Home() {
                   Megha Bhat
                 </span>
               </Link>
-              <div className="hidden md:flex items-center gap-8">
+              <div className="flex items-center gap-8">
                 <Link href="#about" className="text-gray-400 hover:text-emerald-400 transition-colors">About</Link>
                 <Link href="#education" className="text-gray-400 hover:text-emerald-400 transition-colors">Education</Link>
                 <Link href="#experience" className="text-gray-400 hover:text-emerald-400 transition-colors">Work</Link>
@@ -101,7 +101,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
                 <div className="relative aspect-square rounded-2xl border-2 border-emerald-500/30 overflow-hidden hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="/images/profile.png" 
+                    src="/images/projects/profile.png" 
                     alt="Megha Bhat" 
                     className="w-full h-full object-cover"
                   />
