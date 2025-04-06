@@ -1,158 +1,225 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaArrowLeft } from 'react-icons/fa'
 
-export default function PhotoEditorProject() {
+export default function PhotoEditor() {
+  const [activeSection, setActiveSection] = useState('overview')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]')
+      let currentSection = 'overview'
+
+      sections.forEach((section) => {
+        const sectionTop = (section as HTMLElement).offsetTop
+        const sectionHeight = section.clientHeight
+        if (window.scrollY >= sectionTop - 200) {
+          currentSection = section.id
+        }
+      })
+
+      setActiveSection(currentSection)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <main className="min-h-screen bg-[#0B1121] text-white">
+    <main className="min-h-screen bg-[#0B1121] text-white pb-20">
       {/* Back Button */}
-      <div className="fixed top-24 left-4 z-50">
+      <div className="fixed top-8 left-8 z-50">
         <Link 
-          href="/" 
-          className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
+          href="/#projects"
+          className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg hover:bg-[#1A2333]/80 transition-all duration-300"
         >
-          <span>←</span> Back
+          <FaArrowLeft className="text-emerald-400" />
+          <span>Back to Projects</span>
         </Link>
       </div>
 
-      <div className="container mx-auto max-w-4xl px-4 py-32">
-        <div className="space-y-16">
-          {/* Header */}
-          <header className="text-center space-y-6">
-            <h1 className="text-4xl font-bold">
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-                Photo Editor
-              </span>
-            </h1>
-            <div className="flex justify-center gap-4">
-              <a 
-                href="https://github.com/meghajbhat/photo-editor" 
-                target="_blank"
-                className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
-              >
-                <FaGithub className="text-xl" />
-                <span>View on GitHub</span>
-              </a>
-            </div>
-          </header>
+      {/* Navigation Menu */}
+      <nav className="fixed right-8 top-1/2 -translate-y-1/2 space-y-4 z-50">
+        {['overview', 'features', 'tech-stack', 'key-functions', 'installation'].map((section) => (
+          <a
+            key={section}
+            href={`#${section}`}
+            className={`block px-4 py-2 rounded-lg text-sm transition-all duration-300 ${
+              activeSection === section
+                ? 'bg-emerald-400 text-[#0B1121]'
+                : 'bg-[#1A2333] text-white hover:bg-[#1A2333]/80'
+            }`}
+          >
+            {section.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+          </a>
+        ))}
+      </nav>
 
-          {/* Overview Section */}
-          <section className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Overview</h2>
-            <p className="text-gray-400 leading-relaxed">
-              This project aims to provide users with a seamless and intuitive platform for easy photo modification. It enables users to enhance their photos effortlessly by adding filters and cropping images. Featuring a user-friendly interface and a wide array of customization options, this platform is designed to transform how individuals engage with and modify their photos.
+      <div className="container mx-auto max-w-4xl px-4 pt-20">
+        {/* Header */}
+        <header className="text-center mb-16">
+          <h1 className="text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Photo Editor
+            </span>
+          </h1>
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href="https://github.com/yourusername/photo-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg hover:bg-[#1A2333]/80 transition-all duration-300"
+            >
+              <FaGithub className="text-emerald-400" />
+              <span>View on GitHub</span>
+            </a>
+          </div>
+        </header>
+
+        {/* Overview Section */}
+        <section id="overview" className="mb-16">
+          <div className="bg-[#1A2333] rounded-xl p-8 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+            <h2 className="text-2xl font-bold text-emerald-400 mb-6">Overview</h2>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              A versatile photo editing application built with Python and OpenCV. This desktop application provides users with a range of image processing tools and filters for quick and easy photo manipulation.
             </p>
-          </section>
+            <p className="text-gray-300 leading-relaxed">
+              The project demonstrates the implementation of various image processing algorithms and provides a user-friendly interface for applying these effects to images.
+            </p>
+          </div>
+        </section>
 
-          {/* Features Section */}
-          <section className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Features</h2>
+        {/* Features Section */}
+        <section id="features" className="mb-16">
+          <div className="bg-[#1A2333] rounded-xl p-8 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+            <h2 className="text-2xl font-bold text-emerald-400 mb-6">Features</h2>
+            <ul className="space-y-4 text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Basic image adjustments (brightness, contrast, saturation)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Image filters (blur, sharpen, grayscale, sepia)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Color balance and temperature adjustments</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Image cropping and resizing tools</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Support for multiple image formats</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Tech Stack Section */}
+        <section id="tech-stack" className="mb-16">
+          <div className="bg-[#1A2333] rounded-xl p-8 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+            <h2 className="text-2xl font-bold text-emerald-400 mb-6">Tech Stack</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">Image Processing</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Basic image adjustments</li>
-                  <li>Filter application</li>
-                  <li>Image cropping</li>
-                  <li>Rotation and flipping</li>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Core</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Python 3.8+</li>
+                  <li>• OpenCV (cv2)</li>
+                  <li>• NumPy</li>
+                  <li>• Tkinter</li>
                 </ul>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">User Interface</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Intuitive controls</li>
-                  <li>Real-time preview</li>
-                  <li>Undo/Redo functionality</li>
-                  <li>Save in multiple formats</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Tech Stack Section */}
-          <section className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Tech Stack</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">Core</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Python</li>
-                  <li>OpenCV</li>
-                  <li>NumPy</li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">UI</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Tkinter</li>
-                  <li>PIL/Pillow</li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">Tools</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Git</li>
-                  <li>Virtual Environment</li>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Development</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Git</li>
+                  <li>• PIL/Pillow</li>
+                  <li>• Virtual Environment</li>
                 </ul>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Key Functions Section */}
-          <section className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Key Functions</h2>
+        {/* Key Functions Section */}
+        <section id="key-functions" className="mb-16">
+          <div className="bg-[#1A2333] rounded-xl p-8 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+            <h2 className="text-2xl font-bold text-emerald-400 mb-6">Key Functions</h2>
             <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">Image Processing</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Brightness and contrast adjustment</li>
-                  <li>Color balance and saturation</li>
-                  <li>Image sharpening and blurring</li>
-                  <li>Custom filter application</li>
-                </ul>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Image Processing</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Core image manipulation functions including brightness adjustment, contrast enhancement, and color balance.
+                </p>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white">File Operations</h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-400">
-                  <li>Multiple format support (PNG, JPEG, etc.)</li>
-                  <li>Batch processing capabilities</li>
-                  <li>Export with custom settings</li>
-                </ul>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Filter Application</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Implementation of various image filters and effects using OpenCV and NumPy operations.
+                </p>
               </div>
-            </div>
-          </section>
-
-          {/* Installation Section */}
-          <section className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Installation</h2>
-            <div className="space-y-6">
-              <p className="text-gray-400">Follow these steps to set up the project locally:</p>
-              <div className="bg-[#0B1121] rounded-lg p-4 font-mono text-sm">
-                <pre className="text-gray-400">
-                  <code>{`# Clone the repository
-git clone https://github.com/meghajbhat/photo-editor.git
-
-# Navigate to project directory
-cd photo-editor
-
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-source venv/bin/activate  # Linux/Mac
-venv\\Scripts\\activate   # Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python main.py`}</code>
-                </pre>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-white">File Operations</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Handling image file operations including loading, saving, and format conversion.
+                </p>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
+        {/* Installation Section */}
+        <section id="installation">
+          <div className="bg-[#1A2333] rounded-xl p-8 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+            <h2 className="text-2xl font-bold text-emerald-400 mb-6">Installation</h2>
+            <div className="space-y-4 text-gray-300">
+              <p className="mb-4">Follow these steps to set up the project locally:</p>
+              <ol className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold">1.</span>
+                  <div>
+                    <p className="font-semibold mb-2">Clone the repository:</p>
+                    <code className="block bg-[#0B1121] p-3 rounded-lg">
+                      git clone https://github.com/yourusername/photo-editor.git
+                    </code>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold">2.</span>
+                  <div>
+                    <p className="font-semibold mb-2">Create and activate virtual environment:</p>
+                    <code className="block bg-[#0B1121] p-3 rounded-lg">
+                      python -m venv venv<br />
+                      source venv/bin/activate  # On Windows: venv\Scripts\activate
+                    </code>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold">3.</span>
+                  <div>
+                    <p className="font-semibold mb-2">Install dependencies:</p>
+                    <code className="block bg-[#0B1121] p-3 rounded-lg">
+                      pip install -r requirements.txt
+                    </code>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold">4.</span>
+                  <div>
+                    <p className="font-semibold mb-2">Run the application:</p>
+                    <code className="block bg-[#0B1121] p-3 rounded-lg">
+                      python photo_editor.py
+                    </code>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   )

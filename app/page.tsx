@@ -119,188 +119,172 @@ export default function Home() {
           <div className="space-y-6">
             {/* Patient Records Management System */}
             <Link href="/projects/patient-records-management-system" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Patient Records Management System
-                    </h3>
-                    <a href="https://github.com/meghajbhat/patient-records" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">MySQL</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">HTML</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Flask</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Patient Records Management System
+                  </h3>
+                  <a href="https://github.com/meghajbhat/patient-records" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">MySQL</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Python</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">HTML</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Flask</span>
                 </div>
               </div>
             </Link>
 
             {/* Simple Chatbot */}
             <Link href="/projects/simple-chatbot" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Simple Chatbot
-                    </h3>
-                    <a href="https://github.com/meghajbhat/simple-chatbot" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    This project is a simple chatbot that uses OpenAI's GPT-3.5-turbo model. It consists of a client and a server script that communicate over HTTP. The server handles the interaction with the OpenAI API, and the client provides a simple command-line interface for users to interact with the chatbot.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">ChatGPT API</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Computer Networks</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Simple Chatbot
+                  </h3>
+                  <a href="https://github.com/meghajbhat/simple-chatbot" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  This project is a simple chatbot that uses OpenAI's GPT-3.5-turbo model. It consists of a client and a server script that communicate over HTTP. The server handles the interaction with the OpenAI API, and the client provides a simple command-line interface for users to interact with the chatbot.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Python</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">ChatGPT API</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Computer Networks</span>
                 </div>
               </div>
             </Link>
 
             {/* University Admission Chatbot */}
             <Link href="/projects/university-admission-chatbot" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      University Admission Chatbot
-                    </h3>
-                    <a href="https://github.com/meghajbhat/university-chatbot" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information to help streamline the admission process for students.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">JSON</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">AIML</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    University Admission Chatbot
+                  </h3>
+                  <a href="https://github.com/meghajbhat/university-chatbot" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information to help streamline the admission process for students.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Python</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">JSON</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">AIML</span>
                 </div>
               </div>
             </Link>
 
             {/* Music Playlist Generator */}
             <Link href="/projects/music-playlist-generator" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Music Playlist Generator
-                    </h3>
-                    <a href="https://github.com/meghajbhat/music-playlist" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    The code defines three main data structures: Song, Playlist, and User. A Song structure holds information about a single song, while a Playlist structure manages a linked list of songs. The User structure encapsulates user information, including a playlist and a stack for played songs.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">C</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Music Playlist Generator
+                  </h3>
+                  <a href="https://github.com/meghajbhat/music-playlist" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  The code defines three main data structures: Song, Playlist, and User. A Song structure holds information about a single song, while a Playlist structure manages a linked list of songs. The User structure encapsulates user information, including a playlist and a stack for played songs.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">C</span>
                 </div>
               </div>
             </Link>
 
             {/* Photo Editor */}
             <Link href="/projects/photo-editor" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Photo Editor
-                    </h3>
-                    <a href="https://github.com/meghajbhat/photo-editor" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    This project aims to provide users with a seamless and intuitive platform for easy photo modification. It enables users to enhance their photos effortlessly by adding filters and cropping images. Featuring a user-friendly interface and a wide array of customization options, this platform is designed to transform how individuals engage with and modify their photos.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">OpenCV</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Tkinter</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Photo Editor
+                  </h3>
+                  <a href="https://github.com/meghajbhat/photo-editor" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  This project aims to provide users with a seamless and intuitive platform for easy photo modification. It enables users to enhance their photos effortlessly by adding filters and cropping images. Featuring a user-friendly interface and a wide array of customization options, this platform is designed to transform how individuals engage with and modify their photos.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">OpenCV</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Tkinter</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Python</span>
                 </div>
               </div>
             </Link>
 
             {/* Dining Cost Estimator */}
             <Link href="/projects/dining-cost-estimator" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Dining Cost Estimator for Two
-                    </h3>
-                    <a href="https://github.com/meghajbhat/dining-cost" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    This project aims to develop a sophisticated predictive model to estimate the average dinner costs at restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Dining Cost Estimator for Two
+                  </h3>
+                  <a href="https://github.com/meghajbhat/dining-cost" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  This project aims to develop a sophisticated predictive model to estimate the average dinner costs at restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Python</span>
                 </div>
               </div>
             </Link>
 
             {/* Speech Coach */}
             <Link href="/projects/speech-coach" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Speech Coach
-                    </h3>
-                    <a href="https://github.com/meghajbhat/speech-coach" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. In addition to this, it could also convert real time communication to written words, as well as it could read written lines out loud.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">NodeJS</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">MongoDB</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">React</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Speech Coach
+                  </h3>
+                  <a href="https://github.com/meghajbhat/speech-coach" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. In addition to this, it could also convert real time communication to written words, as well as it could read written lines out loud.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Python</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">NodeJS</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">MongoDB</span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">React</span>
                 </div>
               </div>
             </Link>
 
             {/* Calendar + Timetable */}
             <Link href="/projects/calendar-timetable" className="block">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                      Calendar + Timetable
-                    </h3>
-                    <a href="https://github.com/meghajbhat/calendar" target="_blank" className="text-gray-600 hover:text-emerald-500">
-                      <FaGithub className="text-xl" />
-                    </a>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    This project aims to create a comprehensive calendar and timetable for academic studies, designed to help users organize their schedules efficiently. It will provide clear guidance on what tasks to complete, when to complete them, and the specific subjects to focus on.
-                  </p>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">C++</span>
-                  </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    Calendar + Timetable
+                  </h3>
+                  <a href="https://github.com/meghajbhat/calendar" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+                <p className="text-gray-400 mb-4">
+                  This project aims to create a comprehensive calendar and timetable for academic studies, designed to help users organize their schedules efficiently. It will provide clear guidance on what tasks to complete, when to complete them, and the specific subjects to focus on.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">C++</span>
                 </div>
               </div>
             </Link>
@@ -311,179 +295,45 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 bg-[#0B1121]/50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-16 text-center">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Skills & Technologies</span>
+          <h2 className="text-4xl font-bold mb-12 text-center">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Skills</span>
           </h2>
-          
-          {/* Programming Languages */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-8">Programming Languages</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Python</span>
-                  <span className="text-emerald-400">95%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '95%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Java</span>
-                  <span className="text-emerald-400">85%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">C++</span>
-                  <span className="text-emerald-400">90%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">JavaScript</span>
-                  <span className="text-emerald-400">80%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+              <h3 className="text-xl font-semibold mb-4 text-emerald-400">Programming Languages</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+              </ul>
             </div>
-          </div>
-
-          {/* Web Development */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-8">Web Development</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">React</span>
-                  <span className="text-emerald-400">85%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Next.js</span>
-                  <span className="text-emerald-400">80%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Node.js</span>
-                  <span className="text-emerald-400">75%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '75%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">HTML/CSS</span>
-                  <span className="text-emerald-400">90%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
-                </div>
-              </div>
+            <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+              <h3 className="text-xl font-semibold mb-4 text-emerald-400">Web Development</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>HTML/CSS</li>
+              </ul>
             </div>
-          </div>
-
-          {/* AI/ML */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-8">AI/ML</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">TensorFlow</span>
-                  <span className="text-emerald-400">85%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">PyTorch</span>
-                  <span className="text-emerald-400">80%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Scikit-learn</span>
-                  <span className="text-emerald-400">90%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">NLP</span>
-                  <span className="text-emerald-400">75%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '75%'}}></div>
-                </div>
-              </div>
+            <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+              <h3 className="text-xl font-semibold mb-4 text-emerald-400">AI/ML</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>TensorFlow</li>
+                <li>PyTorch</li>
+                <li>Scikit-learn</li>
+                <li>NLP</li>
+              </ul>
             </div>
-          </div>
-
-          {/* Tools & Technologies */}
-          <div>
-            <h3 className="text-2xl font-bold text-emerald-400 mb-8">Tools & Technologies</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Git</span>
-                  <span className="text-emerald-400">90%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">Docker</span>
-                  <span className="text-emerald-400">75%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '75%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">SQL</span>
-                  <span className="text-emerald-400">85%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-semibold text-white">MongoDB</span>
-                  <span className="text-emerald-400">80%</span>
-                </div>
-                <div className="w-full bg-[#0B1121] rounded-full h-2">
-                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
-                </div>
-              </div>
+            <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+              <h3 className="text-xl font-semibold mb-4 text-emerald-400">Tools & Technologies</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>Git</li>
+                <li>Docker</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+              </ul>
             </div>
           </div>
         </div>
