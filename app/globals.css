@@ -3,17 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 51, 51, 51;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 249, 250, 251;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  }
+}
+
+@layer components {
+  .skill-card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
+  }
+  
+  .section-title {
+    @apply text-2xl font-bold mb-6 text-gray-800 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-blue-500 rounded-full;
+  }
+  
+  .contact-link {
+    @apply flex items-center gap-2 text-gray-600 hover:text-blue-500 transition-colors duration-300;
+  }
+  
+  .nav-link {
+    @apply text-gray-600 hover:text-blue-500 transition-colors duration-300 px-4 py-2;
+  }
 } 
