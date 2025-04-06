@@ -116,190 +116,190 @@ export default function Home() {
               Projects
             </span>
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Patient Records Management System */}
-            <Link href="/projects/patient-records-management-system" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/patient-records.png" 
-                    alt="Patient Records Management System" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Patient Records Management System</h3>
-                  <p className="text-gray-400 mb-6">
+            <Link href="/projects/patient-records-management-system" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Patient Records Management System
+                    </h3>
+                    <a href="https://github.com/meghajbhat/patient-records" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
                     A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">MySQL</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">HTML</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Flask</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">MySQL</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">HTML</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Flask</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Simple Chatbot */}
-            <Link href="/projects/simple-chatbot" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/simple-chatbot.png" 
-                    alt="Simple Chatbot" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Simple Chatbot</h3>
-                  <p className="text-gray-400 mb-6">
+            <Link href="/projects/simple-chatbot" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Simple Chatbot
+                    </h3>
+                    <a href="https://github.com/meghajbhat/simple-chatbot" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
                     This project is a simple chatbot that uses OpenAI's GPT-3.5-turbo model. It consists of a client and a server script that communicate over HTTP. The server handles the interaction with the OpenAI API, and the client provides a simple command-line interface for users to interact with the chatbot.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">ChatGPT API</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Computer Networks</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">ChatGPT API</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Computer Networks</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* University Admission Chatbot */}
-            <Link href="/projects/university-admission-chatbot" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/admission-chatbot.png" 
-                    alt="University Admission Chatbot" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">University Admission Chatbot</h3>
-                  <p className="text-gray-400 mb-6">
+            <Link href="/projects/university-admission-chatbot" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      University Admission Chatbot
+                    </h3>
+                    <a href="https://github.com/meghajbhat/university-chatbot" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
                     This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information to help streamline the admission process for students.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">JSON</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">AIML</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">JSON</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">AIML</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Music Playlist Generator */}
-            <Link href="/projects/music-playlist-generator" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/music-playlist.png" 
-                    alt="Music Playlist Generator" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Music Playlist Generator</h3>
-                  <p className="text-gray-400 mb-6">
+            <Link href="/projects/music-playlist-generator" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Music Playlist Generator
+                    </h3>
+                    <a href="https://github.com/meghajbhat/music-playlist" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
                     The code defines three main data structures: Song, Playlist, and User. A Song structure holds information about a single song, while a Playlist structure manages a linked list of songs. The User structure encapsulates user information, including a playlist and a stack for played songs.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">C</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">C</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Photo Editor */}
-            <Link href="/projects/photo-editor" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/photo-editor.png" 
-                    alt="Photo Editor" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Photo Editor</h3>
-                  <p className="text-gray-400 mb-6">
+            <Link href="/projects/photo-editor" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Photo Editor
+                    </h3>
+                    <a href="https://github.com/meghajbhat/photo-editor" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
                     This project aims to provide users with a seamless and intuitive platform for easy photo modification. It enables users to enhance their photos effortlessly by adding filters and cropping images. Featuring a user-friendly interface and a wide array of customization options, this platform is designed to transform how individuals engage with and modify their photos.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">OpenCV</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Tkinter</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Python</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">OpenCV</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Tkinter</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Dining Cost Estimator */}
-            <Link href="/projects/dining-cost-estimator" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/dining-cost.png" 
-                    alt="Dining Cost Estimator" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Dining Cost Estimator for Two</h3>
-                  <p className="text-gray-400 mb-6">
-                    This project aims to develop a sophisticated predictive model to estimate the average dinner costs at restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions. This project was undertaken during my college hackathon, Epoch, showcasing our commitment to practical, data-driven solutions.
+            <Link href="/projects/dining-cost-estimator" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Dining Cost Estimator for Two
+                    </h3>
+                    <a href="https://github.com/meghajbhat/dining-cost" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    This project aims to develop a sophisticated predictive model to estimate the average dinner costs at restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Python</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Speech Coach */}
-            <Link href="/projects/speech-coach" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/speech-coach.png" 
-                    alt="Speech Coach" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Speech Coach</h3>
-                  <p className="text-gray-400 mb-6">
-                    Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. In addition to this, it could also convert real time communication to written words, as well as it could read written lines out loud. The project could also convert English to Japanese, Chinese and French.
+            <Link href="/projects/speech-coach" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Speech Coach
+                    </h3>
+                    <a href="https://github.com/meghajbhat/speech-coach" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. In addition to this, it could also convert real time communication to written words, as well as it could read written lines out loud.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">Python</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">NodeJS</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">MongoDB</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">React</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">NodeJS</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">MongoDB</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">React</span>
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Calendar + Timetable */}
-            <Link href="/projects/calendar-timetable" className="block group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-                <div className="relative aspect-video">
-                  <img 
-                    src="/images/projects/calendar.png" 
-                    alt="Calendar + Timetable" 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Calendar + Timetable</h3>
-                  <p className="text-gray-400 mb-6">
-                    This project aims to create a comprehensive calendar and timetable for academic studies, designed to help users organize their schedules efficiently. It will provide clear guidance on what tasks to complete, when to complete them, and the specific subjects to focus on. By breaking down the workload into manageable segments, this tool will help users stay motivated and ensure they complete their tasks within the specified timeframe.
+            <Link href="/projects/calendar-timetable" className="block">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                      Calendar + Timetable
+                    </h3>
+                    <a href="https://github.com/meghajbhat/calendar" target="_blank" className="text-gray-600 hover:text-emerald-500">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    This project aims to create a comprehensive calendar and timetable for academic studies, designed to help users organize their schedules efficiently. It will provide clear guidance on what tasks to complete, when to complete them, and the specific subjects to focus on.
                   </p>
-                  <div className="flex gap-3">
-                    <span className="px-3 py-1 text-sm rounded-full bg-emerald-400/10 text-emerald-400">C++</span>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600">C++</span>
                   </div>
                 </div>
               </div>
