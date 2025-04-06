@@ -128,73 +128,247 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-32 relative">
+      <section id="projects" className="py-32 relative min-h-screen">
         <div className="absolute inset-0">
           <div className="absolute w-full h-full">
             <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
             <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
           </div>
         </div>
-        <div className="container mx-auto px-4 max-w-5xl relative">
+        <div className="container mx-auto px-4 max-w-7xl relative">
           <h2 className="text-5xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project Cards */}
-            <Link href="/projects/patient-records-management-system" className="group">
-              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
-                    Patient Records Management System
-                  </h3>
-                  <a href="https://github.com/meghajbhat/patient-records" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
-                    <FaGithub className="text-xl" />
-                  </a>
-                </div>
-                <p className="text-gray-400 mb-6">
-                  A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">MySQL</span>
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Flask</span>
-                </div>
-                <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span>View project</span>
-                  <FaArrowRight className="ml-2" />
-                </div>
-              </div>
-            </Link>
-            
-            {/* Add similar structure for other projects */}
-            {/* Simple Chatbot */}
-            <Link href="/projects/simple-chatbot" className="group">
-              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
-                    Simple Chatbot
-                  </h3>
-                  <a href="https://github.com/meghajbhat/simple-chatbot" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
-                    <FaGithub className="text-xl" />
-                  </a>
-                </div>
-                <p className="text-gray-400 mb-6">
-                  A chatbot using OpenAI's GPT-3.5-turbo model with client-server architecture for natural language interaction.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">ChatGPT API</span>
-                </div>
-                <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span>View project</span>
-                  <FaArrowRight className="ml-2" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
+            {/* Patient Records Management System */}
+            <Link href="/projects/patient-records-management-system" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Patient Records Management System
+                    </h3>
+                    <a href="https://github.com/meghajbhat/patient-records" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">MySQL</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Flask</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">HTML</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
                 </div>
               </div>
             </Link>
 
-            {/* Continue with other projects in the same format */}
+            {/* Simple Chatbot */}
+            <Link href="/projects/simple-chatbot" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Simple Chatbot
+                    </h3>
+                    <a href="https://github.com/meghajbhat/simple-chatbot" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A chatbot using OpenAI's GPT-3.5-turbo model with client-server architecture for natural language interaction.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">ChatGPT API</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Computer Networks</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* University Admission Chatbot */}
+            <Link href="/projects/university-admission-chatbot" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      University Admission Chatbot
+                    </h3>
+                    <a href="https://github.com/meghajbhat/university-chatbot" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A chatbot designed to assist prospective students with admission inquiries, powered by AIML and TensorFlow.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">JSON</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">AIML</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Music Playlist Generator */}
+            <Link href="/projects/music-playlist-generator" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Music Playlist Generator
+                    </h3>
+                    <a href="https://github.com/meghajbhat/music-playlist" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A C-based music playlist manager with data structures for songs, playlists, and user information.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">C</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Photo Editor */}
+            <Link href="/projects/photo-editor" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Photo Editor
+                    </h3>
+                    <a href="https://github.com/meghajbhat/photo-editor" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A user-friendly photo editing platform with filters and image manipulation features.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">OpenCV</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Tkinter</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Dining Cost Estimator */}
+            <Link href="/projects/dining-cost-estimator" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Dining Cost Estimator for Two
+                    </h3>
+                    <a href="https://github.com/meghajbhat/dining-cost" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A predictive model for estimating dinner costs at Bengaluru restaurants using data from Zomato.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Speech Coach */}
+            <Link href="/projects/speech-coach" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Speech Coach
+                    </h3>
+                    <a href="https://github.com/meghajbhat/speech-coach" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A grammar correction tool that records speech, corrects errors, and supports multiple language translations.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">NodeJS</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">MongoDB</span>
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">React</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Calendar + Timetable */}
+            <Link href="/projects/calendar-timetable" className="group project-card">
+              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-2 border border-emerald-500/10 hover:border-emerald-500/30 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      Calendar + Timetable
+                    </h3>
+                    <a href="https://github.com/meghajbhat/calendar" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                  <p className="text-gray-400 mb-6">
+                    A comprehensive academic calendar and timetable manager for efficient schedule organization.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">C++</span>
+                  </div>
+                  <div className="mt-6 flex items-center text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>View project</span>
+                    <FaArrowRight className="ml-2" />
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
