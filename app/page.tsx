@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaCode, FaAward, FaCertificate, FaLaptopCode } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaCode, FaAward, FaCertificate, FaLaptopCode, FaArrowRight } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -87,73 +87,176 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-50">
-        <div className="container mx-auto max-w-4xl px-6">
-          <h2 className="section-title">Projects</h2>
-          <div className="grid grid-cols-1 gap-6">
-            {[
-              {
-                title: "Patient Records Management System",
-                tech: "MySQL, Python, HTML, Flask",
-                description: "A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.",
-                link: "https://github.com/meghajbhat/Patient-Records-Management-System"
-              },
-              {
-                title: "Speech Coach",
-                tech: "Python, NodeJS, MongoDB, React, HTML, CSS",
-                description: "Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech is grammatically correct. Features include real-time communication to text conversion and multilingual support.",
-                link: "https://github.com/meghajbhat/speech-coach"
-              },
-              {
-                title: "University Admission Chatbot",
-                tech: "Python, JSON, pkl, h5, AIML",
-                description: "This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information to help streamline the admission process for students.",
-                link: "https://github.com/meghajbhat/admission-chatbot"
-              },
-              {
-                title: "Music Playlist Generator",
-                tech: "C",
-                description: "The code defines three main data structures: Song, Playlist, and User. A Song structure holds information about a single song, while a Playlist structure manages a linked list of songs. The User structure encapsulates user information, including a playlist and a stack for played songs.",
-                link: "https://github.com/meghajbhat/playlist-generator"
-              },
-              {
-                title: "Photo Editor",
-                tech: "OpenCV, Tkinter, Python",
-                description: "This project aims to provide users with a seamless and intuitive platform for easy photo modification. It enables users to enhance their photos effortlessly by adding filters and cropping images. Featuring a user-friendly interface and a wide array of customization options, this platform is designed to transform how individuals engage with and modify their photos.",
-                link: "https://github.com/meghajbhat/photo-editor"
-              },
-              {
-                title: "Dining Cost Estimator for Two",
-                tech: "Python",
-                description: "This project aims to develop a sophisticated predictive model to estimate the average dinner costs at restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions. This project was undertaken during my college hackathon, Epoch, showcasing our commitment to practical, data-driven solutions.",
-                link: "https://github.com/meghajbhat/dining-cost-estimator"
-              },
-              {
-                title: "Calendar + Timetable",
-                tech: "C++",
-                description: "This project aims to create a comprehensive calendar and timetable for academic studies, designed to help users organize their schedules efficiently. It will provide clear guidance on what tasks to complete, when to complete them, and the specific subjects to focus on. By breaking down the workload into manageable segments, this tool will help users stay motivated and ensure they complete their tasks within the specified timeframe.",
-                link: "https://github.com/meghajbhat/academic-calendar"
-              }
-            ].map((project) => (
-              <div key={project.title} className="skill-card transform hover:scale-[1.02] transition-transform">
-                <div className="flex justify-between items-start mb-4">
-                  <Link href={`/projects/${project.title.toLowerCase().replace(/[\s+]/g, '-').replace(/[^a-zA-Z0-9-]/g, '')}`} className="group">
-                    <h3 className="text-xl font-semibold gradient-text group-hover:underline">{project.title}</h3>
-                  </Link>
-                  <div className="text-sm text-gray-600">{project.tech}</div>
-                </div>
-                <p className="text-gray-600">{project.description}</p>
-                <div className="mt-4 flex space-x-4">
-                  <Link href={`/projects/${project.title.toLowerCase().replace(/[\s+]/g, '-').replace(/[^a-zA-Z0-9-]/g, '')}`} className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
-                    <FaLaptopCode className="mr-2" />
-                    View Details
-                  </Link>
-                  <Link href={project.link} target="_blank" className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
-                    <FaGithub className="mr-2" />
-                    View on GitHub
-                  </Link>
-                </div>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold mb-12 text-center gradient-text">Projects</h2>
+          <div className="grid grid-cols-1 gap-8">
+            {/* Patient Records Management System */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Patient Records Management System</h3>
+              <p className="text-gray-700 mb-4">
+                A comprehensive web-based healthcare management system built with Python Flask. Features include patient records management, appointment scheduling, prescription tracking, and billing management.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/patient-records-management-system"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+                <Link
+                  href="https://github.com/meghajbhat/Patient-Records-Management-System"
+                  target="_blank"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <FaGithub className="mr-2" />
+                  View on GitHub
+                </Link>
               </div>
-            ))}
+            </div>
+
+            {/* University Admission Chatbot */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">University Admission Chatbot</h3>
+              <p className="text-gray-700 mb-4">
+                An intelligent chatbot powered by AIML and TensorFlow that assists prospective students with admission inquiries, course information, and campus details.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/university-admission-chatbot"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+                <Link
+                  href="https://github.com/meghajbhat/University-Admission-Chatbot"
+                  target="_blank"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <FaGithub className="mr-2" />
+                  View on GitHub
+                </Link>
+              </div>
+            </div>
+
+            {/* Simple Chatbot */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Simple Chatbot</h3>
+              <p className="text-gray-700 mb-4">
+                A modern chatbot implementation using OpenAI's GPT-3.5-turbo model. Features client-server architecture with HTTP communication, OpenAI API integration, and a user-friendly command-line interface.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/simple-chatbot"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+                <Link
+                  href="https://github.com/meghajbhat/simple-chatbot"
+                  target="_blank"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <FaGithub className="mr-2" />
+                  View on GitHub
+                </Link>
+              </div>
+            </div>
+
+            {/* Music Playlist Generator */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Music Playlist Generator</h3>
+              <p className="text-gray-700 mb-4">
+                A C-based music management system with YouTube integration. Features include playlist creation, song discovery, and advanced playback controls.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/music-playlist-generator"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+                <Link
+                  href="https://github.com/meghajbhat/Music-Playlist-Generator"
+                  target="_blank"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <FaGithub className="mr-2" />
+                  View on GitHub
+                </Link>
+              </div>
+            </div>
+
+            {/* Photo Editor */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Photo Editor</h3>
+              <p className="text-gray-700 mb-4">
+                A feature-rich photo editing application with filters, effects, and basic image manipulation tools.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/photo-editor"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </div>
+
+            {/* Calendar + Timetable */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Calendar + Timetable</h3>
+              <p className="text-gray-700 mb-4">
+                A comprehensive calendar and timetable management application for organizing schedules and events.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/calendar-timetable"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </div>
+
+            {/* Dining Cost Estimator */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Dining Cost Estimator for Two</h3>
+              <p className="text-gray-700 mb-4">
+                An application to estimate and split dining costs between two people, with features for tax and tip calculation.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/dining-cost-estimator"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </div>
+
+            {/* Speech Coach */}
+            <div className="skill-card">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">Speech Coach</h3>
+              <p className="text-gray-700 mb-4">
+                An interactive application designed to help improve public speaking skills through practice and feedback.
+              </p>
+              <div className="flex gap-4">
+                <Link 
+                  href="/projects/speech-coach"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                >
+                  <span className="mr-2">View Details</span>
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
