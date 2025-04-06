@@ -192,6 +192,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Certificates Section */}
+      <section id="certificates" className="py-24 relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">MY ACHIEVEMENTS</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Certificates.
+            </span>
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Certificates Grid */}
+            <div className="space-y-6">
+              {/* Atlassian Certificate */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
+                    <p className="text-emerald-400 mt-1">Atlassian</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Coursera Certificates */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Introduction to Generative AI for Software Development</h3>
+                    <p className="text-emerald-400 mt-1">Coursera</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Kaggle Certificates */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Pandas & Intro To Machine Learning</h3>
+                    <p className="text-emerald-400 mt-1">Kaggle</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {/* Coursera Data Science */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">What is Data Science?</h3>
+                    <p className="text-emerald-400 mt-1">Coursera</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* GDSC & Skill Nation */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">GDSC Member & ChatGPT and AI Tools</h3>
+                    <p className="text-emerald-400 mt-1">PESU & Skill Nation</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* PESU IO & Python */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">OpenCV with Python & Getting Started With Python</h3>
+                    <p className="text-emerald-400 mt-1">PESU IO & Coursera</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section id="experience" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-6xl">
