@@ -566,6 +566,8 @@ export default function Home() {
                 e.preventDefault();
                 const form = e.currentTarget;
                 const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+                const formData = new FormData(form);
+                const senderEmail = formData.get('from_email');
                 
                 try {
                   submitButton.disabled = true;
@@ -578,7 +580,25 @@ export default function Home() {
                     '-UCnHkBHJrirqj0Kf'
                   );
 
-                  alert('Message sent successfully! I will get back to you soon.');
+                  const messageDiv = document.createElement('div');
+                  messageDiv.innerHTML = `
+                    <div class="fixed top-4 right-4 bg-[#1A2333] border border-emerald-500/30 rounded-lg p-4 shadow-lg max-w-md z-50">
+                      <div class="flex items-start gap-4">
+                        <div class="flex-1">
+                          <h3 class="font-medium text-white mb-1">Portfolio Contact from ${formData.get('from_name')}</h3>
+                          <p class="text-gray-400 text-sm mb-2">${senderEmail}</p>
+                          <p class="text-emerald-400">A message has been received. Kindly respond at your earliest convenience.</p>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                  document.body.appendChild(messageDiv);
+                  
+                  // Remove the notification after 5 seconds
+                  setTimeout(() => {
+                    messageDiv.remove();
+                  }, 5000);
+
                   form.reset();
                 } catch (error) {
                   console.error('Error sending email:', error);
