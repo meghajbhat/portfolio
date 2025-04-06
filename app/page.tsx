@@ -109,54 +109,186 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Projects</span>
+      <section id="projects" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Projects
+            </span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Patient Records Management System */}
             <Link href="/projects/patient-records-management-system" className="group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="aspect-video relative">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
                   <img 
                     src="/images/projects/patient-records.png" 
                     alt="Patient Records Management System" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-emerald-400 transition-colors duration-300">Patient Records Management System</h3>
-                  <p className="text-gray-400">A comprehensive healthcare management system built with Python Flask.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Patient Records Management System</h3>
+                  <p className="text-gray-400 text-sm mb-4">A comprehensive healthcare management system built with Python Flask.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Flask</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">SQLite</span>
+                  </div>
                 </div>
               </div>
             </Link>
+
+            {/* University Admission Chatbot */}
             <Link href="/projects/university-admission-chatbot" className="group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="aspect-video relative">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
                   <img 
                     src="/images/projects/admission-chatbot.png" 
                     alt="University Admission Chatbot" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-emerald-400 transition-colors duration-300">University Admission Chatbot</h3>
-                  <p className="text-gray-400">An AI-powered chatbot for university admissions using AIML and TensorFlow.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">University Admission Chatbot</h3>
+                  <p className="text-gray-400 text-sm mb-4">An AI-powered chatbot for university admission inquiries.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">NLTK</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">TensorFlow</span>
+                  </div>
                 </div>
               </div>
             </Link>
+
+            {/* Music Playlist Generator */}
             <Link href="/projects/music-playlist-generator" className="group">
-              <div className="bg-[#1A2333] rounded-2xl overflow-hidden transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="aspect-video relative">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
                   <img 
                     src="/images/projects/music-playlist.png" 
                     alt="Music Playlist Generator" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-emerald-400 transition-colors duration-300">Music Playlist Generator</h3>
-                  <p className="text-gray-400">A web application that creates personalized music playlists based on user preferences.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Music Playlist Generator</h3>
+                  <p className="text-gray-400 text-sm mb-4">AI-powered music recommendation system.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Scikit-learn</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Spotify API</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Smart Home Automation */}
+            <Link href="/projects/smart-home-automation" className="group">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
+                  <img 
+                    src="/images/projects/smart-home.png" 
+                    alt="Smart Home Automation" 
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">Smart Home Automation</h3>
+                  <p className="text-gray-400 text-sm mb-4">IoT-based home automation system.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Raspberry Pi</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">MQTT</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Weather Forecasting */}
+            <Link href="/projects/weather-forecasting" className="group">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
+                  <img 
+                    src="/images/projects/weather.png" 
+                    alt="Weather Forecasting" 
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">Weather Forecasting</h3>
+                  <p className="text-gray-400 text-sm mb-4">ML-based weather prediction system.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">TensorFlow</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">OpenWeather API</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* E-commerce Analytics */}
+            <Link href="/projects/ecommerce-analytics" className="group">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
+                  <img 
+                    src="/images/projects/ecommerce.png" 
+                    alt="E-commerce Analytics" 
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">E-commerce Analytics</h3>
+                  <p className="text-gray-400 text-sm mb-4">Data analytics dashboard for e-commerce.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Pandas</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Plotly</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Face Recognition */}
+            <Link href="/projects/face-recognition" className="group">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
+                  <img 
+                    src="/images/projects/face-recognition.png" 
+                    alt="Face Recognition" 
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">Face Recognition</h3>
+                  <p className="text-gray-400 text-sm mb-4">Real-time face detection and recognition system.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">OpenCV</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">dlib</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Stock Market Prediction */}
+            <Link href="/projects/stock-market-prediction" className="group">
+              <div className="bg-[#1A2333] rounded-xl overflow-hidden border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative aspect-video">
+                  <img 
+                    src="/images/projects/stock-market.png" 
+                    alt="Stock Market Prediction" 
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">Stock Market Prediction</h3>
+                  <p className="text-gray-400 text-sm mb-4">ML-based stock price prediction system.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Python</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">LSTM</span>
+                    <span className="px-2 py-1 text-xs rounded bg-emerald-400/10 text-emerald-400">Alpha Vantage API</span>
+                  </div>
                 </div>
               </div>
             </Link>

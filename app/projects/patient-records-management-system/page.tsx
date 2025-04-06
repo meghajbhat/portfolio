@@ -80,14 +80,6 @@ export default function PatientRecordsProject() {
                 <FaGithub className="text-xl" />
                 <span>View on GitHub</span>
               </a>
-              <a 
-                href="#" 
-                target="_blank"
-                className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
-              >
-                <FaLink className="text-xl" />
-                <span>Live Demo</span>
-              </a>
             </div>
           </header>
 

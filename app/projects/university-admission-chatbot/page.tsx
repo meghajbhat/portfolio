@@ -80,21 +80,13 @@ export default function UniversityAdmissionChatbotProject() {
                 <FaGithub className="text-xl" />
                 <span>View on GitHub</span>
               </a>
-              <a 
-                href="#" 
-                target="_blank"
-                className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
-              >
-                <FaLink className="text-xl" />
-                <span>Live Demo</span>
-              </a>
             </div>
           </header>
 
           {/* Project Image */}
           <div className="bg-[#1A2333] rounded-2xl p-2 border border-emerald-500/10">
             <img 
-              src="/images/projects/chatbot.png" 
+              src="/images/projects/admission-chatbot.png" 
               alt="University Admission Chatbot" 
               className="w-full h-auto rounded-xl"
             />

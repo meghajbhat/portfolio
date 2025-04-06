@@ -1,209 +1,238 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { FaGithub, FaArrowLeft } from 'react-icons/fa'
+import { FaGithub, FaPython, FaSpotify, FaBrain } from 'react-icons/fa'
 
 export default function MusicPlaylistGeneratorProject() {
+  const [activeSection, setActiveSection] = useState('overview')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]')
+      let current = ''
+
+      sections.forEach(section => {
+        const sectionTop = (section as HTMLElement).offsetTop
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id') || ''
+        }
+      })
+
+      setActiveSection(current)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <div className="min-h-screen bg-[#f8f9fa]">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <span className="text-xl font-bold gradient-text">MB</span>
-            <div className="flex space-x-2">
-              <Link href="/" className="nav-link">Home</Link>
-              <Link href="/#experience" className="nav-link">Experience</Link>
-              <Link href="/#projects" className="nav-link">Projects</Link>
-              <Link href="/#skills" className="nav-link">Skills</Link>
-              <Link href="/#education" className="nav-link">Education</Link>
-              <Link href="/#certifications" className="nav-link">Certifications</Link>
-              <Link href="/#achievements" className="nav-link">Achievements</Link>
-              <Link href="/#contact" className="nav-link">Contact</Link>
-            </div>
-          </div>
+    <main className="min-h-screen bg-[#0B1121] text-white">
+      {/* Back Button */}
+      <div className="fixed top-24 left-4 z-50">
+        <Link 
+          href="/" 
+          className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
+        >
+          <span>←</span> Back
+        </Link>
+      </div>
+
+      {/* Vertical Navigation */}
+      <nav className="fixed top-1/2 right-4 transform -translate-y-1/2 z-50">
+        <div className="bg-[#1A2333] p-4 rounded-lg border border-emerald-500/10">
+          <h3 className="text-sm font-medium text-emerald-400 mb-4">Quick Navigation</h3>
+          <ul className="space-y-4">
+            <li>
+              <a href="#overview" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Overview</a>
+            </li>
+            <li>
+              <a href="#features" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Features</a>
+            </li>
+            <li>
+              <a href="#tech-stack" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Tech Stack</a>
+            </li>
+            <li>
+              <a href="#key-functions" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Key Functions</a>
+            </li>
+            <li>
+              <a href="#installation" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Installation</a>
+            </li>
+          </ul>
         </div>
       </nav>
 
-      {/* Project Content */}
-      <div className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="mb-8">
-            <Link href="/#projects" className="inline-flex items-center text-gray-600 hover:text-gray-800">
-              <FaArrowLeft className="mr-2" />
-              Back to Projects
-            </Link>
+      {/* Content */}
+      <div className="container mx-auto max-w-4xl px-4 py-32">
+        <div className="space-y-16">
+          {/* Header */}
+          <header className="text-center space-y-6">
+            <h1 className="text-4xl font-bold">
+              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                Music Playlist Generator
+              </span>
+            </h1>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://github.com/meghajbhat/music-playlist-generator" 
+                target="_blank"
+                className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
+              >
+                <FaGithub className="text-xl" />
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </header>
+
+          {/* Project Image */}
+          <div className="bg-[#1A2333] rounded-2xl p-2 border border-emerald-500/10">
+            <img 
+              src="/images/projects/music-playlist.png" 
+              alt="Music Playlist Generator" 
+              className="w-full h-auto rounded-xl"
+            />
           </div>
 
-          {/* Hero Image */}
-          <div className="mb-12">
-            <div className="relative aspect-[16/9] w-2/3 mx-auto rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/projects/music-playlist.png"
-                alt="Music Playlist Generator Interface"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
+          {/* Overview Section */}
+          <section id="overview" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Overview</h2>
+            <p className="text-gray-400 leading-relaxed">
+              An AI-powered music recommendation system that creates personalized playlists based on user preferences, listening history, and music features. The system uses machine learning algorithms to analyze audio features and generate playlists that match the user's taste.
+            </p>
+          </section>
 
-          <div className="flex gap-8">
-            {/* Vertical Navigation */}
-            <div className="w-64 flex-shrink-0">
-              <div className="sticky top-32 space-y-2">
-                <a href="#overview" className="block px-4 py-2 rounded-lg hover:bg-white hover:shadow-sm transition-all text-gray-700 hover:text-emerald-600">Overview</a>
-                <a href="#features" className="block px-4 py-2 rounded-lg hover:bg-white hover:shadow-sm transition-all text-gray-700 hover:text-emerald-600">Features</a>
-                <a href="#tech-stack" className="block px-4 py-2 rounded-lg hover:bg-white hover:shadow-sm transition-all text-gray-700 hover:text-emerald-600">Technology Stack</a>
-                <a href="#key-functionalities" className="block px-4 py-2 rounded-lg hover:bg-white hover:shadow-sm transition-all text-gray-700 hover:text-emerald-600">Key Functionalities</a>
-                <a href="#installation" className="block px-4 py-2 rounded-lg hover:bg-white hover:shadow-sm transition-all text-gray-700 hover:text-emerald-600">Installation</a>
+          {/* Features Section */}
+          <section id="features" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Core Features</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Personalized playlist generation</li>
+                  <li>Music taste analysis</li>
+                  <li>Genre-based filtering</li>
+                  <li>Mood-based recommendations</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">User Experience</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Intuitive interface</li>
+                  <li>Real-time updates</li>
+                  <li>Playlist export</li>
+                  <li>Social sharing</li>
+                </ul>
               </div>
             </div>
+          </section>
 
-            {/* Main Content */}
-            <div className="flex-1 space-y-8">
-              <div>
-                <h1 className="text-4xl font-bold mb-4 gradient-text">Music Playlist Generator</h1>
-                <Link 
-                  href="https://github.com/meghajbhat/Music-Playlist-Generator"
-                  target="_blank"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <FaGithub className="mr-2" />
-                  View on GitHub
-                </Link>
-              </div>
-
-              <div id="overview" className="skill-card scroll-mt-32">
-                <h2 className="text-2xl font-semibold gradient-text mb-4">📚 Overview</h2>
-                <p className="text-gray-700">
-                  The Music Playlist Generator is a robust C-based program that enables users to create and manage personalized music playlists. With features like song discovery through YouTube integration, playlist shuffling, and comprehensive playback controls, this application provides a complete music management solution. The system uses CSV files for local song storage and supports dynamic user management for a personalized experience.
-                </p>
-              </div>
-
-              <div id="features" className="skill-card scroll-mt-32">
-                <h2 className="text-2xl font-semibold gradient-text mb-4">🚀 Features</h2>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">User Management</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>User registration with secure account creation</li>
-                      <li>Login system for personalized playlist access</li>
-                      <li>Individual playlist management for each user</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Playlist Management</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>Add songs from local CSV database</li>
-                      <li>Import songs from YouTube search results</li>
-                      <li>View and manage playlist contents</li>
-                      <li>Remove songs from playlist</li>
-                      <li>Shuffle playlist for random playback</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Playback Controls</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>Play next song with detailed information display</li>
-                      <li>Previous song playback using stack implementation</li>
-                      <li>Current song information display</li>
-                      <li>Random song suggestions</li>
-                    </ul>
-                  </div>
+          {/* Tech Stack Section */}
+          <section id="tech-stack" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Tech Stack</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <FaPython className="text-2xl text-emerald-400" />
+                  <h3 className="text-xl font-semibold">Core</h3>
                 </div>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>SQLAlchemy</li>
+                </ul>
               </div>
-
-              <div id="tech-stack" className="skill-card scroll-mt-32">
-                <h2 className="text-2xl font-semibold gradient-text mb-4">🛠️ Technology Stack</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Core Technologies</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>C Programming Language</li>
-                      <li>Python (for YouTube integration)</li>
-                      <li>CSV File Handling</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">APIs and Libraries</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>YouTube Data API</li>
-                      <li>Standard C Libraries</li>
-                      <li>Google API Python Client</li>
-                    </ul>
-                  </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <FaBrain className="text-2xl text-emerald-400" />
+                  <h3 className="text-xl font-semibold">ML/AI</h3>
                 </div>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Scikit-learn</li>
+                  <li>Pandas</li>
+                  <li>NumPy</li>
+                </ul>
               </div>
-
-              <div id="key-functionalities" className="skill-card scroll-mt-32">
-                <h2 className="text-2xl font-semibold gradient-text mb-4">🔑 Key Functionalities</h2>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Data Structures</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>Linked Lists for dynamic playlist management</li>
-                      <li>Stack implementation for song history</li>
-                      <li>Arrays for song database management</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">File Operations</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>CSV file reading and writing</li>
-                      <li>User data persistence</li>
-                      <li>Playlist state management</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">YouTube Integration</h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
-                      <li>Search functionality for YouTube songs</li>
-                      <li>Result parsing and integration</li>
-                      <li>Video ID extraction and storage</li>
-                    </ul>
-                  </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <FaSpotify className="text-2xl text-emerald-400" />
+                  <h3 className="text-xl font-semibold">APIs</h3>
                 </div>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Spotify API</li>
+                  <li>Last.fm API</li>
+                  <li>Genius API</li>
+                </ul>
               </div>
+            </div>
+          </section>
 
-              <div id="installation" className="skill-card scroll-mt-32">
-                <h2 className="text-2xl font-semibold gradient-text mb-4">⚙️ Installation</h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700">To set up the Music Playlist Generator:</p>
-                  <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto">
-{`# Clone the repository
-git clone https://github.com/meghajbhat/Music-Playlist-Generator.git
+          {/* Key Functions Section */}
+          <section id="key-functions" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Key Functions</h2>
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Music Analysis</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Audio feature extraction</li>
+                  <li>Genre classification</li>
+                  <li>Mood detection</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Recommendation Engine</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Collaborative filtering</li>
+                  <li>Content-based filtering</li>
+                  <li>Hybrid recommendation system</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">User Management</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>User preferences tracking</li>
+                  <li>Playlist management</li>
+                  <li>Social features</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Installation Section */}
+          <section id="installation" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Installation</h2>
+            <div className="space-y-6">
+              <p className="text-gray-400">Follow these steps to set up the project locally:</p>
+              <div className="bg-[#0B1121] rounded-lg p-4 font-mono text-sm">
+                <pre className="text-gray-400">
+                  <code>{`# Clone the repository
+git clone https://github.com/meghajbhat/music-playlist-generator.git
 
 # Navigate to project directory
-cd Music-Playlist-Generator
+cd music-playlist-generator
 
-# Install Python dependencies
-pip install google-api-python-client
+# Create virtual environment
+python -m venv venv
 
-# Compile the C program
-gcc dsap.c -o music_playlist
+# Activate virtual environment
+source venv/bin/activate  # Linux/Mac
+venv\\Scripts\\activate   # Windows
 
-# Run the program
-./music_playlist`}
-                  </pre>
-                  <p className="text-gray-700 mt-4">Note: Make sure to replace the placeholder API key in youtube_search.py with your YouTube Data API key before running the program.</p>
-                </div>
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+
+# Initialize database
+flask db upgrade
+
+# Run the application
+flask run`}</code>
+                </pre>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="py-8 bg-white">
-        <div className="container mx-auto max-w-4xl px-6">
-          <p className="text-center text-gray-600">
-            © 2024 Megha Bhat. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+    </main>
   )
 } 
