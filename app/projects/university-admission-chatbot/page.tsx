@@ -6,27 +6,8 @@ import { FaGithub, FaArrowLeft } from 'react-icons/fa'
 export default function UniversityAdmissionChatbotProject() {
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <span className="text-xl font-bold gradient-text">MB</span>
-            <div className="flex space-x-2">
-              <Link href="/" className="nav-link">Home</Link>
-              <Link href="/#experience" className="nav-link">Experience</Link>
-              <Link href="/#projects" className="nav-link">Projects</Link>
-              <Link href="/#skills" className="nav-link">Skills</Link>
-              <Link href="/#education" className="nav-link">Education</Link>
-              <Link href="/#certifications" className="nav-link">Certifications</Link>
-              <Link href="/#achievements" className="nav-link">Achievements</Link>
-              <Link href="/#contact" className="nav-link">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Project Content */}
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-24 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-8">
             <Link href="/#projects" className="inline-flex items-center text-gray-600 hover:text-gray-800">
