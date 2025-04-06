@@ -311,45 +311,179 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 bg-[#0B1121]/50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Skills</span>
+          <h2 className="text-4xl font-bold mb-16 text-center">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Skills & Technologies</span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <div className="bg-[#1A2333] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-              <h3 className="text-xl font-semibold mb-4 text-emerald-400">Programming Languages</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Python</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>JavaScript</li>
-              </ul>
+          
+          {/* Programming Languages */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-8">Programming Languages</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Python</span>
+                  <span className="text-emerald-400">95%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '95%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Java</span>
+                  <span className="text-emerald-400">85%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">C++</span>
+                  <span className="text-emerald-400">90%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">JavaScript</span>
+                  <span className="text-emerald-400">80%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
+                </div>
+              </div>
             </div>
-            <div className="bg-[#1A2333] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-              <h3 className="text-xl font-semibold mb-4 text-emerald-400">Web Development</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>HTML/CSS</li>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
-              </ul>
+          </div>
+
+          {/* Web Development */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-8">Web Development</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">React</span>
+                  <span className="text-emerald-400">85%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Next.js</span>
+                  <span className="text-emerald-400">80%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Node.js</span>
+                  <span className="text-emerald-400">75%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">HTML/CSS</span>
+                  <span className="text-emerald-400">90%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
+                </div>
+              </div>
             </div>
-            <div className="bg-[#1A2333] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-              <h3 className="text-xl font-semibold mb-4 text-emerald-400">AI/ML</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-                <li>Scikit-learn</li>
-                <li>NLP</li>
-              </ul>
+          </div>
+
+          {/* AI/ML */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-emerald-400 mb-8">AI/ML</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">TensorFlow</span>
+                  <span className="text-emerald-400">85%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">PyTorch</span>
+                  <span className="text-emerald-400">80%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Scikit-learn</span>
+                  <span className="text-emerald-400">90%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">NLP</span>
+                  <span className="text-emerald-400">75%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
             </div>
-            <div className="bg-[#1A2333] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-              <h3 className="text-xl font-semibold mb-4 text-emerald-400">Tools & Technologies</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Git</li>
-                <li>Docker</li>
-                <li>SQL</li>
-                <li>MongoDB</li>
-              </ul>
+          </div>
+
+          {/* Tools & Technologies */}
+          <div>
+            <h3 className="text-2xl font-bold text-emerald-400 mb-8">Tools & Technologies</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Git</span>
+                  <span className="text-emerald-400">90%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">Docker</span>
+                  <span className="text-emerald-400">75%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">SQL</span>
+                  <span className="text-emerald-400">85%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div className="bg-[#1A2333] rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-semibold text-white">MongoDB</span>
+                  <span className="text-emerald-400">80%</span>
+                </div>
+                <div className="w-full bg-[#0B1121] rounded-full h-2">
+                  <div className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full" style={{width: '80%'}}></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
