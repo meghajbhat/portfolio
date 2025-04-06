@@ -28,7 +28,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B1121]/80 backdrop-blur-sm">
+        <nav className="fixed top-0 left-0 right-0 z-50">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between py-4">
               <Link href="/" className="flex items-center gap-4">
@@ -90,7 +90,6 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">ABOUT ME</h2>
           <h1 className="text-8xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
               About.
@@ -98,13 +97,15 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="relative w-full max-w-lg mx-auto perspective-1000">
+              <div className="relative w-full max-w-lg mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
-                <img 
-                  src="/images/profile.jpg" 
-                  alt="Megha Bhat" 
-                  className="relative w-full aspect-square object-cover rounded-2xl border-2 border-emerald-500/30 hover:scale-105 transition-transform duration-300"
-                />
+                <div className="relative aspect-square rounded-2xl border-2 border-emerald-500/30 overflow-hidden hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="/images/profile.png" 
+                    alt="Megha Bhat" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
             <div className="space-y-6">
