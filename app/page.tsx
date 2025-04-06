@@ -213,9 +213,9 @@ export default function Home() {
 
       {/* Education Section */}
       <section id="education" className="py-32 relative">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-xl font-medium text-center mb-4 text-gray-400 tracking-wide">WHAT I HAVE STUDIED SO FAR</h2>
-          <h1 className="text-7xl font-bold text-center mb-24">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">WHAT I HAVE STUDIED SO FAR</h2>
+          <h1 className="text-8xl font-bold text-center mb-32">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
               Education.
             </span>
@@ -223,17 +223,17 @@ export default function Home() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-emerald-500/20"></div>
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-emerald-500/20"></div>
 
             {/* PES University */}
-            <div className="relative mb-40">
-              <div className="absolute right-1/2 translate-x-[150px] top-0">
-                <div className="w-14 h-14 rounded-full bg-[#0f172a] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/pes-logo.png" alt="PES University" className="w-10 h-10 object-contain" />
+            <div className="relative mb-64">
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-16 h-16 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                  <img src="/images/projects/pes-logo.png" alt="PES University" className="w-12 h-12 object-contain" />
                 </div>
               </div>
-              <div className="bg-[#0f172a] rounded-2xl p-8 max-w-[500px] ml-auto mr-[200px] transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl font-bold text-white mb-3">Computer Science Bachelors</h3>
+              <div className="ml-[calc(50%+64px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-8 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-4xl font-bold text-white mb-3">Computer Science Bachelors</h3>
                 <p className="text-emerald-400 text-lg mb-2">PES University, Bengaluru, India</p>
                 <p className="text-gray-400 mb-2">September 2022 - May 2026</p>
                 <p className="text-gray-400">CGPA: 7.47</p>
@@ -241,14 +241,14 @@ export default function Home() {
             </div>
 
             {/* BASE PU College */}
-            <div className="relative mb-40">
-              <div className="absolute left-1/2 -translate-x-[164px] top-0">
-                <div className="w-14 h-14 rounded-full bg-[#0f172a] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/base-logo.png" alt="BASE PU College" className="w-10 h-10 object-contain" />
+            <div className="relative mb-64">
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-16 h-16 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                  <img src="/images/projects/base-logo.png" alt="BASE PU College" className="w-12 h-12 object-contain" />
                 </div>
               </div>
-              <div className="bg-[#0f172a] rounded-2xl p-8 max-w-[500px] mr-auto ml-[200px] transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl font-bold text-white mb-3">Class XII PU</h3>
+              <div className="mr-[calc(50%+64px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-8 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-4xl font-bold text-white mb-3">Class XII PU</h3>
                 <p className="text-emerald-400 text-lg mb-2">BASE PU College, Bengaluru, India</p>
                 <p className="text-gray-400 mb-2">July 2020 - May 2022</p>
                 <p className="text-gray-400">Physics, Chemistry, Mathematics, Computer Science</p>
@@ -257,13 +257,13 @@ export default function Home() {
 
             {/* PSBB LLA */}
             <div className="relative">
-              <div className="absolute right-1/2 translate-x-[150px] top-0">
-                <div className="w-14 h-14 rounded-full bg-[#0f172a] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/psbb-logo.png" alt="PSBB LLA" className="w-10 h-10 object-contain" />
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-16 h-16 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                  <img src="/images/projects/psbb-logo.png" alt="PSBB LLA" className="w-12 h-12 object-contain" />
                 </div>
               </div>
-              <div className="bg-[#0f172a] rounded-2xl p-8 max-w-[500px] ml-auto mr-[200px] transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl font-bold text-white mb-3">Class X School</h3>
+              <div className="ml-[calc(50%+64px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-8 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-4xl font-bold text-white mb-3">Class X School</h3>
                 <p className="text-emerald-400 text-lg mb-2">PSBB LLA, Bengaluru, India</p>
                 <p className="text-gray-400 mb-2">July 2019 - July 2020</p>
                 <p className="text-gray-400">Physics, Chemistry, Social Science, Mathematics</p>
