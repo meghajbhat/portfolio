@@ -1,203 +1,243 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { FaGithub, FaArrowLeft } from 'react-icons/fa'
+import { FaGithub, FaLink, FaPython, FaRobot, FaBrain } from 'react-icons/fa'
 
 export default function UniversityAdmissionChatbotProject() {
+  const [activeSection, setActiveSection] = useState('overview')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]')
+      let current = ''
+
+      sections.forEach(section => {
+        const sectionTop = (section as HTMLElement).offsetTop
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id') || ''
+        }
+      })
+
+      setActiveSection(current)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* Project Content */}
-      <div className="pt-24 pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          {/* Back Button with enhanced styling */}
-          <div className="mb-12">
-            <Link 
-              href="/#projects" 
-              className="inline-flex items-center px-4 py-2 rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300 text-gray-700 hover:text-emerald-600"
-            >
-              <FaArrowLeft className="mr-2" />
-              Back to Projects
-            </Link>
+    <main className="min-h-screen bg-[#0B1121] text-white">
+      {/* Back Button */}
+      <div className="fixed top-24 left-4 z-50">
+        <Link 
+          href="/" 
+          className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
+        >
+          <span>←</span> Back
+        </Link>
+      </div>
+
+      {/* Vertical Navigation */}
+      <nav className="fixed top-1/2 right-4 transform -translate-y-1/2 z-50">
+        <div className="bg-[#1A2333] p-4 rounded-lg border border-emerald-500/10">
+          <h3 className="text-sm font-medium text-emerald-400 mb-4">Quick Navigation</h3>
+          <ul className="space-y-4">
+            <li>
+              <a href="#overview" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Overview</a>
+            </li>
+            <li>
+              <a href="#features" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Features</a>
+            </li>
+            <li>
+              <a href="#tech-stack" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Tech Stack</a>
+            </li>
+            <li>
+              <a href="#key-functions" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Key Functions</a>
+            </li>
+            <li>
+              <a href="#installation" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Installation</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Content */}
+      <div className="container mx-auto max-w-4xl px-4 py-32">
+        <div className="space-y-16">
+          {/* Header */}
+          <header className="text-center space-y-6">
+            <h1 className="text-4xl font-bold">
+              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                University Admission Chatbot
+              </span>
+            </h1>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://github.com/meghajbhat/University-Admission-Chatbot" 
+                target="_blank"
+                className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
+              >
+                <FaGithub className="text-xl" />
+                <span>View on GitHub</span>
+              </a>
+              <a 
+                href="#" 
+                target="_blank"
+                className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
+              >
+                <FaLink className="text-xl" />
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </header>
+
+          {/* Project Image */}
+          <div className="bg-[#1A2333] rounded-2xl p-2 border border-emerald-500/10">
+            <img 
+              src="/images/projects/chatbot.png" 
+              alt="University Admission Chatbot" 
+              className="w-full h-auto rounded-xl"
+            />
           </div>
 
-          {/* Hero Image with enhanced container */}
-          <div className="mb-16">
-            <div className="relative aspect-[16/9] w-full md:w-4/5 lg:w-3/4 mx-auto rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/images/projects/admission-chatbot.png"
-                alt="University Admission Chatbot Interface"
-                className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
+          {/* Overview Section */}
+          <section id="overview" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Overview</h2>
+            <p className="text-gray-400 leading-relaxed">
+              An intelligent chatbot system designed to assist prospective students with university admission inquiries. Built using Python and natural language processing techniques, the chatbot provides instant, accurate responses to common admission-related questions, streamlining the admission process for both students and university staff.
+            </p>
+          </section>
 
-          <div className="flex flex-col lg:flex-row gap-12">
-            {/* Vertical Navigation with enhanced styling */}
-            <div className="w-full lg:w-64 flex-shrink-0">
-              <div className="sticky top-32 space-y-2 p-4 bg-white rounded-2xl shadow-lg">
-                <h3 className="text-lg font-semibold mb-4 text-gray-800">Quick Navigation</h3>
-                <a href="#overview" className="block px-4 py-3 rounded-lg hover:bg-emerald-50 transition-all text-gray-600 hover:text-emerald-600 hover:translate-x-1 duration-200">Overview</a>
-                <a href="#features" className="block px-4 py-3 rounded-lg hover:bg-emerald-50 transition-all text-gray-600 hover:text-emerald-600 hover:translate-x-1 duration-200">Features</a>
-                <a href="#tech-stack" className="block px-4 py-3 rounded-lg hover:bg-emerald-50 transition-all text-gray-600 hover:text-emerald-600 hover:translate-x-1 duration-200">Technology Stack</a>
-                <a href="#key-functionalities" className="block px-4 py-3 rounded-lg hover:bg-emerald-50 transition-all text-gray-600 hover:text-emerald-600 hover:translate-x-1 duration-200">Key Functionalities</a>
-                <a href="#installation" className="block px-4 py-3 rounded-lg hover:bg-emerald-50 transition-all text-gray-600 hover:text-emerald-600 hover:translate-x-1 duration-200">Installation</a>
+          {/* Features Section */}
+          <section id="features" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Core Features</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Natural language understanding</li>
+                  <li>Context-aware responses</li>
+                  <li>Multi-language support</li>
+                  <li>24/7 availability</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Information Coverage</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Admission requirements</li>
+                  <li>Course information</li>
+                  <li>Application deadlines</li>
+                  <li>Fee structure</li>
+                </ul>
               </div>
             </div>
+          </section>
 
-            {/* Main Content with enhanced cards */}
-            <div className="flex-1 space-y-12">
-              <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:shadow-xl transition-all duration-300">
-                <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">University Admission Chatbot</h1>
-                <Link 
-                  href="https://github.com/meghajbhat/University-Admission-Chatbot"
-                  target="_blank"
-                  className="inline-flex items-center px-6 py-3 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <FaGithub className="mr-2 text-xl" />
-                  View on GitHub
-                </Link>
-              </div>
-
-              <div id="overview" className="bg-white rounded-2xl shadow-lg p-8 scroll-mt-32 transform hover:shadow-xl transition-all duration-300">
-                <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span className="text-4xl">📚</span>
-                  <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Overview</span>
-                </h2>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  The ABC University Admission Chatbot is an intelligent conversational agent designed to streamline the admission process for prospective students. Powered by AIML and TensorFlow, this chatbot provides accurate and timely information about admission procedures, courses, campus facilities, and more, making the admission journey smoother for applicants.
-                </p>
-              </div>
-
-              <div id="features" className="bg-white rounded-2xl shadow-lg p-8 scroll-mt-32 transform hover:shadow-xl transition-all duration-300">
-                <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span className="text-4xl">🚀</span>
-                  <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Features</span>
-                </h2>
-                <div className="space-y-8">
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Comprehensive Responses</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Admission deadlines and requirements</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Course offerings and program details</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Transportation and logistics information</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Fee structure and payment options</li>
-                    </ul>
-                  </div>
-
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Campus Information</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Housing options and accommodation details</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Dining facilities and meal plans</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Recreational activities and facilities</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Campus safety and security measures</li>
-                    </ul>
-                  </div>
-
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Application Assistance</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Document requirements and submission guidelines</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Application process walkthrough</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Important deadlines and dates</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Status tracking information</li>
-                    </ul>
-                  </div>
+          {/* Tech Stack Section */}
+          <section id="tech-stack" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Tech Stack</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <FaPython className="text-2xl text-emerald-400" />
+                  <h3 className="text-xl font-semibold">Core</h3>
                 </div>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Python</li>
+                  <li>NLTK</li>
+                  <li>TensorFlow</li>
+                </ul>
               </div>
-
-              <div id="tech-stack" className="bg-white rounded-2xl shadow-lg p-8 scroll-mt-32 transform hover:shadow-xl transition-all duration-300">
-                <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span className="text-4xl">🛠️</span>
-                  <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Technology Stack</span>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Core Technologies</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Python</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">AIML (Artificial Intelligence Markup Language)</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">TensorFlow</li>
-                    </ul>
-                  </div>
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Additional Tools</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">JSON for data storage</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Pickle for model serialization</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">H5 for deep learning models</li>
-                    </ul>
-                  </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <FaRobot className="text-2xl text-emerald-400" />
+                  <h3 className="text-xl font-semibold">NLP</h3>
                 </div>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>SpaCy</li>
+                  <li>Transformers</li>
+                  <li>Word2Vec</li>
+                </ul>
               </div>
-
-              <div id="key-functionalities" className="bg-white rounded-2xl shadow-lg p-8 scroll-mt-32 transform hover:shadow-xl transition-all duration-300">
-                <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span className="text-4xl">🔑</span>
-                  <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Key Functionalities</span>
-                </h2>
-                <div className="space-y-6">
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Natural Language Processing</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Advanced text processing for accurate query understanding</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Context-aware responses for better conversation flow</li>
-                    </ul>
-                  </div>
-
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">Intelligent Response System</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Dynamic response generation based on user queries</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Continuous learning from interactions</li>
-                    </ul>
-                  </div>
-
-                  <div className="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-700">User Experience</h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700">
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Simple command-line interface for easy interaction</li>
-                      <li className="hover:text-emerald-600 transition-colors duration-200">Quick and accurate responses to user queries</li>
-                    </ul>
-                  </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <FaBrain className="text-2xl text-emerald-400" />
+                  <h3 className="text-xl font-semibold">ML/AI</h3>
                 </div>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Scikit-learn</li>
+                  <li>Keras</li>
+                  <li>NumPy</li>
+                </ul>
               </div>
+            </div>
+          </section>
 
-              <div id="installation" className="bg-white rounded-2xl shadow-lg p-8 scroll-mt-32 transform hover:shadow-xl transition-all duration-300">
-                <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span className="text-4xl">⚙️</span>
-                  <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Installation</span>
-                </h2>
-                <div className="space-y-4">
-                  <p className="text-gray-700 text-lg">To run the chatbot locally:</p>
-                  <pre className="bg-gray-50 p-6 rounded-xl overflow-x-auto font-mono text-sm">
-{`# Clone the repository
+          {/* Key Functions Section */}
+          <section id="key-functions" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Key Functions</h2>
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Natural Language Processing</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Intent classification</li>
+                  <li>Entity recognition</li>
+                  <li>Sentiment analysis</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Response Generation</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Context-aware responses</li>
+                  <li>Dynamic information retrieval</li>
+                  <li>Fallback mechanisms</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">User Experience</h3>
+                <ul className="list-disc pl-6 space-y-2 text-gray-400">
+                  <li>Interactive conversations</li>
+                  <li>Multi-turn dialogue</li>
+                  <li>Error handling</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Installation Section */}
+          <section id="installation" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
+            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Installation</h2>
+            <div className="space-y-6">
+              <p className="text-gray-400">Follow these steps to set up the chatbot locally:</p>
+              <div className="bg-[#0B1121] rounded-lg p-4 font-mono text-sm">
+                <pre className="text-gray-400">
+                  <code>{`# Clone the repository
 git clone https://github.com/meghajbhat/University-Admission-Chatbot.git
 
 # Navigate to project directory
 cd University-Admission-Chatbot
 
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate  # Linux/Mac
+venv\\Scripts\\activate   # Windows
+
 # Install dependencies
 pip install -r requirements.txt
 
+# Download required NLTK data
+python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger'); nltk.download('wordnet')"
+
 # Run the chatbot
-python main.py`}
-                  </pre>
-                </div>
+python chatbot.py`}</code>
+                </pre>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="py-8 bg-white">
-        <div className="container mx-auto max-w-4xl px-6">
-          <p className="text-center text-gray-600">
-            © 2024 Megha Bhat. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+    </main>
   )
 } 
