@@ -37,10 +37,10 @@ export default function Home() {
                   </span>
                 </h1>
                 <h2 className="text-3xl font-bold text-emerald-400">
-                  I'M A DEVELOPER!
+                  I'M A PASSIONATE LEARNER!
                 </h2>
                 <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-                  A passionate software developer specializing in AI/ML and web development. Currently pursuing Computer Science at PES University with a CGPA of 7.47/10.
+                  Computer Science student at PES University.
                 </p>
                 <div className="flex items-center gap-4">
                   <a 
