@@ -214,15 +214,61 @@ export default function Home() {
       {/* Education Section */}
       <section id="education" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-5xl font-bold mb-16 text-center">
+          <h2 className="text-4xl font-medium text-center mb-4 text-gray-400">WHAT I HAVE STUDIED SO FAR</h2>
+          <h1 className="text-7xl font-bold text-center mb-32">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Education
+              Education.
             </span>
-          </h2>
-          <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-            <h3 className="text-2xl font-bold mb-4 text-white">PES University</h3>
-            <p className="text-emerald-400 mb-2">Bachelor of Technology in Computer Science</p>
-            <p className="text-gray-400">2021 - Present | CGPA: 7.47/10</p>
+          </h1>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-emerald-500/20"></div>
+
+            {/* PES University */}
+            <div className="relative mb-32">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-16 h-16 rounded-full bg-[#1A2333] border-4 border-emerald-500/30 flex items-center justify-center">
+                  <img src="/images/pes-logo.png" alt="PES University" className="w-10 h-10 object-contain" />
+                </div>
+              </div>
+              <div className="absolute top-8 right-1/2 translate-x-20 bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 w-[400px] transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <h3 className="text-2xl font-bold text-white mb-2">Computer Science Bachelors</h3>
+                <p className="text-emerald-400 mb-1">PES University, Bengaluru, India</p>
+                <p className="text-gray-400 mb-2">September 2022 - May 2026</p>
+                <p className="text-gray-400">CGPA: 7.47</p>
+              </div>
+            </div>
+
+            {/* BASE PU College */}
+            <div className="relative mb-32">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-16 h-16 rounded-full bg-[#1A2333] border-4 border-emerald-500/30 flex items-center justify-center">
+                  <img src="/images/base-logo.png" alt="BASE PU College" className="w-10 h-10 object-contain" />
+                </div>
+              </div>
+              <div className="absolute top-8 left-1/2 -translate-x-[420px] bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 w-[400px] transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <h3 className="text-2xl font-bold text-white mb-2">Class XII PU</h3>
+                <p className="text-emerald-400 mb-1">BASE PU College, Bengaluru, India</p>
+                <p className="text-gray-400 mb-2">July 2020 - May 2022</p>
+                <p className="text-gray-400">Physics, Chemistry, Mathematics, Computer Science</p>
+              </div>
+            </div>
+
+            {/* PSBB LLA */}
+            <div className="relative">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-16 h-16 rounded-full bg-[#1A2333] border-4 border-emerald-500/30 flex items-center justify-center">
+                  <img src="/images/psbb-logo.png" alt="PSBB LLA" className="w-10 h-10 object-contain" />
+                </div>
+              </div>
+              <div className="absolute top-8 right-1/2 translate-x-20 bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 w-[400px] transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <h3 className="text-2xl font-bold text-white mb-2">Class X School</h3>
+                <p className="text-emerald-400 mb-1">PSBB LLA, Bengaluru, India</p>
+                <p className="text-gray-400 mb-2">July 2019 - July 2020</p>
+                <p className="text-gray-400">Physics, Chemistry, Social Science, Mathematics</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
