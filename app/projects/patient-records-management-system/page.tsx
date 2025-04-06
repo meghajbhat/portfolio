@@ -39,7 +39,7 @@ export default function PatientRecordsProject() {
             <div>
               <h1 className="text-4xl font-bold mb-4 gradient-text">Patient Records Management System</h1>
               <Link 
-                href="https://github.com/meghajbhat/Patient-Records-Management-System.git"
+                href="https://github.com/meghajbhat/Patient-Records-Management-System"
                 target="_blank"
                 className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
               >

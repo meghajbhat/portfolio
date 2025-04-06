@@ -95,7 +95,7 @@ export default function Home() {
                 title: "Patient Records Management System",
                 tech: "MySQL, Python, HTML, Flask",
                 description: "A web-based application designed for efficient management of hospital operations, including patient records, appointments, prescriptions, and billing. Built with Python Flask, it provides role-based access for administrators, doctors, and patients, ensuring streamlined workflows and secure data handling.",
-                link: "https://github.com/meghajbhat/patient-records"
+                link: "https://github.com/meghajbhat/Patient-Records-Management-System"
               },
               {
                 title: "Speech Coach",
@@ -136,14 +136,14 @@ export default function Home() {
             ].map((project) => (
               <div key={project.title} className="skill-card transform hover:scale-[1.02] transition-transform">
                 <div className="flex justify-between items-start mb-4">
-                  <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="group">
+                  <Link href={`/projects/${project.title.toLowerCase().replace(/[\s+]/g, '-').replace(/[^a-zA-Z0-9-]/g, '')}`} className="group">
                     <h3 className="text-xl font-semibold gradient-text group-hover:underline">{project.title}</h3>
                   </Link>
                   <div className="text-sm text-gray-600">{project.tech}</div>
                 </div>
                 <p className="text-gray-600">{project.description}</p>
                 <div className="mt-4 flex space-x-4">
-                  <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
+                  <Link href={`/projects/${project.title.toLowerCase().replace(/[\s+]/g, '-').replace(/[^a-zA-Z0-9-]/g, '')}`} className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
                     <FaLaptopCode className="mr-2" />
                     View Details
                   </Link>
