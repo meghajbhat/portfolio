@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaCode, FaArrowRight } from 'react-icons/fa'
 
@@ -435,7 +435,38 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Contact Form */}
-            <div className="space-y-6">
+            <form 
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = {
+                  name: formData.get('name'),
+                  email: formData.get('email'),
+                  message: formData.get('message')
+                };
+
+                try {
+                  // You can replace this with your actual email service endpoint
+                  const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                  });
+
+                  if (response.ok) {
+                    alert('Message sent successfully! I will get back to you soon.');
+                    e.currentTarget.reset();
+                  } else {
+                    throw new Error('Failed to send message');
+                  }
+                } catch (error) {
+                  alert('Please email me directly at meghajbhat@gmail.com');
+                }
+              }}
+              className="space-y-6"
+            >
               <div>
                 <label className="flex items-center gap-2 text-gray-400 mb-2">
                   <span className="w-6 h-6">👤</span>
@@ -443,7 +474,10 @@ export default function Home() {
                 </label>
                 <input 
                   type="text" 
+                  name="name"
                   placeholder="Your name" 
+                  required
+                  minLength={2}
                   className="w-full bg-[#1A1A2E] text-gray-400 rounded-xl p-4 border border-emerald-500/30 focus:border-emerald-500 focus:outline-none transition-colors"
                 />
               </div>
@@ -454,7 +488,10 @@ export default function Home() {
                 </label>
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="Your email" 
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   className="w-full bg-[#1A1A2E] text-gray-400 rounded-xl p-4 border border-emerald-500/30 focus:border-emerald-500 focus:outline-none transition-colors"
                 />
               </div>
@@ -464,20 +501,28 @@ export default function Home() {
                   Message
                 </label>
                 <textarea 
+                  name="message"
                   placeholder="Hey Megha, love the website! I'd like to chat about some opportunities you might like! 🚀" 
+                  required
+                  minLength={10}
                   rows={6}
                   className="w-full bg-[#1A1A2E] text-gray-400 rounded-xl p-4 border border-emerald-500/30 focus:border-emerald-500 focus:outline-none transition-colors resize-none"
                 ></textarea>
               </div>
-              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-bold py-4 px-8 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                Send Message
-                <span className="transform rotate-90">✈️</span>
+              <button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-bold py-4 px-8 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 relative overflow-hidden group"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Send Message
+                  <span className="transform rotate-90 group-hover:translate-x-1 transition-transform">✈️</span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </button>
-            </div>
+            </form>
 
             {/* 3D Globe */}
             <div className="relative aspect-square">
-              {/* Add your 3D globe component or image here */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-full animate-spin-slow"></div>
             </div>
           </div>
