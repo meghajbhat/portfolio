@@ -12,11 +12,12 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <span className="text-xl font-bold gradient-text">MB</span>
             <div className="flex space-x-2">
-              <a href="#about" className="nav-link">About</a>
+              <a href="#" className="nav-link">Home</a>
               <a href="#experience" className="nav-link">Experience</a>
               <a href="#projects" className="nav-link">Projects</a>
               <a href="#skills" className="nav-link">Skills</a>
               <a href="#education" className="nav-link">Education</a>
+              <a href="#certifications" className="nav-link">Certifications</a>
               <a href="#achievements" className="nav-link">Achievements</a>
               <a href="#contact" className="nav-link">Contact</a>
             </div>
@@ -31,7 +32,6 @@ export default function Home() {
             <h1 className="text-5xl font-bold mb-4 gradient-text">Megha Bhat</h1>
             <p className="text-xl text-gray-600">Computer Science Student at PES University</p>
             <p className="text-lg text-gray-700">CGPA: 7.47/10</p>
-            <p className="text-md text-gray-600">National level artist, violinist & Bharatnatyam dancer</p>
             
             <div className="flex justify-center space-x-6 mt-8">
               <Link href="https://github.com/meghajbhat" target="_blank" 
@@ -136,16 +136,20 @@ export default function Home() {
             ].map((project) => (
               <div key={project.title} className="skill-card transform hover:scale-[1.02] transition-transform">
                 <div className="flex justify-between items-start mb-4">
-                  <Link href={project.link} target="_blank" className="group">
+                  <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="group">
                     <h3 className="text-xl font-semibold gradient-text group-hover:underline">{project.title}</h3>
                   </Link>
                   <div className="text-sm text-gray-600">{project.tech}</div>
                 </div>
                 <p className="text-gray-600">{project.description}</p>
-                <div className="mt-4">
+                <div className="mt-4 flex space-x-4">
+                  <Link href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
+                    <FaLaptopCode className="mr-2" />
+                    View Details
+                  </Link>
                   <Link href={project.link} target="_blank" className="inline-flex items-center text-emerald-600 hover:text-emerald-700">
                     <FaGithub className="mr-2" />
-                    View Project
+                    View on GitHub
                   </Link>
                 </div>
               </div>
