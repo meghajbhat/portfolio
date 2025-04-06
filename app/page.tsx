@@ -27,27 +27,6 @@ export default function Home() {
     <main className="min-h-screen bg-[#0B1121] text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 z-50">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between py-4">
-              <Link href="/" className="flex items-center gap-4">
-                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-                  Megha Bhat
-                </span>
-              </Link>
-              <div className="flex items-center gap-8">
-                <Link href="#about" className="text-gray-400 hover:text-emerald-400 transition-colors">About</Link>
-                <Link href="#education" className="text-gray-400 hover:text-emerald-400 transition-colors">Education</Link>
-                <Link href="#experience" className="text-gray-400 hover:text-emerald-400 transition-colors">Work</Link>
-                <Link href="#skills" className="text-gray-400 hover:text-emerald-400 transition-colors">Skills</Link>
-                <Link href="#projects" className="text-gray-400 hover:text-emerald-400 transition-colors">Projects</Link>
-                <Link href="#contact" className="text-gray-400 hover:text-emerald-400 transition-colors">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
         <div className="container mx-auto px-4 py-32">
           <div className="max-w-5xl mx-auto">
             <h1 className="text-7xl font-bold mb-6">
@@ -101,7 +80,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
                 <div className="relative aspect-square rounded-2xl border-2 border-emerald-500/30 overflow-hidden hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="/images/projects/profile.png" 
+                    src="public\images\projects\profile.jpg" 
                     alt="Megha Bhat" 
                     className="w-full h-full object-cover"
                   />
