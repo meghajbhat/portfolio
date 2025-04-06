@@ -297,35 +297,52 @@ export default function Home() {
 
       {/* Skills Section */}
       <section id="skills" className="py-32 relative">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-5xl font-bold mb-16 text-center">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h1 className="text-8xl font-bold text-center mb-24">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Skills
+              Skills.
             </span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-xl font-bold mb-6 text-emerald-400">Programming Languages</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center text-gray-400">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                  Python
-                </li>
-                <li className="flex items-center text-gray-400">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                  Java
-                </li>
-                <li className="flex items-center text-gray-400">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                  C++
-                </li>
-                <li className="flex items-center text-gray-400">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                  JavaScript
-                </li>
-              </ul>
+          </h1>
+          <div className="space-y-8">
+            {/* Programming Languages */}
+            <div className="bg-[#0B1121] rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <h3 className="text-xl font-bold text-white min-w-[240px]">Programming Languages</h3>
+                <p className="text-gray-400">
+                  C++, Python, C, GOLang, Kotlin Basics, JavaScript, MATLAB
+                </p>
+              </div>
             </div>
-            {/* Add other skill categories with the same styling */}
+
+            {/* Libraries/Frameworks */}
+            <div className="bg-[#0B1121] rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <h3 className="text-xl font-bold text-white min-w-[240px]">Libraries/Frameworks</h3>
+                <p className="text-gray-400">
+                  OpenCV, React, Scikit-Learn, Node JS, HTML, CSS, Pandas, NumPy, TensorFlow, Flask, Flutter
+                </p>
+              </div>
+            </div>
+
+            {/* Tools / Platforms */}
+            <div className="bg-[#0B1121] rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <h3 className="text-xl font-bold text-white min-w-[240px]">Tools / Platforms</h3>
+                <p className="text-gray-400">
+                  Google Colab, GitHub, Kaggle, VS Code, Apache Kafka, Spark, Hadoop, Jira
+                </p>
+              </div>
+            </div>
+
+            {/* Databases */}
+            <div className="bg-[#0B1121] rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <h3 className="text-xl font-bold text-white min-w-[240px]">Databases</h3>
+                <p className="text-gray-400">
+                  MongoDB, MySQL
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
