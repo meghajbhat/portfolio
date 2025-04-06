@@ -91,171 +91,183 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center gradient-text">Projects</h2>
           <div className="grid grid-cols-1 gap-8">
             {/* Patient Records Management System */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Patient Records Management System</h3>
-              <p className="text-gray-700 mb-4">
-                A comprehensive web-based healthcare management system built with Python Flask. Features include patient records management, appointment scheduling, prescription tracking, and billing management.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/patient-records-management-system"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-                <Link
-                  href="https://github.com/meghajbhat/Patient-Records-Management-System"
-                  target="_blank"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <FaGithub className="mr-2" />
-                  View on GitHub
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/patient-records-management-system" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Patient Records Management System</h3>
+                  <p className="text-gray-700 mb-4">
+                    A comprehensive web-based healthcare management system built with Python Flask. Features include patient records management, appointment scheduling, prescription tracking, and billing management.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                    <Link
+                      href="https://github.com/meghajbhat/Patient-Records-Management-System"
+                      target="_blank"
+                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaGithub className="mr-2" />
+                      View on GitHub
+                    </Link>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* University Admission Chatbot */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">University Admission Chatbot</h3>
-              <p className="text-gray-700 mb-4">
-                An intelligent chatbot powered by AIML and TensorFlow that assists prospective students with admission inquiries, course information, and campus details.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/university-admission-chatbot"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-                <Link
-                  href="https://github.com/meghajbhat/University-Admission-Chatbot"
-                  target="_blank"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <FaGithub className="mr-2" />
-                  View on GitHub
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/university-admission-chatbot" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">University Admission Chatbot</h3>
+                  <p className="text-gray-700 mb-4">
+                    An intelligent chatbot powered by AIML and TensorFlow that assists prospective students with admission inquiries, course information, and campus details.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                    <Link
+                      href="https://github.com/meghajbhat/University-Admission-Chatbot"
+                      target="_blank"
+                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaGithub className="mr-2" />
+                      View on GitHub
+                    </Link>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Simple Chatbot */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Simple Chatbot</h3>
-              <p className="text-gray-700 mb-4">
-                A modern chatbot implementation using OpenAI's GPT-3.5-turbo model. Features client-server architecture with HTTP communication, OpenAI API integration, and a user-friendly command-line interface.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/simple-chatbot"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-                <Link
-                  href="https://github.com/meghajbhat/simple-chatbot"
-                  target="_blank"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <FaGithub className="mr-2" />
-                  View on GitHub
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/simple-chatbot" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Simple Chatbot</h3>
+                  <p className="text-gray-700 mb-4">
+                    A modern chatbot implementation using OpenAI's GPT-3.5-turbo model. Features client-server architecture with HTTP communication, OpenAI API integration, and a user-friendly command-line interface.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                    <Link
+                      href="https://github.com/meghajbhat/simple-chatbot"
+                      target="_blank"
+                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaGithub className="mr-2" />
+                      View on GitHub
+                    </Link>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Music Playlist Generator */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Music Playlist Generator</h3>
-              <p className="text-gray-700 mb-4">
-                A C-based music management system with YouTube integration. Features include playlist creation, song discovery, and advanced playback controls.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/music-playlist-generator"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-                <Link
-                  href="https://github.com/meghajbhat/Music-Playlist-Generator"
-                  target="_blank"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <FaGithub className="mr-2" />
-                  View on GitHub
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/music-playlist-generator" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Music Playlist Generator</h3>
+                  <p className="text-gray-700 mb-4">
+                    A C-based music management system with YouTube integration. Features include playlist creation, song discovery, and advanced playback controls.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                    <Link
+                      href="https://github.com/meghajbhat/Music-Playlist-Generator"
+                      target="_blank"
+                      className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FaGithub className="mr-2" />
+                      View on GitHub
+                    </Link>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Photo Editor */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Photo Editor</h3>
-              <p className="text-gray-700 mb-4">
-                A feature-rich photo editing application with filters, effects, and basic image manipulation tools.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/photo-editor"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/photo-editor" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Photo Editor</h3>
+                  <p className="text-gray-700 mb-4">
+                    A feature-rich photo editing application with filters, effects, and basic image manipulation tools.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Calendar + Timetable */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Calendar + Timetable</h3>
-              <p className="text-gray-700 mb-4">
-                A comprehensive calendar and timetable management application for organizing schedules and events.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/calendar-timetable"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/calendar-timetable" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Calendar + Timetable</h3>
+                  <p className="text-gray-700 mb-4">
+                    A comprehensive calendar and timetable management application for organizing schedules and events.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Dining Cost Estimator */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Dining Cost Estimator for Two</h3>
-              <p className="text-gray-700 mb-4">
-                An application to estimate and split dining costs between two people, with features for tax and tip calculation.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/dining-cost-estimator"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/dining-cost-estimator" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Dining Cost Estimator for Two</h3>
+                  <p className="text-gray-700 mb-4">
+                    An application to estimate and split dining costs between two people, with features for tax and tip calculation.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Speech Coach */}
-            <div className="skill-card">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">Speech Coach</h3>
-              <p className="text-gray-700 mb-4">
-                An interactive application designed to help improve public speaking skills through practice and feedback.
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  href="/projects/speech-coach"
-                  className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
-                >
-                  <span className="mr-2">View Details</span>
-                  <FaArrowRight />
-                </Link>
-              </div>
+            <div className="group">
+              <Link href="/projects/speech-coach" className="block">
+                <div className="skill-card hover:shadow-lg transition-all cursor-pointer">
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text group-hover:text-emerald-600">Speech Coach</h3>
+                  <p className="text-gray-700 mb-4">
+                    An interactive application designed to help improve public speaking skills through practice and feedback.
+                  </p>
+                  <div className="flex gap-4">
+                    <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
+                      <span className="mr-2">View Details</span>
+                      <FaArrowRight />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
