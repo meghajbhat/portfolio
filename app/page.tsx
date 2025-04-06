@@ -109,6 +109,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         A comprehensive web-based healthcare management system built with Python Flask. Features include patient records management, appointment scheduling, prescription tracking, and billing management.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: Python, Flask, SQLite, HTML, CSS, Bootstrap, Jinja2</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -149,6 +152,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         An intelligent chatbot powered by AIML and TensorFlow that assists prospective students with admission inquiries, course information, and campus details.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: Python, TensorFlow, AIML, Natural Language Processing, Flask</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -189,6 +195,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         A modern chatbot implementation using OpenAI's GPT-3.5-turbo model. Features client-server architecture with HTTP communication, OpenAI API integration, and a user-friendly command-line interface.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: Python, OpenAI API, HTTP, JSON, Command-line Interface</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -229,6 +238,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         A C-based music management system with YouTube integration. Features include playlist creation, song discovery, and advanced playback controls.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: C, File Handling, Data Structures, YouTube API</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -269,6 +281,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         A feature-rich photo editing application with filters, effects, and basic image manipulation tools.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: Python, OpenCV, NumPy, Tkinter</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -300,6 +315,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         A comprehensive calendar and timetable management application for organizing schedules and events.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: Python, SQLite, Tkinter, iCalendar</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -331,6 +349,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         An application to estimate and split dining costs between two people, with features for tax and tip calculation.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: C++, STL, File I/O</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>
@@ -362,6 +383,9 @@ export default function Home() {
                       <p className="text-gray-700 mb-4">
                         An interactive application designed to help improve public speaking skills through practice and feedback.
                       </p>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">Technologies: Python, Speech Recognition, Natural Language Processing, Audio Processing</p>
+                      </div>
                       <div className="flex gap-4">
                         <span className="inline-flex items-center text-emerald-600 group-hover:text-emerald-700">
                           <span className="mr-2">View Details</span>

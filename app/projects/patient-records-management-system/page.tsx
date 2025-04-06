@@ -37,7 +37,7 @@ export default function PatientRecordsProject() {
 
           {/* Hero Image */}
           <div className="mb-12">
-            <div className="relative aspect-[21/9] rounded-xl overflow-hidden shadow-lg">
+            <div className="relative aspect-[16/9] w-2/3 mx-auto rounded-xl overflow-hidden shadow-lg">
               <img 
                 src="/images/projects/patient-records.png"
                 alt="Patient Records Management System Interface"
