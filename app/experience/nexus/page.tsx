@@ -1,9 +1,30 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { FaArrowLeft, FaFileAlt, FaPython, FaRobot, FaBrain, FaCode } from 'react-icons/fa'
 
 export default function NexusExperience() {
+  const [activeSection, setActiveSection] = useState('overview')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]')
+      let current = ''
+
+      sections.forEach(section => {
+        const sectionTop = (section as HTMLElement).offsetTop
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id') || ''
+        }
+      })
+
+      setActiveSection(current)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       {/* Navigation */}
@@ -25,16 +46,57 @@ export default function NexusExperience() {
         </div>
       </nav>
 
-      {/* Content */}
-      <div className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="mb-8">
-            <Link href="/#experience" className="inline-flex items-center text-gray-600 hover:text-gray-800">
-              <FaArrowLeft className="mr-2" />
-              Back to Experience
-            </Link>
-          </div>
+      {/* Back Button */}
+      <div className="fixed top-24 left-6 z-40">
+        <Link href="/#experience" className="inline-flex items-center text-gray-600 hover:text-gray-800">
+          <FaArrowLeft className="mr-2" />
+          Back
+        </Link>
+      </div>
 
+      {/* Vertical Navigation */}
+      <div className="fixed top-32 left-6 space-y-4 z-40">
+        <a 
+          href="#overview" 
+          className={`block text-sm ${activeSection === 'overview' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Overview
+        </a>
+        <a 
+          href="#phase1" 
+          className={`block text-sm ${activeSection === 'phase1' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          First Phase
+        </a>
+        <a 
+          href="#phase2" 
+          className={`block text-sm ${activeSection === 'phase2' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Second Phase
+        </a>
+        <a 
+          href="#learnings" 
+          className={`block text-sm ${activeSection === 'learnings' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Key Learnings
+        </a>
+        <a 
+          href="#impact" 
+          className={`block text-sm ${activeSection === 'impact' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Impact
+        </a>
+        <a 
+          href="#certificate" 
+          className={`block text-sm ${activeSection === 'certificate' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Certificate
+        </a>
+      </div>
+
+      {/* Content */}
+      <div className="pt-32 pb-20 px-4 ml-48">
+        <div className="container mx-auto max-w-4xl">
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl font-bold mb-4 gradient-text">
@@ -56,14 +118,14 @@ export default function NexusExperience() {
               </div>
             </div>
 
-            <div className="skill-card">
+            <section id="overview" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Overview</h2>
               <p className="text-gray-700 mb-4">
                 During my summer internship at Nexus Info, I had the opportunity to immerse myself in the world of Artificial Intelligence and Machine Learning. This experience not only enhanced my technical skills but also provided valuable insights into real-world applications of AI and ML technologies.
               </p>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="phase1" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">First Phase: Building the Basics</h2>
               <ul className="list-disc list-inside space-y-3 text-gray-700">
                 <li>Spent the first 15 days working on 2 foundational projects:
@@ -75,9 +137,9 @@ export default function NexusExperience() {
                 <li>Learned at my own pace while maintaining focus on quality deliverables</li>
                 <li>Gained hands-on experience with various AI and ML tasks</li>
               </ul>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="phase2" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Second Phase: Real-World Projects</h2>
               <ul className="list-disc list-inside space-y-3 text-gray-700">
                 <li>Advanced to a higher-level project: Disease Prediction System using Machine Learning</li>
@@ -85,9 +147,9 @@ export default function NexusExperience() {
                 <li>Gained valuable insights into industry challenges</li>
                 <li>Developed project management and problem-solving abilities</li>
               </ul>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="learnings" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Key Learnings</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -109,16 +171,16 @@ export default function NexusExperience() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="impact" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Impact and Achievements</h2>
               <p className="text-gray-700 mb-4">
                 This internship experience strengthened my technical skills, expanded my professional network, and set a solid foundation for my career in AI and ML. The hands-on experience with real-world projects provided invaluable insights into the industry and prepared me for future professional endeavors.
               </p>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="certificate" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Certificate</h2>
               <Link 
                 href="https://drive.google.com/file/d/1IzhcwqwiGVRYUV0_NIFIPZV8IjY3Ota2/view?usp=drive_link"
@@ -128,7 +190,7 @@ export default function NexusExperience() {
                 <FaFileAlt className="mr-2" />
                 View Certificate
               </Link>
-            </div>
+            </section>
           </div>
         </div>
       </div>

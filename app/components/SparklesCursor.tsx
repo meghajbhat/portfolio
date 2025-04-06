@@ -17,7 +17,9 @@ export default function SparklesCursor() {
     'url(#sparkleGradient1)',
     'url(#sparkleGradient2)',
     'url(#sparkleGradient3)',
-    'url(#sparkleGradient4)'
+    'url(#sparkleGradient4)',
+    'url(#sparkleGradient5)',
+    'url(#sparkleGradient6)'
   ]
 
   useEffect(() => {
@@ -56,7 +58,7 @@ export default function SparklesCursor() {
       {sparkles.map(sparkle => (
         <div
           key={sparkle.id}
-          className="absolute w-4 h-4 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute w-6 h-6 transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: sparkle.x,
             top: sparkle.y,
@@ -64,14 +66,14 @@ export default function SparklesCursor() {
         >
           <div className="animate-sparkle">
             <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="absolute"
             >
-              <circle cx="8" cy="8" r="8" fill={sparkle.color} />
+              <circle cx="12" cy="12" r="12" fill={sparkle.color} />
               <defs>
                 <radialGradient
                   id="sparkleGradient1"
@@ -79,10 +81,10 @@ export default function SparklesCursor() {
                   cy="0"
                   r="1"
                   gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                  gradientTransform="translate(12 12) rotate(90) scale(12)"
                 >
-                  <stop stopColor="#14b8a6" />
-                  <stop offset="1" stopColor="#14b8a6" stopOpacity="0" />
+                  <stop stopColor="#FF6B6B" />
+                  <stop offset="1" stopColor="#FF6B6B" stopOpacity="0" />
                 </radialGradient>
                 <radialGradient
                   id="sparkleGradient2"
@@ -90,10 +92,10 @@ export default function SparklesCursor() {
                   cy="0"
                   r="1"
                   gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                  gradientTransform="translate(12 12) rotate(90) scale(12)"
                 >
-                  <stop stopColor="#6c5ce7" />
-                  <stop offset="1" stopColor="#6c5ce7" stopOpacity="0" />
+                  <stop stopColor="#4ECDC4" />
+                  <stop offset="1" stopColor="#4ECDC4" stopOpacity="0" />
                 </radialGradient>
                 <radialGradient
                   id="sparkleGradient3"
@@ -101,10 +103,10 @@ export default function SparklesCursor() {
                   cy="0"
                   r="1"
                   gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                  gradientTransform="translate(12 12) rotate(90) scale(12)"
                 >
-                  <stop stopColor="#00b894" />
-                  <stop offset="1" stopColor="#00b894" stopOpacity="0" />
+                  <stop stopColor="#FFD93D" />
+                  <stop offset="1" stopColor="#FFD93D" stopOpacity="0" />
                 </radialGradient>
                 <radialGradient
                   id="sparkleGradient4"
@@ -112,10 +114,32 @@ export default function SparklesCursor() {
                   cy="0"
                   r="1"
                   gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(8 8) rotate(90) scale(8)"
+                  gradientTransform="translate(12 12) rotate(90) scale(12)"
                 >
-                  <stop stopColor="#e84393" />
-                  <stop offset="1" stopColor="#e84393" stopOpacity="0" />
+                  <stop stopColor="#6C5CE7" />
+                  <stop offset="1" stopColor="#6C5CE7" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="sparkleGradient5"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(12 12) rotate(90) scale(12)"
+                >
+                  <stop stopColor="#A8E6CF" />
+                  <stop offset="1" stopColor="#A8E6CF" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="sparkleGradient6"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(12 12) rotate(90) scale(12)"
+                >
+                  <stop stopColor="#FF9A9E" />
+                  <stop offset="1" stopColor="#FF9A9E" stopOpacity="0" />
                 </radialGradient>
               </defs>
             </svg>

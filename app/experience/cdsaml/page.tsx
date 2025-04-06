@@ -1,9 +1,30 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { FaArrowLeft, FaFileAlt, FaPython, FaBrain, FaCode } from 'react-icons/fa'
 
 export default function CdsamlExperience() {
+  const [activeSection, setActiveSection] = useState('overview')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]')
+      let current = ''
+
+      sections.forEach(section => {
+        const sectionTop = (section as HTMLElement).offsetTop
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id') || ''
+        }
+      })
+
+      setActiveSection(current)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       {/* Navigation */}
@@ -25,16 +46,57 @@ export default function CdsamlExperience() {
         </div>
       </nav>
 
-      {/* Content */}
-      <div className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="mb-8">
-            <Link href="/#experience" className="inline-flex items-center text-gray-600 hover:text-gray-800">
-              <FaArrowLeft className="mr-2" />
-              Back to Experience
-            </Link>
-          </div>
+      {/* Back Button */}
+      <div className="fixed top-24 left-6 z-40">
+        <Link href="/#experience" className="inline-flex items-center text-gray-600 hover:text-gray-800">
+          <FaArrowLeft className="mr-2" />
+          Back
+        </Link>
+      </div>
 
+      {/* Vertical Navigation */}
+      <div className="fixed top-32 left-6 space-y-4 z-40">
+        <a 
+          href="#overview" 
+          className={`block text-sm ${activeSection === 'overview' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Project Overview
+        </a>
+        <a 
+          href="#activities" 
+          className={`block text-sm ${activeSection === 'activities' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Key Activities
+        </a>
+        <a 
+          href="#objectives" 
+          className={`block text-sm ${activeSection === 'objectives' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Objectives
+        </a>
+        <a 
+          href="#technologies" 
+          className={`block text-sm ${activeSection === 'technologies' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Technologies
+        </a>
+        <a 
+          href="#acknowledgment" 
+          className={`block text-sm ${activeSection === 'acknowledgment' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Acknowledgment
+        </a>
+        <a 
+          href="#certificate" 
+          className={`block text-sm ${activeSection === 'certificate' ? 'text-emerald-600 font-semibold' : 'text-gray-600 hover:text-gray-800'}`}
+        >
+          Certificate
+        </a>
+      </div>
+
+      {/* Content */}
+      <div className="pt-32 pb-20 px-4 ml-48">
+        <div className="container mx-auto max-w-4xl">
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl font-bold mb-4 gradient-text">
@@ -56,30 +118,30 @@ export default function CdsamlExperience() {
               </div>
             </div>
 
-            <div className="skill-card">
+            <section id="overview" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Project Overview</h2>
               <p className="text-gray-700 mb-4">
                 As part of a dedicated team of three, I worked on a project aimed at reducing hallucinations in large language models (LLMs). We utilize the Mistral LLM, sourced from Hugging Face, and the HaluEval dataset from GitHub, leveraging the computational power of a GPU P100 on Kaggle.
               </p>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="activities" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Key Activities</h2>
               <ul className="list-disc list-inside space-y-3 text-gray-700">
                 <li>Generated 10,000 hallucinated samples each for QA, dialogue, and summarization tasks using HotpotQA, OpenDialKG, and CNN/Daily Mail datasets.</li>
                 <li>Designed both one-pass(one-turn) and conversational(multi-turn) methods to induce hallucinations.</li>
               </ul>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="objectives" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Objectives</h2>
               <ul className="list-disc list-inside space-y-3 text-gray-700">
                 <li>Evaluate the performance of various advanced prompt engineering techniques in reducing hallucinations.</li>
                 <li>Study and suggest improvements for different prompt engineering techniques.</li>
               </ul>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="technologies" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Technologies Used</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -99,16 +161,16 @@ export default function CdsamlExperience() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="acknowledgment" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Acknowledgment</h2>
               <p className="text-gray-700">
                 This project is undertaken under the valuable guidance of Dr. Sujatha R Upadhyaya and with the help of the Centre for Cloud Computing and Big Data, to whom we extend our deepest gratitude.
               </p>
-            </div>
+            </section>
 
-            <div className="skill-card">
+            <section id="certificate" className="skill-card">
               <h2 className="text-2xl font-semibold gradient-text mb-4">Certificate</h2>
               <Link 
                 href="https://drive.google.com/file/d/14b3ElbyzX_lQHA-32UEDasPT8ayr18MM/view?usp=drive_link"
@@ -118,7 +180,7 @@ export default function CdsamlExperience() {
                 <FaFileAlt className="mr-2" />
                 View Certificate
               </Link>
-            </div>
+            </section>
           </div>
         </div>
       </div>
