@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 51, 51, 51;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 249, 250, 251;
+  --primary-gradient: linear-gradient(45deg, #00b894, #6c5ce7);
+  --foreground-rgb: 45, 52, 54;
+  --background-start-rgb: 248, 249, 250;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @layer base {
@@ -14,35 +15,67 @@
   }
   
   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background: rgb(var(--background-start-rgb));
+    line-height: 1.6;
+    overflow-x: hidden;
   }
 }
 
 @layer components {
+  .nav-link {
+    @apply text-gray-800 px-4 py-2 relative font-medium transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 transform scale-x-0 transition-transform duration-300;
+    background: var(--primary-gradient);
+  }
+
+  .nav-link:hover {
+    @apply text-emerald-600;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+
   .skill-card {
-    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
+    @apply bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1;
   }
-  
+
   .section-title {
-    @apply text-2xl font-bold mb-6 text-gray-800 relative inline-block;
+    @apply text-2xl font-bold mb-8 text-gray-800 relative inline-block;
   }
-  
+
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-blue-500 rounded-full;
+    @apply absolute bottom-0 left-0 w-1/2 h-1 rounded-full;
+    background: var(--primary-gradient);
   }
-  
+
   .contact-link {
-    @apply flex items-center gap-2 text-gray-600 hover:text-blue-500 transition-colors duration-300;
+    @apply flex items-center gap-2 text-gray-600 hover:text-emerald-600 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-gray-50;
   }
-  
-  .nav-link {
-    @apply text-gray-600 hover:text-blue-500 transition-colors duration-300 px-4 py-2;
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text;
+    background-image: var(--primary-gradient);
+  }
+
+  .gradient-btn {
+    @apply px-6 py-2 text-white rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    background: var(--primary-gradient);
+  }
+
+  .skill-item {
+    @apply flex items-center gap-2 text-gray-600;
+  }
+
+  .skill-dot {
+    @apply w-2 h-2 rounded-full;
+    background: var(--primary-gradient);
   }
 } 
