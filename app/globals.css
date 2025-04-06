@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .hexagon {
+    width: 100px;
+    height: 100px;
+    background: #1A1A2E;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.3s ease;
+  }
+
+  .hexagon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .group:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transition: all 0.3s ease;
+  }
+
+  .skill-category {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -17,24 +63,16 @@
   }
 }
 
-.animate-blob {
-  animation: blob 7s infinite;
+/* Skill icon animations */
+.group:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  transition: all 0.3s ease;
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.perspective {
-  perspective: 1000px;
-}
-
-.perspective-1000 {
-  perspective: 1000px;
+/* Category tag glow effect */
+.text-[#8B5CF6] {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
 }
 
 :root {
