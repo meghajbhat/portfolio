@@ -305,144 +305,120 @@ export default function Home() {
             </span>
           </h1>
 
-          {/* Programming Category */}
-          <div className="mb-12">
-            <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Programming&gt;</h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/python.png" alt="Python" className="w-12 h-12 object-contain" />
+          <div className="max-w-4xl mx-auto">
+            {/* Programming Category */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Programming&gt;</h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/python.png" alt="Python" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Python</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">Python</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/cpp.png" alt="C++" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/cpp.png" alt="C++" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">C++</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">C++</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/js.png" alt="JavaScript" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/js.png" alt="JavaScript" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">JavaScript</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">JavaScript</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/golang.png" alt="GoLang" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/golang.png" alt="GoLang" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">GoLang</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">GoLang</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/kotlin.png" alt="Kotlin" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/kotlin.png" alt="Kotlin" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Kotlin</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">Kotlin</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/matlab.png" alt="MATLAB" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/matlab.png" alt="MATLAB" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">MATLAB</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">MATLAB</p>
               </div>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Programming&gt;</h3>
             </div>
-            <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Programming&gt;</h3>
-          </div>
 
-          {/* Libraries/Frameworks Category */}
-          <div className="mb-12">
-            <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Libraries&gt;</h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/react.png" alt="React" className="w-12 h-12 object-contain" />
+            {/* Libraries/Frameworks Category */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Libraries&gt;</h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/react.png" alt="React" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">React</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">React</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/node.png" alt="Node.js" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/node.png" alt="Node.js" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Node.js</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">Node.js</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/tensorflow.png" alt="TensorFlow" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/tensorflow.png" alt="TensorFlow" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">TensorFlow</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">TensorFlow</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/opencv.png" alt="OpenCV" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/opencv.png" alt="OpenCV" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">OpenCV</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">OpenCV</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/flask.png" alt="Flask" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/flask.png" alt="Flask" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Flask</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">Flask</p>
               </div>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Libraries&gt;</h3>
             </div>
-            <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Libraries&gt;</h3>
-          </div>
 
-          {/* Tools Category */}
-          <div className="mb-12">
-            <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Tools&gt;</h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/github.png" alt="GitHub" className="w-12 h-12 object-contain" />
+            {/* Tools Category */}
+            <div>
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Tools&gt;</h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/github.png" alt="GitHub" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">GitHub</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">GitHub</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/vscode.png" alt="VS Code" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/vscode.png" alt="VS Code" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">VS Code</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">VS Code</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/kafka.png" alt="Kafka" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/kafka.png" alt="Kafka" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Kafka</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">Kafka</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/projects/hadoop.png" alt="Hadoop" className="w-12 h-12 object-contain" />
+                <div className="group">
+                  <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                    <img src="/images/projects/hadoop.png" alt="Hadoop" className="w-12 h-12 object-contain" />
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Hadoop</p>
                 </div>
-                <p className="text-center text-gray-400 mt-2">Hadoop</p>
               </div>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Tools&gt;</h3>
             </div>
-            <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Tools&gt;</h3>
-          </div>
-
-          {/* Content Production Category */}
-          <div>
-            <h3 className="text-xl font-bold text-[#8B5CF6] mb-8">&lt;contentProduction&gt;</h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/skills/photoshop.png" alt="Photoshop" className="w-12 h-12 object-contain" />
-                </div>
-                <p className="text-center text-gray-400 mt-2">Photoshop</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/skills/premiere.png" alt="Premiere Pro" className="w-12 h-12 object-contain" />
-                </div>
-                <p className="text-center text-gray-400 mt-2">Premiere Pro</p>
-              </div>
-              <div className="group">
-                <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                  <img src="/images/skills/cinema4d.png" alt="Cinema 4D" className="w-12 h-12 object-contain" />
-                </div>
-                <p className="text-center text-gray-400 mt-2">Cinema 4D</p>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/contentProduction&gt;</h3>
           </div>
         </div>
       </section>
@@ -450,20 +426,60 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-5xl font-bold mb-16 text-center">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">GET IN TOUCH</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Get In Touch
+              Contact.
             </span>
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-            <a href="mailto:meghajbhat@gmail.com" className="group flex items-center text-gray-400 hover:text-emerald-400 transition-all duration-300 bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl px-8 py-4 border border-emerald-500/10 hover:border-emerald-500/30">
-              <FaEnvelope className="mr-3 text-xl group-hover:scale-110 transition-transform duration-300" />
-              meghajbhat@gmail.com
-            </a>
-            <a href="tel:+919876543210" className="group flex items-center text-gray-400 hover:text-emerald-400 transition-all duration-300 bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl px-8 py-4 border border-emerald-500/10 hover:border-emerald-500/30">
-              <FaPhone className="mr-3 text-xl group-hover:scale-110 transition-transform duration-300" />
-              +91 9876543210
-            </a>
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Contact Form */}
+            <div className="space-y-6">
+              <div>
+                <label className="flex items-center gap-2 text-gray-400 mb-2">
+                  <span className="w-6 h-6">👤</span>
+                  Name
+                </label>
+                <input 
+                  type="text" 
+                  placeholder="Your name" 
+                  className="w-full bg-[#1A1A2E] text-gray-400 rounded-xl p-4 border border-emerald-500/30 focus:border-emerald-500 focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <label className="flex items-center gap-2 text-gray-400 mb-2">
+                  <span className="w-6 h-6">📧</span>
+                  Email
+                </label>
+                <input 
+                  type="email" 
+                  placeholder="Your email" 
+                  className="w-full bg-[#1A1A2E] text-gray-400 rounded-xl p-4 border border-emerald-500/30 focus:border-emerald-500 focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <label className="flex items-center gap-2 text-gray-400 mb-2">
+                  <span className="w-6 h-6">💬</span>
+                  Message
+                </label>
+                <textarea 
+                  placeholder="Hey Megha, love the website! I'd like to chat about some opportunities you might like! 🚀" 
+                  rows={6}
+                  className="w-full bg-[#1A1A2E] text-gray-400 rounded-xl p-4 border border-emerald-500/30 focus:border-emerald-500 focus:outline-none transition-colors resize-none"
+                ></textarea>
+              </div>
+              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-bold py-4 px-8 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                Send Message
+                <span className="transform rotate-90">✈️</span>
+              </button>
+            </div>
+
+            {/* 3D Globe */}
+            <div className="relative aspect-square">
+              {/* Add your 3D globe component or image here */}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-full animate-spin-slow"></div>
+            </div>
           </div>
         </div>
       </section>
