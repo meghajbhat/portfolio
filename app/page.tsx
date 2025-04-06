@@ -76,13 +76,44 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="relative w-full max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
-                <div className="relative aspect-square rounded-2xl border-2 border-emerald-500/30 overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="relative w-full max-w-lg mx-auto perspective-3d group">
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 animate-pulse"></div>
+                
+                {/* Floating circles animation */}
+                <div className="absolute -inset-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-0 left-0 w-20 h-20 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+                  <div className="absolute bottom-0 left-1/2 w-20 h-20 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+                </div>
+
+                {/* Main image container with 3D effect */}
+                <div 
+                  className="relative aspect-square rounded-2xl border-2 border-emerald-500/30 overflow-hidden hover:scale-105 transition-all duration-500 transform-gpu hover:rotate-2 group-hover:border-emerald-500/70 shadow-2xl"
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+                  }}
+                  onMouseMove={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = (e.clientX - rect.left) / rect.width;
+                    const y = (e.clientY - rect.top) / rect.height;
+                    const rotateX = (y - 0.5) * 20;
+                    const rotateY = (x - 0.5) * 20;
+                    e.currentTarget.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                  }}
+                >
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Profile image */}
                   <img 
-                    src="public\images\projects\profile.jpg" 
+                    src="/images/projects/profile.jpg" 
                     alt="Megha Bhat" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               </div>
