@@ -31,9 +31,9 @@ export default function RootLayout({
                 <Link href="/#about" className="nav-link text-sm">About</Link>
                 <Link href="/#experience" className="nav-link text-sm">Experience</Link>
                 <Link href="/#projects" className="nav-link text-sm">Projects</Link>
-                <Link href="/#certificates" className="nav-link text-sm">Certificates</Link>
                 <Link href="/#skills" className="nav-link text-sm">Skills</Link>
                 <Link href="/#hackathons" className="nav-link text-sm">Hackathons</Link>
+                <Link href="/#certificates" className="nav-link text-sm">Certificates</Link>
                 <Link href="/#education" className="nav-link text-sm">Education</Link>
                 <Link href="/#contact" className="nav-link text-sm">Contact Me</Link>
               </div>
