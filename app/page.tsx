@@ -674,7 +674,7 @@ export default function Home() {
                 transform: `translateX(-${activeHackathon * 100}%) translateZ(-100px)`,
               }}
             >
-              {/* Dining Cost Estimator Card */}
+              {/* Dining Cost Estimator Card- EPOCH */}
               <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
                 <div className="space-y-6">
                   <h3 className="text-3xl font-bold text-white">DINING COST ESTIMATOR FOR TWO</h3>
@@ -705,7 +705,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Speech Coach Card */}
+              {/* Speech Coach Card- Nexgen */}
               <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
                 <div className="space-y-6">
                   <h3 className="text-3xl font-bold text-white">SPEECH COACH</h3>
@@ -728,6 +728,48 @@ export default function Home() {
                   
                   <div className="h-[52px]"></div> {/* Spacer to align with other card's button */}
                 </div>
+              </div>
+
+              {/* Certificate Card Template */}
+              <div 
+                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width;
+                  const y = (e.clientY - rect.top) / rect.height;
+                  const rotateX = (y - 0.5) * 20;
+                  const rotateY = (x - 0.5) * 20;
+                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img src="/images/projects/atlassian.png" alt="Atlassian" className="w-8 h-8 object-contain" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
+                          <p className="text-emerald-400">Atlassian</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-400 mt-4">Learn the fundamentals of Jira Work Management and enhance your project management skills.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex justify-end">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition-colors group">
+                      View Certificate
+                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
               </div>
             </div>
 
@@ -810,7 +852,7 @@ export default function Home() {
 
       {/* Certificates Section */}
       <section id="certificates" className="py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-4 max-w-7xl">
           {/* Background Effects */}
           <div className="absolute inset-0">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full filter blur-3xl animate-blob"></div>
@@ -825,181 +867,8 @@ export default function Home() {
             </span>
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-            {/* Left Column */}
-            <div className="space-y-8 perspective-1000">
-              {/* Atlassian Certificate */}
-              <div 
-                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-                onMouseMove={(e) => {
-                  const card = e.currentTarget;
-                  const rect = card.getBoundingClientRect();
-                  const x = (e.clientX - rect.left) / rect.width;
-                  const y = (e.clientY - rect.top) / rect.height;
-                  const rotateX = (y - 0.5) * 20;
-                  const rotateY = (x - 0.5) * 20;
-                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <img src="/images/projects/atlassian.png" alt="Atlassian" className="w-8 h-8 object-contain" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
-                          <p className="text-emerald-400">Atlassian</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-400 mt-4">Learn the fundamentals of Jira Work Management and enhance your project management skills.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 flex justify-end">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition-colors group">
-                      View Certificate
-                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-                {/* Glowing effect on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
-              </div>
-
-              {/* Coursera Certificates */}
-              <div 
-                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2"
-                onMouseMove={(e) => {
-                  const card = e.currentTarget;
-                  const rect = card.getBoundingClientRect();
-                  const x = (e.clientX - rect.left) / rect.width;
-                  const y = (e.clientY - rect.top) / rect.height;
-                  const rotateX = (y - 0.5) * 20;
-                  const rotateY = (x - 0.5) * 20;
-                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-500">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <img src="/images/projects/coursera.png" alt="Coursera" className="w-8 h-8 object-contain" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Introduction to Generative AI</h3>
-                          <p className="text-blue-400">Coursera</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-400 mt-4">Master the fundamentals of Generative AI and its applications in software development.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 flex justify-end">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/10 rounded-xl text-blue-400 hover:bg-blue-500/20 transition-colors group">
-                      View Certificate
-                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-8 perspective-1000">
-              {/* Kaggle Certificates */}
-              <div 
-                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-                onMouseMove={(e) => {
-                  const card = e.currentTarget;
-                  const rect = card.getBoundingClientRect();
-                  const x = (e.clientX - rect.left) / rect.width;
-                  const y = (e.clientY - rect.top) / rect.height;
-                  const rotateX = (y - 0.5) * 20;
-                  const rotateY = (x - 0.5) * 20;
-                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 group-hover:border-purple-500/50 transition-all duration-500">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <img src="/images/projects/kaggle.png" alt="Kaggle" className="w-8 h-8 object-contain" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Pandas & Machine Learning</h3>
-                          <p className="text-purple-400">Kaggle</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-400 mt-4">Advanced data manipulation with Pandas and introduction to machine learning concepts.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 flex justify-end">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-xl text-purple-400 hover:bg-purple-500/20 transition-colors group">
-                      View Certificate
-                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
-              </div>
-
-              {/* GDSC & Skill Nation */}
-              <div 
-                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2"
-                onMouseMove={(e) => {
-                  const card = e.currentTarget;
-                  const rect = card.getBoundingClientRect();
-                  const x = (e.clientX - rect.left) / rect.width;
-                  const y = (e.clientY - rect.top) / rect.height;
-                  const rotateX = (y - 0.5) * 20;
-                  const rotateY = (x - 0.5) * 20;
-                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 group-hover:border-pink-500/50 transition-all duration-500">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-pink-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <img src="/images/projects/gdsc.png" alt="GDSC" className="w-8 h-8 object-contain" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-pink-400 transition-colors">GDSC Member & AI Tools</h3>
-                          <p className="text-pink-400">PESU & Skill Nation</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-400 mt-4">Active member of Google Developer Student Clubs and proficiency in modern AI tools.</p>
-                    </div>
-                  </div>
-                  <div className="mt-6 flex justify-end">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-pink-500/10 rounded-xl text-pink-400 hover:bg-pink-500/20 transition-colors group">
-                      View Certificate
-                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-red-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
-              </div>
-            </div>
+          <div className="certificates-grid relative z-10">
+            {/* Certificate cards will go here */}
           </div>
 
           {/* Floating Elements */}
