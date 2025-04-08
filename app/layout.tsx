@@ -26,16 +26,16 @@ export default function RootLayout({
               <Link href="/" className="flex items-center gap-2">
                 <span className="text-2xl font-bold gradient-text">Megha Bhat</span>
               </Link>
-              <div className="flex items-center space-x-6">
-                <Link href="/" className="nav-link text-base">Home</Link>
-                <Link href="/#about" className="nav-link text-base">About</Link>
-                <Link href="/#experience" className="nav-link text-base">Experience</Link>
-                <Link href="/#projects" className="nav-link text-base">Projects</Link>
-                <Link href="/#certificates" className="nav-link text-base">Certificates</Link>
-                <Link href="/#skills" className="nav-link text-base">Skills</Link>
-                <Link href="/#hackathons" className="nav-link text-base">Hackathons</Link>
-                <Link href="/#education" className="nav-link text-base">Education</Link>
-                <Link href="/#contact" className="nav-link text-base">Contact Me</Link>
+              <div className="hidden md:flex items-center gap-6">
+                <Link href="/" className="nav-link text-sm">Home</Link>
+                <Link href="/#about" className="nav-link text-sm">About</Link>
+                <Link href="/#experience" className="nav-link text-sm">Experience</Link>
+                <Link href="/#projects" className="nav-link text-sm">Projects</Link>
+                <Link href="/#certificates" className="nav-link text-sm">Certificates</Link>
+                <Link href="/#skills" className="nav-link text-sm">Skills</Link>
+                <Link href="/#hackathons" className="nav-link text-sm">Hackathons</Link>
+                <Link href="/#education" className="nav-link text-sm">Education</Link>
+                <Link href="/#contact" className="nav-link text-sm">Contact Me</Link>
               </div>
             </nav>
           </div>

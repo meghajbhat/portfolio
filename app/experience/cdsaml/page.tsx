@@ -1,164 +1,141 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { FaArrowLeft, FaFileAlt, FaPython, FaBrain, FaCode } from 'react-icons/fa'
+import { FaArrowLeft, FaFileAlt, FaPython, FaBrain, FaCode, FaGithub } from 'react-icons/fa'
 
 export default function CdsamlExperience() {
-  const [activeSection, setActiveSection] = useState('overview')
-
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]')
-      let current = ''
-
-      sections.forEach(section => {
-        const sectionTop = (section as HTMLElement).offsetTop
-        if (window.scrollY >= sectionTop - 100) {
-          current = section.getAttribute('id') || ''
-        }
+    const handleMouseMove = (e: MouseEvent) => {
+      const cards = document.querySelectorAll('.card-3d')
+      cards.forEach((card: Element) => {
+        const rect = card.getBoundingClientRect()
+        const x = (e.clientX - rect.left) / rect.width
+        const y = (e.clientY - rect.top) / rect.height
+        const rotateX = (y - 0.5) * 20
+        const rotateY = (x - 0.5) * 20
+        (card as HTMLElement).style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`
       })
-
-      setActiveSection(current)
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
   return (
-    <main className="min-h-screen bg-[#0B1121] text-white">
-      {/* Back Button */}
-      <div className="fixed top-24 left-4 z-50">
-        <Link 
-          href="/" 
-          className="flex items-center gap-2 px-4 py-2 bg-[#1A2333] rounded-lg text-gray-400 hover:text-emerald-400 transition-colors duration-300 border border-emerald-500/10 hover:border-emerald-500/30"
-        >
-          <span>←</span> Back
-        </Link>
-      </div>
-
-      {/* Vertical Navigation */}
-      <nav className="fixed top-1/2 right-4 transform -translate-y-1/2 z-50">
-        <div className="bg-[#1A2333] p-4 rounded-lg border border-emerald-500/10">
-          <h3 className="text-sm font-medium text-emerald-400 mb-4">Quick Navigation</h3>
-          <ul className="space-y-4">
-            <li>
-              <a href="#overview" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Overview</a>
-            </li>
-            <li>
-              <a href="#first-phase" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">First Phase</a>
-            </li>
-            <li>
-              <a href="#second-phase" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Second Phase</a>
-            </li>
-            <li>
-              <a href="#key-learnings" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Key Learnings</a>
-            </li>
-            <li>
-              <a href="#impact" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Impact</a>
-            </li>
-            <li>
-              <a href="#certificate" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">Certificate</a>
-            </li>
-          </ul>
+    <div className="min-h-screen bg-[#0B1121] py-20">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-[#0B1121]/80 backdrop-blur-sm border-b border-emerald-500/20 z-50">
+        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+          <Link href="/#experience" className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors">
+            <FaArrowLeft />
+            <span>Back to Experience</span>
+          </Link>
+          <a 
+            href="https://drive.google.com/file/d/14b3ElbyzX_lQHA-32UEDasPT8ayr18MM/view?usp=drive_link"
+            target="_blank"
+            className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-all"
+          >
+            View Certificate
+          </a>
         </div>
       </nav>
 
-      {/* Content */}
-      <div className="container mx-auto max-w-4xl px-4 py-32">
-        <div className="space-y-16">
-          {/* Header */}
-          <header className="text-center space-y-4">
-            <h1 className="text-4xl font-bold">
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-                Research Intern at CDSAML
-              </span>
-            </h1>
-            <p className="text-gray-400">January 2024 - Present</p>
-          </header>
+      <div className="container mx-auto px-4 mt-12">
+        {/* Project Header */}
+        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 mb-12 transform transition-all duration-500">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold text-white">Research Intern - CDSAML</h1>
+            <div className="flex flex-wrap gap-3">
+              <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Python</span>
+              <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">LLM</span>
+              <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">CoV</span>
+              <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">CoT</span>
+              <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Mistral 7B</span>
+            </div>
+          </div>
+        </div>
 
-          {/* Overview Section */}
-          <section id="overview" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Overview</h2>
-            <p className="text-gray-400 leading-relaxed">
-              Working as a Research Intern at the Center for Data Science and Applied Machine Learning (CDSAML), focusing on measuring and reducing hallucinations in Large Language Models. The project aims to improve model reliability and accuracy through innovative techniques and methodologies.
-            </p>
-          </section>
-
-          {/* First Phase */}
-          <section id="first-phase" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">First Phase</h2>
-            <div className="space-y-4 text-gray-400">
-              <p>Key activities and achievements during the first phase:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Conducted extensive research on hallucination detection methods in LLMs</li>
-                <li>Implemented and tested various evaluation metrics</li>
-                <li>Developed baseline models for comparison</li>
-                <li>Documented findings and methodologies</li>
+        {/* Project Overview */}
+        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 mb-8 transform transition-all duration-500">
+          <h2 className="text-2xl font-bold text-white mb-4">🔍 Project Overview</h2>
+          <div className="space-y-4 text-gray-300">
+            <div>
+              <h3 className="font-bold text-emerald-400">Title:</h3>
+              <p>AI-Generated Image Detection</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-emerald-400">Goal:</h3>
+              <p>Distinguish between AI-generated and real images</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-emerald-400">Dataset:</h3>
+              <p>Kaggle's AI vs. Real Images dataset</p>
+              <ul className="list-disc list-inside mt-2 ml-4">
+                <li>30,000 AI-generated images</li>
+                <li>30,000 real images</li>
               </ul>
             </div>
-          </section>
+          </div>
+        </div>
 
-          {/* Second Phase */}
-          <section id="second-phase" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Second Phase</h2>
-            <div className="space-y-4 text-gray-400">
-              <p>Current focus areas and ongoing work:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Developing advanced techniques for hallucination reduction</li>
-                <li>Implementing React Prompting methodology</li>
-                <li>Creating Chain of Verification systems</li>
-                <li>Optimizing model performance and reliability</li>
+        {/* Phases & Progress */}
+        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 mb-8 transform transition-all duration-500">
+          <h2 className="text-2xl font-bold text-white mb-4">📁 Phases & Progress</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-bold text-emerald-400 mb-2">✅ Phase 1: Data Setup</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                <li>Loaded and preprocessed the 60K image dataset</li>
+                <li>Split into training, validation, and test sets</li>
+                <li>Handled image resizing, normalization, and data augmentation</li>
               </ul>
             </div>
-          </section>
 
-          {/* Key Learnings */}
-          <section id="key-learnings" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Key Learnings</h2>
-            <div className="space-y-4 text-gray-400">
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Deep understanding of LLM architectures and behavior</li>
-                <li>Advanced prompt engineering techniques</li>
-                <li>Research methodology and documentation</li>
-                <li>Collaborative research practices</li>
-                <li>Technical writing and presentation skills</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Impact */}
-          <section id="impact" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Impact</h2>
-            <div className="space-y-4 text-gray-400">
-              <p>The research work has contributed to:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Improved accuracy in LLM responses</li>
-                <li>Development of new evaluation metrics</li>
-                <li>Better understanding of hallucination patterns</li>
-                <li>Enhanced model reliability for critical applications</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Certificate */}
-          <section id="certificate" className="bg-[#1A2333] rounded-2xl p-8 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-6 text-emerald-400">Certificate</h2>
-            <div className="space-y-4">
-              <p className="text-gray-400">Certificate of completion will be provided upon successful completion of the internship.</p>
-              <div className="flex justify-center">
-                <Link 
-                  href="/certificates/cdsaml"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors duration-300"
-                >
-                  <span>View Certificate</span>
-                  <span>→</span>
-                </Link>
+            <div>
+              <h3 className="text-xl font-bold text-emerald-400 mb-2">✅ Phase 2: Model Development</h3>
+              <div className="space-y-4 text-gray-300 ml-4">
+                <p><span className="font-bold">Model Used:</span> ResNet18 (pretrained from torchvision)</p>
+                <p>Modified final FC layer for binary classification</p>
+                
+                <div>
+                  <p className="font-bold">Training Setup:</p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>Loss: CrossEntropyLoss</li>
+                    <li>Optimizer: Adam</li>
+                    <li>Learning Rate Scheduler: CosineAnnealing</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </section>
+
+            <div>
+              <h3 className="text-xl font-bold text-emerald-400 mb-2">🟡 Phase 3: Evaluation & Robustness</h3>
+              <div className="space-y-4 text-gray-300 ml-4">
+                <p className="font-bold">To Do:</p>
+                <ul className="list-disc list-inside ml-4">
+                  <li>Evaluate model on test data (accuracy, precision, recall, F1)</li>
+                  <li>Add robustness testing (noise, blur, JPEG compression)</li>
+                  <li>Implement Grad-CAM / Saliency Maps</li>
+                  <li>Add SHAP or LIME for image inputs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Next Steps */}
+        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 transform transition-all duration-500">
+          <h2 className="text-2xl font-bold text-white mb-4">🛠️ Next Steps</h2>
+          <ul className="space-y-2 text-gray-300 ml-4 list-disc list-inside">
+            <li>Build a web interface with Streamlit or Flask</li>
+            <li>Implement confidence metrics for classifications</li>
+            <li>Try other models (EfficientNet, Vision Transformers)</li>
+            <li>Deploy on HuggingFace Spaces or Streamlit Cloud</li>
+            <li>Create comprehensive documentation with results and examples</li>
+          </ul>
         </div>
       </div>
-    </main>
+    </div>
   )
 } 
