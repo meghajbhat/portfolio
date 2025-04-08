@@ -9,6 +9,7 @@ emailjs.init("-UCnHkBHJrirqj0Kf")
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
+  const [activeHackathon, setActiveHackathon] = useState(0)
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -21,6 +22,14 @@ export default function Home() {
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveHackathon((prev) => (prev === 0 ? 1 : 0))
+    }, 3000) // Switch every 3 seconds
+
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -485,6 +494,96 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Hackathons Section */}
+      <section id="hackathons" className="py-24 relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">CONTINUOUS LEARNING</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Hackathons
+            </span>
+          </h1>
+
+          {/* Carousel Container */}
+          <div className="relative perspective-1000 max-w-4xl mx-auto">
+            <div 
+              className="flex gap-8 transition-transform duration-500 ease-out" 
+              style={{ 
+                transform: `translateX(-${activeHackathon * 100}%) translateZ(-100px)`,
+              }}
+            >
+              {/* Dining Cost Estimator Card */}
+              <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="space-y-6">
+                  <h3 className="text-3xl font-bold text-white">DINING COST ESTIMATOR FOR TWO</h3>
+                  <p className="text-emerald-400 text-lg">2023</p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Data Analytics</span>
+                  </div>
+                  
+                  <p className="text-gray-400 leading-relaxed">
+                    This project aims to develop a sophisticated predictive model to estimate the average dinner costs at
+                    restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data
+                    analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions.
+                    This project was undertaken during my college hackathon, Epoch, showcasing our commitment to
+                    practical, data-driven solutions.
+                  </p>
+                  
+                  <a 
+                    href="https://drive.google.com/file/d/1LxPOOFp06ao65BFUbHsfI0y9nncpK59w/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    Learn More
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Speech Coach Card */}
+              <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="space-y-6">
+                  <h3 className="text-3xl font-bold text-white">SPEECH COACH</h3>
+                  <p className="text-emerald-400 text-lg">2024</p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">NodeJS</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">MongoDB</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">React</span>
+                  </div>
+                  
+                  <p className="text-gray-400 leading-relaxed">
+                    Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it
+                    detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech
+                    is grammatically correct. In addition to this, it could also convert real time communication to written
+                    words, as well as it could read written lines out loud. The project could also convert English to Japanese,
+                    Chinese and French.
+                  </p>
+                  
+                  <div className="h-[52px]"></div> {/* Spacer to align with other card's button */}
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              <button 
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeHackathon === 0 ? 'bg-emerald-500' : 'bg-gray-600'}`}
+                onClick={() => setActiveHackathon(0)}
+              ></button>
+              <button 
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeHackathon === 1 ? 'bg-emerald-500' : 'bg-gray-600'}`}
+                onClick={() => setActiveHackathon(1)}
+              ></button>
+            </div>
           </div>
         </div>
       </section>

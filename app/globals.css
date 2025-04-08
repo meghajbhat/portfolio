@@ -33,12 +33,43 @@
     position: relative;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     transition: all 0.3s ease;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 1;
+  }
+
+  .hexagon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(215deg, #10b981, #3b82f6, #8b5cf6);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .hexagon::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(215deg, #10b981, #3b82f6, #8b5cf6);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    filter: blur(10px);
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   .hexagon:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .hexagon:hover::before {
+    opacity: 1;
+  }
+
+  .hexagon:hover::after {
+    opacity: 0.5;
   }
 
   .nav-link {
