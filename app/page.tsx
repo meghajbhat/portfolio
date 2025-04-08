@@ -25,10 +25,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#0B1121] text-white">
-      {/* Hero Section */}
+      {/* Hero Section - "Hi I'm Megha Bhat" */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="container mx-auto px-4 py-32">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-7xl font-bold mb-6">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
@@ -36,10 +36,10 @@ export default function Home() {
               </span>
             </h1>
             <h2 className="text-3xl font-medium text-gray-400 mb-12">Computer Science student at PES University</h2>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl">
+            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
               Exploring the intersection of technology and creativity. Passionate about building innovative solutions and learning new technologies.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex justify-center gap-6 mb-12">
               <a 
                 href="https://github.com/meghajbhat" 
                 target="_blank" 
@@ -62,8 +62,25 @@ export default function Home() {
                 <FaCode className="text-2xl" />
               </a>
             </div>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="#contact" 
+                className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full text-white font-medium hover:scale-105 transition-transform"
+              >
+                Get in Touch
+              </a>
+              <a 
+                href="#about" 
+                className="px-8 py-3 border border-emerald-500/50 rounded-full text-emerald-400 font-medium hover:bg-emerald-500/10 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
+        {/* Animated background elements */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full filter blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
       </section>
 
       {/* About Section */}
@@ -125,165 +142,6 @@ export default function Home() {
               <p className="text-lg text-gray-400">
                 Currently, I'm focused on developing my skills in full-stack development, artificial intelligence, and cloud computing. I love taking on challenging projects that push my boundaries and help me grow as a developer.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section id="education" className="py-24 relative">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">WHAT I HAVE STUDIED SO FAR</h2>
-          <h1 className="text-8xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Education.
-            </span>
-          </h1>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-emerald-500/20"></div>
-
-            {/* PES University */}
-            <div className="relative mb-20">
-              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/projects/pes-logo.png" alt="PES University" className="w-10 h-10 object-contain" />
-                </div>
-              </div>
-              <div className="ml-[calc(50%+48px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl font-bold text-white mb-2">Computer Science Bachelors</h3>
-                <p className="text-emerald-400 text-lg mb-2">PES University, Bengaluru, India</p>
-                <p className="text-gray-400 mb-1">September 2022 - May 2026</p>
-                <p className="text-gray-400">CGPA: 7.47</p>
-              </div>
-            </div>
-
-            {/* BASE PU College */}
-            <div className="relative mb-20">
-              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/projects/base-logo.png" alt="BASE PU College" className="w-10 h-10 object-contain" />
-                </div>
-              </div>
-              <div className="mr-[calc(50%+48px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl font-bold text-white mb-2">Class XII PU</h3>
-                <p className="text-emerald-400 text-lg mb-2">BASE PU College, Bengaluru, India</p>
-                <p className="text-gray-400 mb-1">July 2020 - May 2022</p>
-                <p className="text-gray-400">Physics, Chemistry, Mathematics, Computer Science</p>
-              </div>
-            </div>
-
-            {/* PSBB LLA */}
-            <div className="relative">
-              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                  <img src="/images/projects/psbb-logo.png" alt="PSBB LLA" className="w-10 h-10 object-contain" />
-                </div>
-              </div>
-              <div className="ml-[calc(50%+48px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl font-bold text-white mb-2">Class X School</h3>
-                <p className="text-emerald-400 text-lg mb-2">PSBB LLA, Bengaluru, India</p>
-                <p className="text-gray-400 mb-1">July 2019 - July 2020</p>
-                <p className="text-gray-400">Physics, Chemistry, Social Science, Mathematics</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certificates Section */}
-      <section id="certificates" className="py-24 relative">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">MY ACHIEVEMENTS</h2>
-          <h1 className="text-8xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Certificates.
-            </span>
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Certificates Grid */}
-            <div className="space-y-6">
-              {/* Atlassian Certificate */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
-                    <p className="text-emerald-400 mt-1">Atlassian</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Coursera Certificates */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Introduction to Generative AI for Software Development</h3>
-                    <p className="text-emerald-400 mt-1">Coursera</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Kaggle Certificates */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Pandas & Intro To Machine Learning</h3>
-                    <p className="text-emerald-400 mt-1">Kaggle</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              {/* Coursera Data Science */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">What is Data Science?</h3>
-                    <p className="text-emerald-400 mt-1">Coursera</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* GDSC & Skill Nation */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">GDSC Member & ChatGPT and AI Tools</h3>
-                    <p className="text-emerald-400 mt-1">PESU & Skill Nation</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* PESU IO & Python */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">OpenCV with Python & Getting Started With Python</h3>
-                    <p className="text-emerald-400 mt-1">PESU IO & Coursera</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -533,6 +391,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Certificates Section */}
+      <section id="certificates" className="py-24 relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">MY ACHIEVEMENTS</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Certificates.
+            </span>
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Certificates Grid */}
+            <div className="space-y-6">
+              {/* Atlassian Certificate */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
+                    <p className="text-emerald-400 mt-1">Atlassian</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Coursera Certificates */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Introduction to Generative AI for Software Development</h3>
+                    <p className="text-emerald-400 mt-1">Coursera</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Kaggle Certificates */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Pandas & Intro To Machine Learning</h3>
+                    <p className="text-emerald-400 mt-1">Kaggle</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {/* Coursera Data Science */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">What is Data Science?</h3>
+                    <p className="text-emerald-400 mt-1">Coursera</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* GDSC & Skill Nation */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">GDSC Member & ChatGPT and AI Tools</h3>
+                    <p className="text-emerald-400 mt-1">PESU & Skill Nation</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+
+              {/* PESU IO & Python */}
+              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">OpenCV with Python & Getting Started With Python</h3>
+                    <p className="text-emerald-400 mt-1">PESU IO & Coursera</p>
+                  </div>
+                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
+                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section id="skills" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -656,6 +611,68 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Tools&gt;</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-24 relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">WHAT I HAVE STUDIED SO FAR</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Education.
+            </span>
+          </h1>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-emerald-500/20"></div>
+
+            {/* PES University */}
+            <div className="relative mb-20">
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                  <img src="/images/projects/pes-logo.png" alt="PES University" className="w-10 h-10 object-contain" />
+                </div>
+              </div>
+              <div className="ml-[calc(50%+48px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-3xl font-bold text-white mb-2">Computer Science Bachelors</h3>
+                <p className="text-emerald-400 text-lg mb-2">PES University, Bengaluru, India</p>
+                <p className="text-gray-400 mb-1">September 2022 - May 2026</p>
+                <p className="text-gray-400">CGPA: 7.47</p>
+              </div>
+            </div>
+
+            {/* BASE PU College */}
+            <div className="relative mb-20">
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                  <img src="/images/projects/base-logo.png" alt="BASE PU College" className="w-10 h-10 object-contain" />
+                </div>
+              </div>
+              <div className="mr-[calc(50%+48px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-3xl font-bold text-white mb-2">Class XII PU</h3>
+                <p className="text-emerald-400 text-lg mb-2">BASE PU College, Bengaluru, India</p>
+                <p className="text-gray-400 mb-1">July 2020 - May 2022</p>
+                <p className="text-gray-400">Physics, Chemistry, Mathematics, Computer Science</p>
+              </div>
+            </div>
+
+            {/* PSBB LLA */}
+            <div className="relative">
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-14 h-14 rounded-full bg-[#0B1121] border-4 border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                  <img src="/images/projects/psbb-logo.png" alt="PSBB LLA" className="w-10 h-10 object-contain" />
+                </div>
+              </div>
+              <div className="ml-[calc(50%+48px)] max-w-[500px] bg-[#0B1121] rounded-2xl p-6 transform hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-3xl font-bold text-white mb-2">Class X School</h3>
+                <p className="text-emerald-400 text-lg mb-2">PSBB LLA, Bengaluru, India</p>
+                <p className="text-gray-400 mb-1">July 2019 - July 2020</p>
+                <p className="text-gray-400">Physics, Chemistry, Social Science, Mathematics</p>
+              </div>
             </div>
           </div>
         </div>

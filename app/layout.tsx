@@ -20,30 +20,25 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex justify-between items-center">
-              <Link href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
-                <img 
-                  src="/images/projects/profile.jpg" 
-                  alt="Megha Bhat" 
-                  className="w-16 h-16 rounded-full object-cover border-2 border-gray-100"
-                />
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B1121] border-b border-emerald-500/20">
+          <div className="container mx-auto px-4">
+            <nav className="flex items-center justify-between h-20">
+              <Link href="/" className="flex items-center gap-2">
                 <span className="text-2xl font-bold gradient-text">Megha Bhat</span>
               </Link>
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-6">
                 <Link href="/" className="nav-link text-base">Home</Link>
+                <Link href="/#about" className="nav-link text-base">About</Link>
                 <Link href="/#experience" className="nav-link text-base">Experience</Link>
                 <Link href="/#projects" className="nav-link text-base">Projects</Link>
+                <Link href="/#certificates" className="nav-link text-base">Certificates</Link>
                 <Link href="/#skills" className="nav-link text-base">Skills</Link>
                 <Link href="/#education" className="nav-link text-base">Education</Link>
-                <Link href="/#certifications" className="nav-link text-base">Certifications</Link>
-                <Link href="/#achievements" className="nav-link text-base">Achievements</Link>
                 <Link href="/#contact" className="nav-link text-base">Contact</Link>
               </div>
-            </div>
+            </nav>
           </div>
-        </nav>
+        </header>
         <main className="pt-24">
           <SparklesCursor />
           {children}

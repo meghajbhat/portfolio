@@ -21,9 +21,9 @@ export default function UniversityChatbotPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0B1121] text-white overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B1121] border-b border-emerald-500/20">
+    <div className="min-h-screen bg-[#0B1121] text-white overflow-x-hidden pt-20">
+      {/* Project-specific Navigation */}
+      <div className="fixed top-20 left-0 right-0 z-40 bg-[#0B1121]/90 backdrop-blur-sm border-b border-emerald-500/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link 
@@ -36,6 +36,7 @@ export default function UniversityChatbotPage() {
             <a 
               href="https://github.com/meghajbhat/university-chatbot" 
               target="_blank" 
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors group"
             >
               <span>View on GitHub</span>
@@ -43,7 +44,7 @@ export default function UniversityChatbotPage() {
             </a>
           </div>
         </div>
-      </nav>
+      </div>
 
       {/* Main Content */}
       <main className="pt-32 pb-16">
