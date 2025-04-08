@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { FaGithub, FaArrowLeft, FaHospital, FaDatabase, FaCode, FaUserMd } from 'react-icons/fa';
+import { FaGithub, FaArrowLeft, FaHospital, FaCode, FaBrain, FaUserMd, FaUserInjured, FaUserShield } from 'react-icons/fa';
 import '../../globals.css';
 
 export default function PatientRecordsPage() {
@@ -34,7 +34,7 @@ export default function PatientRecordsPage() {
               <span>Back to Portfolio</span>
             </Link>
             <a 
-              href="https://github.com/meghajbhat/patient-records" 
+              href="https://github.com/meghajbhat/Patient-Records-Management-System" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors group"
@@ -76,12 +76,12 @@ export default function PatientRecordsPage() {
                   </span>
                 </h1>
                 <p className="text-xl text-gray-400 mb-8 text-center max-w-3xl mx-auto">
-                  A comprehensive hospital management system for efficient patient care and record keeping
+                  A comprehensive web-based system for managing hospital operations, patient records, and medical workflows
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">MySQL</span>
                   <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">Python</span>
                   <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">Flask</span>
+                  <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">SQLite</span>
                 </div>
               </div>
             </div>
@@ -95,12 +95,12 @@ export default function PatientRecordsPage() {
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500 h-full">
                 <div className="absolute -top-6 left-6">
                   <div className="w-12 h-12 bg-[#0B1121] rounded-xl border border-emerald-500/30 flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <FaUserMd className="text-2xl text-emerald-400" />
+                    <FaHospital className="text-2xl text-emerald-400" />
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-6 pt-6 text-white group-hover:text-emerald-400 transition-colors duration-300">Overview</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  A web-based hospital management system designed to streamline patient care operations. The system manages patient records, appointments, prescriptions, and billing with role-based access control for different hospital staff members.
+                  A robust web-based application designed for hospitals and healthcare providers to streamline the management of patient records, appointments, prescriptions, and billing. Built using Python Flask, the system ensures efficient coordination between administrators, doctors, and patients in a secure environment.
                 </p>
               </div>
             </div>
@@ -118,19 +118,19 @@ export default function PatientRecordsPage() {
                 <ul className="space-y-4 text-gray-400">
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Patient registration and medical history tracking</span>
+                    <span>Role-based access control</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Appointment scheduling and management</span>
+                    <span>Appointment management system</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Digital prescription and medication tracking</span>
+                    <span>Prescription tracking</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Automated billing and payment processing</span>
+                    <span>Billing and payment processing</span>
                   </li>
                 </ul>
               </div>
@@ -142,50 +142,71 @@ export default function PatientRecordsPage() {
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
                 <div className="absolute -top-6 left-6">
                   <div className="w-12 h-12 bg-[#0B1121] rounded-xl border border-emerald-500/30 flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <FaDatabase className="text-2xl text-emerald-400" />
+                    <FaBrain className="text-2xl text-emerald-400" />
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-6 pt-6 text-white group-hover:text-emerald-400 transition-colors duration-300">Technical Implementation</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-gray-300">Backend Components</h3>
+                    <h3 className="text-xl font-semibold text-gray-300">Patient Features</h3>
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Flask RESTful API architecture</span>
+                        <span>Personal dashboard</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>MySQL database with optimized queries</span>
+                        <span>Appointment booking</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>JWT-based authentication system</span>
+                        <span>Prescription history</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Role-based access control (RBAC)</span>
+                        <span>Billing information</span>
                       </li>
                     </ul>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-gray-300">System Features</h3>
+                    <h3 className="text-xl font-semibold text-gray-300">Doctor Features</h3>
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Real-time data synchronization</span>
+                        <span>Patient management</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Automated report generation</span>
+                        <span>Prescription creation</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Secure data encryption</span>
+                        <span>Appointment scheduling</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Audit trail logging</span>
+                        <span>Medical records access</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold text-gray-300">Admin Features</h3>
+                    <ul className="space-y-3 text-gray-400">
+                      <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
+                        <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                        <span>User management</span>
+                      </li>
+                      <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
+                        <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                        <span>System configuration</span>
+                      </li>
+                      <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
+                        <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                        <span>Reports generation</span>
+                      </li>
+                      <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
+                        <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                        <span>Data analytics</span>
                       </li>
                     </ul>
                   </div>

@@ -34,7 +34,7 @@ export default function ChatbotPage() {
               <span>Back to Portfolio</span>
             </Link>
             <a 
-              href="https://github.com/meghajbhat/chatbot" 
+              href="https://github.com/meghajbhat/Simple-Chatbot" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors group"
@@ -72,16 +72,16 @@ export default function ChatbotPage() {
 
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center pt-12">
                   <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-                    AI-Powered Chatbot
+                    Simple Chatbot
                   </span>
                 </h1>
                 <p className="text-xl text-gray-400 mb-8 text-center max-w-3xl mx-auto">
-                  An intelligent conversational AI system using OpenAI's GPT-3.5-turbo model
+                  A client-server chatbot using OpenAI's GPT-3.5-turbo model for intelligent conversations
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">Python</span>
-                  <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">ChatGPT API</span>
-                  <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">Networks</span>
+                  <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">GPT-3.5-turbo</span>
+                  <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">HTTP</span>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function ChatbotPage() {
                 </div>
                 <h2 className="text-2xl font-bold mb-6 pt-6 text-white group-hover:text-emerald-400 transition-colors duration-300">Overview</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  A sophisticated chatbot leveraging OpenAI's GPT-3.5-turbo model to provide intelligent responses. The system features a client-server architecture for efficient natural language processing and real-time communication.
+                  A simple yet powerful chatbot implementation using OpenAI's GPT-3.5-turbo model. The system features a client-server architecture with HTTP communication, providing a seamless interface for users to interact with the AI model.
                 </p>
               </div>
             </div>
@@ -118,19 +118,19 @@ export default function ChatbotPage() {
                 <ul className="space-y-4 text-gray-400">
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Natural language understanding and processing</span>
+                    <span>Simple command-line interface</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Real-time response generation</span>
+                    <span>Proxy server for API requests</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Context-aware conversations</span>
+                    <span>Conversation history tracking</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Efficient client-server communication</span>
+                    <span>Secure API communication</span>
                   </li>
                 </ul>
               </div>
@@ -148,44 +148,44 @@ export default function ChatbotPage() {
                 <h2 className="text-2xl font-bold mb-6 pt-6 text-white group-hover:text-emerald-400 transition-colors duration-300">Technical Implementation</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-gray-300">AI Components</h3>
+                    <h3 className="text-xl font-semibold text-gray-300">Client Components</h3>
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>GPT-3.5-turbo integration</span>
+                        <span>Command-line interface</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Natural language processing</span>
+                        <span>HTTP request handling</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Context management</span>
+                        <span>User input processing</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Response optimization</span>
+                        <span>Response display</span>
                       </li>
                     </ul>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-gray-300">System Architecture</h3>
+                    <h3 className="text-xl font-semibold text-gray-300">Server Components</h3>
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Client-server architecture</span>
+                        <span>OpenAI API integration</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>WebSocket communication</span>
+                        <span>Port 65432 server</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Error handling system</span>
+                        <span>Request processing</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Rate limiting and caching</span>
+                        <span>Response formatting</span>
                       </li>
                     </ul>
                   </div>

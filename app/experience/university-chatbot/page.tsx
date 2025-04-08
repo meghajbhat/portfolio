@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { FaGithub, FaArrowLeft, FaRobot, FaUniversity, FaCode, FaBrain } from 'react-icons/fa';
+import { FaGithub, FaArrowLeft, FaRobot, FaCode, FaBrain, FaGraduationCap } from 'react-icons/fa';
 import '../../globals.css';
 
 export default function UniversityChatbotPage() {
@@ -34,7 +34,7 @@ export default function UniversityChatbotPage() {
               <span>Back to Portfolio</span>
             </Link>
             <a 
-              href="https://github.com/meghajbhat/university-chatbot" 
+              href="https://github.com/meghajbhat/University-Admission-Chatbot" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors group"
@@ -65,7 +65,7 @@ export default function UniversityChatbotPage() {
                   <div className="relative w-24 h-24">
                     <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl rotate-45 animate-spin-slow"></div>
                     <div className="absolute inset-1 bg-[#1A2333] rounded-2xl flex items-center justify-center">
-                      <FaRobot className="text-4xl text-emerald-400" />
+                      <FaGraduationCap className="text-4xl text-emerald-400" />
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function UniversityChatbotPage() {
                   </span>
                 </h1>
                 <p className="text-xl text-gray-400 mb-8 text-center max-w-3xl mx-auto">
-                  An intelligent chatbot for student admission support, powered by advanced AI
+                  An intelligent chatbot assisting prospective students with admission procedures, courses, and campus information
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <span className="px-6 py-3 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/70 transition-all duration-300 transform hover:scale-110">Python</span>
@@ -95,12 +95,12 @@ export default function UniversityChatbotPage() {
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500 h-full">
                 <div className="absolute -top-6 left-6">
                   <div className="w-12 h-12 bg-[#0B1121] rounded-xl border border-emerald-500/30 flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <FaUniversity className="text-2xl text-emerald-400" />
+                    <FaRobot className="text-2xl text-emerald-400" />
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-6 pt-6 text-white group-hover:text-emerald-400 transition-colors duration-300">Overview</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  This chatbot is designed to assist prospective students with inquiries related to admission procedures, courses offered, campus facilities, and more. Powered by AIML and TensorFlow, it provides accurate and timely information to help streamline the admission process.
+                  A specialized chatbot designed to assist prospective students with inquiries about admission procedures, courses offered, and campus facilities. Powered by AIML and TensorFlow, it provides accurate and timely information to streamline the admission process.
                 </p>
               </div>
             </div>
@@ -118,19 +118,19 @@ export default function UniversityChatbotPage() {
                 <ul className="space-y-4 text-gray-400">
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Admission procedure guidance with step-by-step assistance</span>
+                    <span>Comprehensive responses about admission procedures</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Comprehensive course information and curriculum details</span>
+                    <span>Detailed campus information and facilities</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>Interactive campus facility information and virtual tour</span>
+                    <span>Application process assistance</span>
                   </li>
                   <li className="flex items-start gap-3 transform hover:translate-x-2 transition-transform">
                     <span className="text-emerald-400 mt-1">•</span>
-                    <span>24/7 intelligent student support with quick response time</span>
+                    <span>Insights into academic life and support services</span>
                   </li>
                 </ul>
               </div>
@@ -148,15 +148,15 @@ export default function UniversityChatbotPage() {
                 <h2 className="text-2xl font-bold mb-6 pt-6 text-white group-hover:text-emerald-400 transition-colors duration-300">Technical Implementation</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-gray-300">AI/ML Components</h3>
+                    <h3 className="text-xl font-semibold text-gray-300">AI Components</h3>
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Advanced AIML pattern matching</span>
+                        <span>AIML for pattern matching</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>TensorFlow deep learning models</span>
+                        <span>TensorFlow for deep learning</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
@@ -164,7 +164,7 @@ export default function UniversityChatbotPage() {
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Dynamic knowledge base integration</span>
+                        <span>Context-aware responses</span>
                       </li>
                     </ul>
                   </div>
@@ -173,19 +173,19 @@ export default function UniversityChatbotPage() {
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Real-time response generation</span>
+                        <span>Modular architecture</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Context-aware conversation flow</span>
+                        <span>JSON data storage</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Multi-language support system</span>
+                        <span>Model persistence (.pkl, .h5)</span>
                       </li>
                       <li className="flex items-center gap-3 transform hover:translate-x-2 transition-transform">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        <span>Continuous learning capabilities</span>
+                        <span>Cross-platform compatibility</span>
                       </li>
                     </ul>
                   </div>
