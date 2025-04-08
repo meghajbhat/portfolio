@@ -521,18 +521,10 @@ export default function Home() {
           </h1>
 
           <div className="max-w-4xl mx-auto">
-            {/* Programming Category */}
+            {/* Programming Languages Category */}
             <div className="mb-12">
-              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Programming&gt;</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Programming Languages&gt;</h3>
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
-                <div className="group">
-                  <div className="skill-icon">
-                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                      <img src="/images/projects/python.png" alt="Python" className="w-12 h-12 object-contain" />
-                    </div>
-                  </div>
-                  <p className="text-center text-gray-400 mt-2">Python</p>
-                </div>
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
@@ -544,10 +536,18 @@ export default function Home() {
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                      <img src="/images/projects/js.png" alt="JavaScript" className="w-12 h-12 object-contain" />
+                      <img src="/images/projects/python.png" alt="Python" className="w-12 h-12 object-contain" />
                     </div>
                   </div>
-                  <p className="text-center text-gray-400 mt-2">JavaScript</p>
+                  <p className="text-center text-gray-400 mt-2">Python</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/c.png" alt="C" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">C</p>
                 </div>
                 <div className="group">
                   <div className="skill-icon">
@@ -568,19 +568,43 @@ export default function Home() {
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/js.png" alt="JavaScript" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">JavaScript</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/java.png" alt="Java" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Java</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
                       <img src="/images/projects/matlab.png" alt="MATLAB" className="w-12 h-12 object-contain" />
                     </div>
                   </div>
                   <p className="text-center text-gray-400 mt-2">MATLAB</p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Programming&gt;</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Programming Languages&gt;</h3>
             </div>
 
             {/* Libraries/Frameworks Category */}
             <div className="mb-12">
-              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Libraries&gt;</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Libraries/Frameworks&gt;</h3>
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/opencv.png" alt="OpenCV" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">OpenCV</p>
+                </div>
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
@@ -588,6 +612,14 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-center text-gray-400 mt-2">React</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/scikit.png" alt="Scikit-Learn" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Scikit-Learn</p>
                 </div>
                 <div className="group">
                   <div className="skill-icon">
@@ -600,18 +632,42 @@ export default function Home() {
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                      <img src="/images/projects/tensorflow.png" alt="TensorFlow" className="w-12 h-12 object-contain" />
+                      <img src="/images/projects/html.png" alt="HTML" className="w-12 h-12 object-contain" />
                     </div>
                   </div>
-                  <p className="text-center text-gray-400 mt-2">TensorFlow</p>
+                  <p className="text-center text-gray-400 mt-2">HTML</p>
                 </div>
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                      <img src="/images/projects/opencv.png" alt="OpenCV" className="w-12 h-12 object-contain" />
+                      <img src="/images/projects/css.png" alt="CSS" className="w-12 h-12 object-contain" />
                     </div>
                   </div>
-                  <p className="text-center text-gray-400 mt-2">OpenCV</p>
+                  <p className="text-center text-gray-400 mt-2">CSS</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/pandas.png" alt="Pandas" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Pandas</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/numpy.png" alt="NumPy" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">NumPy</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/tensorflow.png" alt="TensorFlow" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">TensorFlow</p>
                 </div>
                 <div className="group">
                   <div className="skill-icon">
@@ -621,14 +677,46 @@ export default function Home() {
                   </div>
                   <p className="text-center text-gray-400 mt-2">Flask</p>
                 </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/flutter.png" alt="Flutter" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Flutter</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/spring.png" alt="Spring Boot" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Spring Boot</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/nextjs.png" alt="Next.js" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Next.js</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Libraries&gt;</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Libraries/Frameworks&gt;</h3>
             </div>
 
-            {/* Tools Category */}
-            <div>
-              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Tools&gt;</h3>
+            {/* Tools / Platforms Category */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Tools / Platforms&gt;</h3>
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/colab.png" alt="Google Colab" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Google Colab</p>
+                </div>
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
@@ -636,6 +724,14 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-center text-gray-400 mt-2">GitHub</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/kaggle.png" alt="Kaggle" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Kaggle</p>
                 </div>
                 <div className="group">
                   <div className="skill-icon">
@@ -648,10 +744,18 @@ export default function Home() {
                 <div className="group">
                   <div className="skill-icon">
                     <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
-                      <img src="/images/projects/kafka.png" alt="Kafka" className="w-12 h-12 object-contain" />
+                      <img src="/images/projects/kafka.png" alt="Apache Kafka" className="w-12 h-12 object-contain" />
                     </div>
                   </div>
-                  <p className="text-center text-gray-400 mt-2">Kafka</p>
+                  <p className="text-center text-gray-400 mt-2">Apache Kafka</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/spark.png" alt="Spark" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Spark</p>
                 </div>
                 <div className="group">
                   <div className="skill-icon">
@@ -661,8 +765,64 @@ export default function Home() {
                   </div>
                   <p className="text-center text-gray-400 mt-2">Hadoop</p>
                 </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/jira.png" alt="Jira" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Jira</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/docker.png" alt="Docker" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Docker</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/vercel.png" alt="Vercel" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Vercel</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/maven.png" alt="Maven" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">Maven</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Tools&gt;</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Tools / Platforms&gt;</h3>
+            </div>
+
+            {/* Databases Category */}
+            <div>
+              <h3 className="text-xl font-bold text-[#8B5CF6] mb-6">&lt;Databases&gt;</h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-4">
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/mongodb.png" alt="MongoDB" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">MongoDB</p>
+                </div>
+                <div className="group">
+                  <div className="skill-icon">
+                    <div className="hexagon bg-[#1A1A2E] hover:bg-[#1A1A2E]/80 transition-all duration-300 p-6 flex items-center justify-center transform hover:scale-110">
+                      <img src="/images/projects/mysql.png" alt="MySQL" className="w-12 h-12 object-contain" />
+                    </div>
+                  </div>
+                  <p className="text-center text-gray-400 mt-2">MySQL</p>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-[#8B5CF6] text-right">&lt;/Databases&gt;</h3>
             </div>
           </div>
         </div>
@@ -837,23 +997,9 @@ export default function Home() {
             </span>
           </h1>
 
-          <div className="certificates-grid relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
             {/* Jira Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -883,21 +1029,7 @@ export default function Home() {
             </div>
 
             {/* Generative AI Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -927,21 +1059,7 @@ export default function Home() {
             </div>
 
             {/* Pandas Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 group-hover:border-purple-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -971,21 +1089,7 @@ export default function Home() {
             </div>
 
             {/* Machine Learning Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 group-hover:border-pink-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -1015,21 +1119,7 @@ export default function Home() {
             </div>
 
             {/* Data Science Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 group-hover:border-red-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -1059,21 +1149,7 @@ export default function Home() {
             </div>
 
             {/* GDSC Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -1103,21 +1179,7 @@ export default function Home() {
             </div>
 
             {/* ChatGPT and AI Tools Certificate */}
-            <div 
-              className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-              onMouseMove={(e) => {
-                const card = e.currentTarget;
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * 20;
-                const rotateY = (x - 0.5) * 20;
-                card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
-            >
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 group-hover:border-green-500/50 transition-all duration-500">
                 <div className="flex items-start justify-between">
@@ -1204,6 +1266,36 @@ export default function Home() {
               </div>
             </div>
 
+            {/* SQL Basic HackerRank Certificate */}
+            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 group-hover:border-orange-500/50 transition-all duration-500">
+                <div className="flex items-start justify-between">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-orange-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img src="/images/projects/hackerrank.png" alt="HackerRank" className="w-8 h-8 object-contain" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">SQL Basic</h3>
+                        <p className="text-orange-400">HackerRank</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1Hs_Hs_Hs_Hs_Hs_Hs_Hs_Hs_Hs_Hs_Hs/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-orange-500/10 rounded-xl text-orange-400 hover:bg-orange-500/20 transition-colors group"
+                  >
+                    View Certificate
+                    <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
+            </div>
+
             {/* cHEAL Symposium Certificate */}
             <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -1232,80 +1324,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Second Generative AI Certificate */}
-            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 group-hover:border-indigo-500/50 transition-all duration-500">
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-indigo-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <img src="/images/projects/coursera.png" alt="Coursera" className="w-8 h-8 object-contain" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Introduction to Generative AI for Software Development</h3>
-                        <p className="text-indigo-400">Coursera</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 flex justify-end">
-                  <button 
-                    onClick={() => window.open('https://drive.google.com/file/d/1h-sPdjRfC-3ej0Dz7nCKBWTpASw_oI6O/view?usp=drive_link', '_blank')}
-                    className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-xl text-indigo-400 hover:bg-indigo-500/20 transition-colors group"
-                  >
-                    View Certificate
-                    <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* HackerRank SQL Certificate */}
-            <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2">
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/20 group-hover:border-violet-500/50 transition-all duration-500">
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-violet-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <img src="/images/projects/hackerrank.png" alt="HackerRank" className="w-8 h-8 object-contain" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-violet-400 transition-colors">SQL (Basic)</h3>
-                        <p className="text-violet-400">HackerRank</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 flex justify-end">
-                  <button 
-                    onClick={() => window.open('https://drive.google.com/file/d/1czpd00GM9ZfCyYbczzwSg39IYs4SD3K-/view?usp=drive_link', '_blank')}
-                    className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-xl text-green-400 hover:bg-green-500/20 transition-colors group"
-                  >
-                    View Certificate
-                    <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-emerald-400/20 rounded-full"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animation: `float ${5 + Math.random() * 5}s linear infinite`,
-                  animationDelay: `${-Math.random() * 5}s`,
-                }}
-              />
-            ))}
           </div>
         </div>
       </section>
