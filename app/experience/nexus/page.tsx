@@ -1,11 +1,12 @@
 'use client'
+
 import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
 
 export default function NexusPage() {
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent): void => {
       const cards = document.querySelectorAll('.card-3d')
       cards.forEach((card: Element) => {
         const rect = card.getBoundingClientRect()
@@ -13,7 +14,8 @@ export default function NexusPage() {
         const y = (e.clientY - rect.top) / rect.height
         const rotateX = (y - 0.5) * 20
         const rotateY = (x - 0.5) * 20
-        (card as HTMLElement).style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`
+        const element = card as HTMLElement
+        element.style.transform = 'perspective(1000px) rotateX(' + (-rotateX) + 'deg) rotateY(' + rotateY + 'deg)'
       })
     }
 

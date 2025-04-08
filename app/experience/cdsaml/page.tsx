@@ -5,7 +5,7 @@ import { FaArrowLeft, FaFileAlt, FaPython, FaBrain, FaCode, FaGithub } from 'rea
 
 export default function CdsamlExperience() {
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent): void => {
       const cards = document.querySelectorAll('.card-3d');
       cards.forEach((card: Element) => {
         const rect = card.getBoundingClientRect();
@@ -13,7 +13,8 @@ export default function CdsamlExperience() {
         const y = (e.clientY - rect.top) / rect.height;
         const rotateX = (y - 0.5) * 20;
         const rotateY = (x - 0.5) * 20;
-        (card as HTMLElement).style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+        const element = card as HTMLElement;
+        element.style.transform = 'perspective(1000px) rotateX(' + (-rotateX) + 'deg) rotateY(' + rotateY + 'deg)';
       });
     };
 
