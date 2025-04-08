@@ -396,7 +396,7 @@ export default function Home() {
           {/* 3D Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 perspective-1000">
             {/* Patient Records Management System */}
-            <div className="group">
+            <Link href="/experience/patient-records" className="group">
               <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2 hover:translate-y-[-10px] preserve-3d">
                 {/* Background Gradient Animation */}
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -422,7 +422,7 @@ export default function Home() {
 
                   {/* Project Description */}
                   <p className="text-gray-400 mb-8 line-clamp-3">
-                    A comprehensive web application designed for efficient hospital operations management, featuring patient record tracking, appointment scheduling, and medical history management.
+                    A web-based application for efficient hospital operations management, featuring patient records, appointments, prescriptions, and billing with role-based access control.
                   </p>
 
                   {/* Tech Stack */}
@@ -438,10 +438,10 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* AI-Powered Chatbot */}
-            <div className="group">
+            <Link href="/experience/chatbot" className="group">
               <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
                 {/* Background Gradient Animation */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -467,15 +467,15 @@ export default function Home() {
 
                   {/* Project Description */}
                   <p className="text-gray-400 mb-8 line-clamp-3">
-                    An advanced chatbot system leveraging natural language processing for intelligent conversations and automated responses.
+                    A simple chatbot using OpenAI's GPT-3.5-turbo model with client-server architecture for natural language processing and intelligent responses.
                   </p>
 
                   {/* Tech Stack */}
                   <div className="absolute bottom-8 left-8 right-8">
                     <div className="flex flex-wrap gap-3">
                       <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Python</span>
-                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">TensorFlow</span>
-                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">NLP</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">ChatGPT API</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Networks</span>
                     </div>
                   </div>
 
@@ -483,10 +483,10 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            {/* Portfolio Website */}
-            <div className="group">
+            {/* University Admission Chatbot */}
+            <Link href="/experience/university-chatbot" className="group">
               <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2 hover:translate-y-[-10px] preserve-3d">
                 {/* Background Gradient Animation */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-emerald-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -497,12 +497,12 @@ export default function Home() {
                   <div className="flex justify-between items-start mb-6">
                     <div className="space-y-2">
                       <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
-                        Portfolio Website
+                        University Admission Chatbot
                       </h3>
-                      <p className="text-gray-400">Personal Portfolio Showcase</p>
+                      <p className="text-gray-400">Student Support System</p>
                     </div>
                     <a 
-                      href="https://github.com/meghajbhat/portfolio" 
+                      href="https://github.com/meghajbhat/university-chatbot" 
                       target="_blank" 
                       className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
                     >
@@ -512,15 +512,15 @@ export default function Home() {
 
                   {/* Project Description */}
                   <p className="text-gray-400 mb-8 line-clamp-3">
-                    A modern, responsive portfolio website built with Next.js and Tailwind CSS, featuring 3D animations and interactive elements.
+                    An intelligent chatbot designed to assist prospective students with admission procedures, courses, and campus facilities using AIML and TensorFlow.
                   </p>
 
                   {/* Tech Stack */}
                   <div className="absolute bottom-8 left-8 right-8">
                     <div className="flex flex-wrap gap-3">
-                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Next.js</span>
-                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">React</span>
-                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Tailwind</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Python</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">AIML</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">TensorFlow</span>
                     </div>
                   </div>
 
@@ -528,7 +528,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
