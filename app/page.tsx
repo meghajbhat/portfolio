@@ -858,7 +858,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1Qfnc5xVtXsuOH_TdosH0j5Qg5gtYDHj-/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -899,7 +902,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/10 rounded-xl text-blue-400 hover:bg-blue-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/19ekVX1QYbL5twJjjVf7_bUmAY7hLrQrD/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-500/10 rounded-xl text-blue-400 hover:bg-blue-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -940,7 +946,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-xl text-purple-400 hover:bg-purple-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/10j_FCCwXHr122mFIIyguiSgo0Fa3xGMs/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-xl text-purple-400 hover:bg-purple-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -981,7 +990,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-pink-500/10 rounded-xl text-pink-400 hover:bg-pink-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/158-LGU5K0PXMUWq34UKozraz6U9Y2qBe/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-pink-500/10 rounded-xl text-pink-400 hover:bg-pink-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1022,7 +1034,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-red-500/10 rounded-xl text-red-400 hover:bg-red-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/18Upa_pyLfHxWYQ6PEFh-5B85GZpnJ3D7/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-red-500/10 rounded-xl text-red-400 hover:bg-red-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1053,7 +1068,7 @@ export default function Home() {
                   <div className="space-y-2">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <img src="/images/projects/gdsc.png" alt="GDSC" className="w-8 h-8 object-contain" />
+                        <img src="/images/projects/pes-logo.png" alt="GDSC" className="w-8 h-8 object-contain" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">GDSC Core Team Member</h3>
@@ -1063,7 +1078,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/10 rounded-xl text-blue-400 hover:bg-blue-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/12uw62jAenyrXbSC2fF5w6JI7zKP9oumw/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-500/10 rounded-xl text-blue-400 hover:bg-blue-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1104,7 +1122,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-xl text-green-400 hover:bg-green-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1czpd00GM9ZfCyYbczzwSg39IYs4SD3K-/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-xl text-green-400 hover:bg-green-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1131,7 +1152,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-xl text-green-400 hover:bg-green-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1eK-NmivkYieuMvwN5UyDwosnavXYMsbw/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-xl text-green-400 hover:bg-green-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1157,7 +1181,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl text-teal-400 hover:bg-teal-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1uZOcj4gQkzhGY-8wT2KPNz_OfhL3hQIj/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl text-teal-400 hover:bg-teal-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1183,7 +1210,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 rounded-xl text-cyan-400 hover:bg-cyan-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1q_ifiAeaN8OvaR5D76v9p9EbGQXi9_sk/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 rounded-xl text-cyan-400 hover:bg-cyan-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1209,7 +1239,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-xl text-indigo-400 hover:bg-indigo-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1h-sPdjRfC-3ej0Dz7nCKBWTpASw_oI6O/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-xl text-indigo-400 hover:bg-indigo-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -1235,7 +1268,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-violet-500/10 rounded-xl text-violet-400 hover:bg-violet-500/20 transition-colors group">
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/file/d/1czpd00GM9ZfCyYbczzwSg39IYs4SD3K-/view?usp=drive_link', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-xl text-green-400 hover:bg-green-500/20 transition-colors group"
+                  >
                     View Certificate
                     <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
                   </button>
