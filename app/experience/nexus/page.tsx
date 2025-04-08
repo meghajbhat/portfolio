@@ -1,32 +1,32 @@
-'use client'
+'use client';
 
-import React, { useEffect } from 'react'
-import Link from 'next/link'
-import { FaGithub, FaArrowLeft, FaCode, FaBrain, FaRobot, FaDatabase, FaExternalLinkAlt } from 'react-icons/fa'
+import React, { useEffect } from 'react';
+import Link from 'next/link';
+import { FaGithub, FaArrowLeft, FaCode, FaBrain, FaRobot, FaDatabase, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function NexusPage() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const cards = document.querySelectorAll('.card-3d')
-      const rect = document.body.getBoundingClientRect()
-      const mouseX = e.clientX - rect.left
-      const mouseY = e.clientY - rect.top
+      const cards = document.querySelectorAll('.card-3d');
+      const rect = document.body.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
       
       cards.forEach((card) => {
-        const cardRect = (card as HTMLElement).getBoundingClientRect()
-        const cardCenterX = cardRect.left + cardRect.width / 2
-        const cardCenterY = cardRect.top + cardRect.height / 2
+        const cardRect = (card as HTMLElement).getBoundingClientRect();
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const cardCenterY = cardRect.top + cardRect.height / 2;
         
-        const angleX = (mouseY - cardCenterY) / 30
-        const angleY = (mouseX - cardCenterX) / 30
+        const angleX = (mouseY - cardCenterY) / 30;
+        const angleY = (mouseX - cardCenterX) / 30;
         
-        (card as HTMLElement).style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg)`
-      })
-    }
+        (card as HTMLElement).style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg)`;
+      });
+    };
 
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
     <main className="min-h-screen bg-[#0B1121] text-white pt-20 pb-32">
@@ -60,7 +60,7 @@ export default function NexusPage() {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               AIML Intern - Nexus
             </h1>
-            <span className="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">
+            <span className="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 hover:border-purple-500/50 transition-colors">
               Completed
             </span>
           </div>
@@ -238,5 +238,5 @@ export default function NexusPage() {
         </div>
       </div>
     </main>
-  )
+  );
 } 
