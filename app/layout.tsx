@@ -33,6 +33,7 @@ export default function RootLayout({
                 <Link href="/#projects" className="nav-link text-base">Projects</Link>
                 <Link href="/#certificates" className="nav-link text-base">Certificates</Link>
                 <Link href="/#skills" className="nav-link text-base">Skills</Link>
+                <Link href="/#hackathons" className="nav-link text-base">Hackathons</Link>
                 <Link href="/#education" className="nav-link text-base">Education</Link>
                 <Link href="/#contact" className="nav-link text-base">Contact Me</Link>
               </div>

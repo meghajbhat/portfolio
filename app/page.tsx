@@ -498,193 +498,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hackathons Section */}
-      <section id="hackathons" className="py-24 relative">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">CONTINUOUS LEARNING</h2>
-          <h1 className="text-8xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Hackathons
-            </span>
-          </h1>
-
-          {/* Carousel Container */}
-          <div className="relative perspective-1000 max-w-4xl mx-auto">
-            <div 
-              className="flex gap-8 transition-transform duration-500 ease-out" 
-              style={{ 
-                transform: `translateX(-${activeHackathon * 100}%) translateZ(-100px)`,
-              }}
-            >
-              {/* Dining Cost Estimator Card */}
-              <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-white">DINING COST ESTIMATOR FOR TWO</h3>
-                  <p className="text-emerald-400 text-lg">2023</p>
-                  
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Python</span>
-                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Data Analytics</span>
-                  </div>
-                  
-                  <p className="text-gray-400 leading-relaxed">
-                    This project aims to develop a sophisticated predictive model to estimate the average dinner costs at
-                    restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data
-                    analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions.
-                    This project was undertaken during my college hackathon, Epoch, showcasing our commitment to
-                    practical, data-driven solutions.
-                  </p>
-                  
-                  <a 
-                    href="https://drive.google.com/file/d/1LxPOOFp06ao65BFUbHsfI0y9nncpK59w/view?usp=drive_link"
-                    target="_blank"
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    Learn More
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
-
-              {/* Speech Coach Card */}
-              <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-white">SPEECH COACH</h3>
-                  <p className="text-emerald-400 text-lg">2024</p>
-                  
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Python</span>
-                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">NodeJS</span>
-                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">MongoDB</span>
-                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">React</span>
-                  </div>
-                  
-                  <p className="text-gray-400 leading-relaxed">
-                    Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it
-                    detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech
-                    is grammatically correct. In addition to this, it could also convert real time communication to written
-                    words, as well as it could read written lines out loud. The project could also convert English to Japanese,
-                    Chinese and French.
-                  </p>
-                  
-                  <div className="h-[52px]"></div> {/* Spacer to align with other card's button */}
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center gap-2 mt-8">
-              <button 
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeHackathon === 0 ? 'bg-emerald-500' : 'bg-gray-600'}`}
-                onClick={() => setActiveHackathon(0)}
-              ></button>
-              <button 
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeHackathon === 1 ? 'bg-emerald-500' : 'bg-gray-600'}`}
-                onClick={() => setActiveHackathon(1)}
-              ></button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certificates Section */}
-      <section id="certificates" className="py-24 relative">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">MY ACHIEVEMENTS</h2>
-          <h1 className="text-8xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Certificates.
-            </span>
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Certificates Grid */}
-            <div className="space-y-6">
-              {/* Atlassian Certificate */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
-                    <p className="text-emerald-400 mt-1">Atlassian</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Coursera Certificates */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Introduction to Generative AI for Software Development</h3>
-                    <p className="text-emerald-400 mt-1">Coursera</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Kaggle Certificates */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Pandas & Intro To Machine Learning</h3>
-                    <p className="text-emerald-400 mt-1">Kaggle</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              {/* Coursera Data Science */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">What is Data Science?</h3>
-                    <p className="text-emerald-400 mt-1">Coursera</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* GDSC & Skill Nation */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">GDSC Member & ChatGPT and AI Tools</h3>
-                    <p className="text-emerald-400 mt-1">PESU & Skill Nation</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
-              {/* PESU IO & Python */}
-              <div className="group bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">OpenCV with Python & Getting Started With Python</h3>
-                    <p className="text-emerald-400 mt-1">PESU IO & Coursera</p>
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center">
-                    <FaArrowRight className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Skills Section */}
       <section id="skills" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -843,6 +656,96 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hackathons Section */}
+      <section id="hackathons" className="py-24 relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">CONTINUOUS LEARNING</h2>
+          <h1 className="text-8xl font-bold text-center mb-16">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Hackathons.
+            </span>
+          </h1>
+
+          {/* Carousel Container */}
+          <div className="relative perspective-1000 max-w-4xl mx-auto">
+            <div 
+              className="flex gap-8 transition-transform duration-500 ease-out" 
+              style={{ 
+                transform: `translateX(-${activeHackathon * 100}%) translateZ(-100px)`,
+              }}
+            >
+              {/* Dining Cost Estimator Card */}
+              <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="space-y-6">
+                  <h3 className="text-3xl font-bold text-white">DINING COST ESTIMATOR FOR TWO</h3>
+                  <p className="text-emerald-400 text-lg">2023</p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Data Analytics</span>
+                  </div>
+                  
+                  <p className="text-gray-400 leading-relaxed">
+                    This project aims to develop a sophisticated predictive model to estimate the average dinner costs at
+                    restaurants in Bengaluru, utilizing data from popular eateries and Zomato. Through meticulous data
+                    analysis, cleansing, and strategic feature engineering, the dataset is optimized for accurate predictions.
+                    This project was undertaken during my college hackathon, Epoch, showcasing our commitment to
+                    practical, data-driven solutions.
+                  </p>
+                  
+                  <a 
+                    href="https://drive.google.com/file/d/1LxPOOFp06ao65BFUbHsfI0y9nncpK59w/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    View Certificate
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Speech Coach Card */}
+              <div className="w-full flex-shrink-0 bg-[#1A2333]/90 backdrop-blur-lg rounded-3xl p-8 hover:transform hover:rotate-y-12 transition-all duration-500 border border-emerald-500/10 hover:border-emerald-500/30">
+                <div className="space-y-6">
+                  <h3 className="text-3xl font-bold text-white">SPEECH COACH</h3>
+                  <p className="text-emerald-400 text-lg">2024</p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">Python</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">NodeJS</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">MongoDB</span>
+                    <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">React</span>
+                  </div>
+                  
+                  <p className="text-gray-400 leading-relaxed">
+                    Grammar Correction: iSpeak records your speech and instantly corrects any grammatical errors it
+                    detects. Whether it's a misplaced comma, punctuation or a pronoun issue, iSpeak ensures your speech
+                    is grammatically correct. In addition to this, it could also convert real time communication to written
+                    words, as well as it could read written lines out loud. The project could also convert English to Japanese,
+                    Chinese and French.
+                  </p>
+                  
+                  <div className="h-[52px]"></div> {/* Spacer to align with other card's button */}
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              <button 
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeHackathon === 0 ? 'bg-emerald-500' : 'bg-gray-600'}`}
+                onClick={() => setActiveHackathon(0)}
+              ></button>
+              <button 
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${activeHackathon === 1 ? 'bg-emerald-500' : 'bg-gray-600'}`}
+                onClick={() => setActiveHackathon(1)}
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Education Section */}
       <section id="education" className="py-24 relative">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -901,6 +804,218 @@ export default function Home() {
                 <p className="text-gray-400">Physics, Chemistry, Social Science, Mathematics</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificates Section */}
+      <section id="certificates" className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Background Effects */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full filter blur-3xl animate-blob"></div>
+            <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
+          </div>
+
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase relative z-10">MY ACHIEVEMENTS</h2>
+          <h1 className="text-8xl font-bold text-center mb-16 relative z-10">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+              Certificates.
+            </span>
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+            {/* Left Column */}
+            <div className="space-y-8 perspective-1000">
+              {/* Atlassian Certificate */}
+              <div 
+                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width;
+                  const y = (e.clientY - rect.top) / rect.height;
+                  const rotateX = (y - 0.5) * 20;
+                  const rotateY = (x - 0.5) * 20;
+                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img src="/images/projects/atlassian.png" alt="Atlassian" className="w-8 h-8 object-contain" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
+                          <p className="text-emerald-400">Atlassian</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-400 mt-4">Learn the fundamentals of Jira Work Management and enhance your project management skills.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex justify-end">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition-colors group">
+                      View Certificate
+                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+                {/* Glowing effect on hover */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
+              </div>
+
+              {/* Coursera Certificates */}
+              <div 
+                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2"
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width;
+                  const y = (e.clientY - rect.top) / rect.height;
+                  const rotateX = (y - 0.5) * 20;
+                  const rotateY = (x - 0.5) * 20;
+                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-500">
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img src="/images/projects/coursera.png" alt="Coursera" className="w-8 h-8 object-contain" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Introduction to Generative AI</h3>
+                          <p className="text-blue-400">Coursera</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-400 mt-4">Master the fundamentals of Generative AI and its applications in software development.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex justify-end">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/10 rounded-xl text-blue-400 hover:bg-blue-500/20 transition-colors group">
+                      View Certificate
+                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-8 perspective-1000">
+              {/* Kaggle Certificates */}
+              <div 
+                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width;
+                  const y = (e.clientY - rect.top) / rect.height;
+                  const rotateX = (y - 0.5) * 20;
+                  const rotateY = (x - 0.5) * 20;
+                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 group-hover:border-purple-500/50 transition-all duration-500">
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img src="/images/projects/kaggle.png" alt="Kaggle" className="w-8 h-8 object-contain" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Pandas & Machine Learning</h3>
+                          <p className="text-purple-400">Kaggle</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-400 mt-4">Advanced data manipulation with Pandas and introduction to machine learning concepts.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex justify-end">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-xl text-purple-400 hover:bg-purple-500/20 transition-colors group">
+                      View Certificate
+                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
+              </div>
+
+              {/* GDSC & Skill Nation */}
+              <div 
+                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2"
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width;
+                  const y = (e.clientY - rect.top) / rect.height;
+                  const rotateX = (y - 0.5) * 20;
+                  const rotateY = (x - 0.5) * 20;
+                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 group-hover:border-pink-500/50 transition-all duration-500">
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-pink-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img src="/images/projects/gdsc.png" alt="GDSC" className="w-8 h-8 object-contain" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-pink-400 transition-colors">GDSC Member & AI Tools</h3>
+                          <p className="text-pink-400">PESU & Skill Nation</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-400 mt-4">Active member of Google Developer Student Clubs and proficiency in modern AI tools.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex justify-end">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-pink-500/10 rounded-xl text-pink-400 hover:bg-pink-500/20 transition-colors group">
+                      View Certificate
+                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-red-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-emerald-400/20 rounded-full"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animation: `float ${5 + Math.random() * 5}s linear infinite`,
+                  animationDelay: `${-Math.random() * 5}s`,
+                }}
+              />
+            ))}
           </div>
         </div>
       </section>
