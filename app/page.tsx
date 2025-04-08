@@ -729,47 +729,6 @@ export default function Home() {
                   <div className="h-[52px]"></div> {/* Spacer to align with other card's button */}
                 </div>
               </div>
-
-              {/* Certificate Card Template */}
-              <div 
-                className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2"
-                onMouseMove={(e) => {
-                  const card = e.currentTarget;
-                  const rect = card.getBoundingClientRect();
-                  const x = (e.clientX - rect.left) / rect.width;
-                  const y = (e.clientY - rect.top) / rect.height;
-                  const rotateX = (y - 0.5) * 20;
-                  const rotateY = (x - 0.5) * 20;
-                  card.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                <div className="relative bg-[#1A2333]/90 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-emerald-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <img src="/images/projects/atlassian.png" alt="Atlassian" className="w-8 h-8 object-contain" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Get Started With Jira Work Management</h3>
-                          <p className="text-emerald-400">Atlassian</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 flex justify-end">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition-colors group">
-                      View Certificate
-                      <FaArrowRight className="transform group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10"></div>
-              </div>
             </div>
 
             {/* Navigation Dots */}
