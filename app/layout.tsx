@@ -34,7 +34,7 @@ export default function RootLayout({
                 <Link href="/#certificates" className="nav-link text-base">Certificates</Link>
                 <Link href="/#skills" className="nav-link text-base">Skills</Link>
                 <Link href="/#education" className="nav-link text-base">Education</Link>
-                <Link href="/#contact" className="nav-link text-base">Contact</Link>
+                <Link href="/#contact" className="nav-link text-base">Contact Me</Link>
               </div>
             </nav>
           </div>
