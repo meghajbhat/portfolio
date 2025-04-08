@@ -182,10 +182,16 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
                     <img src="/images/projects/pes-logo.png" alt="CDSAML" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="text-left">
+                  <div className="text-left flex-1">
                     <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Research Intern - CDSAML</h3>
                     <p className="text-gray-400">CDSAML</p>
                   </div>
+                  <Link 
+                    href="/experience/cdsaml"
+                    className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-all"
+                  >
+                    Learn More
+                  </Link>
                 </div>
               </button>
 
@@ -201,12 +207,18 @@ export default function Home() {
               }} className="w-full" id="nexus-button">
                 <div className="group flex items-center gap-4 cursor-pointer p-4 rounded-xl border-2 border-transparent hover:border-emerald-500/30 hover:bg-[#1A2333]/50 transition-all duration-300">
                   <div className="w-12 h-12 rounded-full bg-[#0B1121] border-2 border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                    <img src="/images/projects/nexus-logo.png" alt="Nexus Info" className="w-8 h-8 object-contain" />
+                    <div className="text-2xl font-bold text-emerald-400">N</div>
                   </div>
-                  <div className="text-left">
+                  <div className="text-left flex-1">
                     <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">AIML Intern</h3>
                     <p className="text-gray-400">Nexus Info</p>
                   </div>
+                  <Link 
+                    href="/experience/nexus"
+                    className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-all"
+                  >
+                    Learn More
+                  </Link>
                 </div>
               </button>
             </div>
