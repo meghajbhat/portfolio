@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { FaGithub, FaArrowLeft, FaRobot, FaUniversity, FaCode, FaBrain } from 'react-icons/fa';
