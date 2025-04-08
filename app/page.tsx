@@ -386,37 +386,149 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-32 relative">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-5xl font-bold mb-16 text-center">
+          <h2 className="text-base font-medium text-center mb-4 text-gray-400 tracking-wider uppercase">MY WORK</h2>
+          <h1 className="text-8xl font-bold text-center mb-24">
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
-              Featured Projects
+              Projects.
             </span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project cards with your existing content but new styling */}
+          </h1>
+
+          {/* 3D Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 perspective-1000">
             {/* Patient Records Management System */}
-            <Link href="/projects/patient-records-management-system" className="group">
-              <div className="bg-[#1A2333]/80 backdrop-blur-sm rounded-2xl p-8 h-full transform hover:-translate-y-2 transition-all duration-300 border border-emerald-500/10 hover:border-emerald-500/30">
-                <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
-                    Patient Records Management System
-                  </h3>
-                  <a href="https://github.com/meghajbhat/patient-records" target="_blank" className="text-gray-400 hover:text-emerald-400 transition-colors">
-                    <FaGithub className="text-xl" />
-                  </a>
-                </div>
-                <p className="text-gray-400 mb-6">
-                  A web-based application for efficient hospital operations management.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">MySQL</span>
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Python</span>
-                  <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/50 text-emerald-400 border border-emerald-500/30">Flask</span>
+            <div className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                        Patient Records Management System
+                      </h3>
+                      <p className="text-gray-400">Hospital Operations Management</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/patient-records" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-emerald-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A comprehensive web application designed for efficient hospital operations management, featuring patient record tracking, appointment scheduling, and medical history management.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">MySQL</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Python</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Flask</span>
+                    </div>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
-            </Link>
+            </div>
 
-            {/* Continue with other project cards in the same format */}
-            {/* Add all your other projects here with the same styling */}
+            {/* AI-Powered Chatbot */}
+            <div className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                        AI-Powered Chatbot
+                      </h3>
+                      <p className="text-gray-400">Intelligent Conversational AI</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/chatbot" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-emerald-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    An advanced chatbot system leveraging natural language processing for intelligent conversations and automated responses.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Python</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">TensorFlow</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">NLP</span>
+                    </div>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Portfolio Website */}
+            <div className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:-rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-emerald-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                        Portfolio Website
+                      </h3>
+                      <p className="text-gray-400">Personal Portfolio Showcase</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/portfolio" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-emerald-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A modern, responsive portfolio website built with Next.js and Tailwind CSS, featuring 3D animations and interactive elements.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Next.js</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">React</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Tailwind</span>
+                    </div>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
