@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { FaGithub, FaArrowLeft, FaBrain, FaCode, FaGamepad, FaHeart, FaSmile, FaMedal } from 'react-icons/fa';
+import { FaGithub, FaArrowLeft, FaCode, FaBrain, FaGamepad, FaHeart, FaSmile, FaMedal } from 'react-icons/fa';
 
 export default function AutismSupportPage() {
   useEffect(() => {
@@ -40,14 +40,16 @@ export default function AutismSupportPage() {
             <FaArrowLeft />
             <span>Back to Projects</span>
           </Link>
-          <a 
-            href="https://github.com/meghajbhat/Adaptive-Technology-for-Autism-Support"
-            target="_blank"
-            className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
-          >
-            <FaGithub className="text-xl" />
-            <span>View on GitHub</span>
-          </a>
+          <div className="flex gap-4">
+            <a 
+              href="https://github.com/meghajbhat/Adaptive-Technology-for-Autism-Support.git"
+              target="_blank"
+              className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+            >
+              <FaGithub className="text-xl" />
+              <span>View on GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -66,7 +68,7 @@ export default function AutismSupportPage() {
 
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Adaptive Technology for Autism Support
+              Adaptive Technology
             </h1>
             <span className="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">
               In Progress
@@ -74,7 +76,7 @@ export default function AutismSupportPage() {
           </div>
           
           <p className="text-xl text-gray-400 mb-8 max-w-3xl">
-            An interactive system designed to help autistic children aged 7-9 years develop emotional understanding, pattern memory, and sensory regulation through engaging games and activities.
+            An interactive system designed to support autistic children through various modules focusing on emotional understanding, memory, sensory regulation, and confidence building.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -87,15 +89,12 @@ export default function AutismSupportPage() {
             <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-purple-400 border border-purple-500/30 hover:border-purple-500/50 transition-colors">
               Custom Graphics
             </span>
-            <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-purple-400 border border-purple-500/30 hover:border-purple-500/50 transition-colors">
-              Animation
-            </span>
           </div>
         </div>
 
-        {/* Modules Grid */}
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {/* Emoji-Based Emotion Recognition */}
+          {/* Emotion Recognition */}
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
@@ -104,27 +103,24 @@ export default function AutismSupportPage() {
               <h2 className="text-2xl font-bold">Emotion Recognition</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Interactive module helping children identify and understand emotions through clickable emoji buttons and animated facial expressions.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Clickable emoji buttons for different emotions
+                  Interactive emotion cards
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Central animated face that mimics chosen emotion
+                  Facial expression matching
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Positive affirmations and supportive messages
+                  Emotion-based scenarios
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Memory Sequence Game */}
+          {/* Memory Game */}
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
@@ -133,27 +129,24 @@ export default function AutismSupportPage() {
               <h2 className="text-2xl font-bold">Memory Game</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Pattern recognition game that enhances memory and focus through increasing sequence complexity and positive reinforcement.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Sequential box flashing patterns
+                  Pattern recognition
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Point system (+5 correct, -2 incorrect)
+                  Visual memory training
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Visual effects for correct answers
+                  Progressive difficulty levels
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Life System & Calm Mode */}
+          {/* Support Features */}
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
@@ -162,27 +155,24 @@ export default function AutismSupportPage() {
               <h2 className="text-2xl font-bold">Support Features</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Comprehensive support system including life management and calming tools for emotional regulation.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  3-life system with visual indicators
+                  Sensory regulation tools
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Breathing circle animation for calming
+                  Calming activities
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Quick-access calm mode ('B' key)
+                  Visual schedules
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Progress Tracking */}
+          {/* Progress System */}
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
@@ -191,21 +181,18 @@ export default function AutismSupportPage() {
               <h2 className="text-2xl font-bold">Progress System</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Comprehensive progress tracking and achievement system to motivate and encourage continued engagement.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Leaderboard with highest scores
+                  Achievement tracking
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Session score tracking
+                  Skill development monitoring
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Start/Stop game flow control
+                  Progress visualization
                 </li>
               </ul>
             </div>
@@ -218,50 +205,42 @@ export default function AutismSupportPage() {
             <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
               <FaCode className="text-2xl text-purple-400" />
             </div>
-            <h2 className="text-2xl font-bold">Technical Details</h2>
+            <h2 className="text-2xl font-bold">Technical Implementation</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-purple-400 mb-4">Core Components</h3>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Core Technologies</h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Pygame Zero game engine integration
+                  Python for game logic
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Custom emoji assets and animations
+                  Pygame Zero for graphics
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  State management system
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400 mt-1">•</span>
-                  Sound effects and feedback system
+                  Custom UI components
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-purple-400 mb-4">Future Enhancements</h3>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Key Features</h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Background music with volume control
+                  Interactive game mechanics
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Cross-session score persistence
+                  Adaptive difficulty
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400 mt-1">•</span>
-                  Theme switching for sensitivity
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400 mt-1">•</span>
-                  Parent progress dashboard
+                  Progress tracking
                 </li>
               </ul>
             </div>

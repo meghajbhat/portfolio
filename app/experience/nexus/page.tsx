@@ -2,20 +2,25 @@
 
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaGithub, FaArrowLeft, FaCode, FaBrain, FaRobot, FaDatabase, FaExternalLinkAlt } from 'react-icons/fa'
 
 export default function NexusPage() {
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent): void => {
+    const handleMouseMove = (e: MouseEvent) => {
       const cards = document.querySelectorAll('.card-3d')
-      cards.forEach((card: Element) => {
-        const rect = card.getBoundingClientRect()
-        const x = (e.clientX - rect.left) / rect.width
-        const y = (e.clientY - rect.top) / rect.height
-        const rotateX = (y - 0.5) * 20
-        const rotateY = (x - 0.5) * 20
-        const element = card as HTMLElement
-        element.style.transform = 'perspective(1000px) rotateX(' + (-rotateX) + 'deg) rotateY(' + rotateY + 'deg)'
+      const rect = document.body.getBoundingClientRect()
+      const mouseX = e.clientX - rect.left
+      const mouseY = e.clientY - rect.top
+      
+      cards.forEach((card) => {
+        const cardRect = (card as HTMLElement).getBoundingClientRect()
+        const cardCenterX = cardRect.left + cardRect.width / 2
+        const cardCenterY = cardRect.top + cardRect.height / 2
+        
+        const angleX = (mouseY - cardCenterY) / 30
+        const angleY = (mouseX - cardCenterX) / 30
+        
+        (card as HTMLElement).style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg)`
       })
     }
 
@@ -24,129 +29,214 @@ export default function NexusPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#0B1121] py-20">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-[#0B1121]/80 backdrop-blur-sm border-b border-emerald-500/20 z-50">
+    <main className="min-h-screen bg-[#0B1121] text-white pt-20 pb-32">
+      {/* Fixed Navigation */}
+      <div className="fixed top-0 left-0 right-0 bg-[#0B1121]/80 backdrop-blur-md z-50 border-b border-purple-500/20">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <Link href="/#experience" className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors">
+          <Link 
+            href="/#experience" 
+            className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+          >
             <FaArrowLeft />
             <span>Back to Experience</span>
           </Link>
-          <a 
-            href="https://drive.google.com/file/d/1IzhcwqwiGVRYUV0_NIFIPZV8IjY3Ota2/view?usp=drive_link"
-            target="_blank"
-            className="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-all"
-          >
-            View Certificate
-          </a>
         </div>
-      </nav>
+      </div>
 
-      <div className="container mx-auto px-4 mt-12">
-        {/* Project Header */}
-        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 mb-12 transform transition-all duration-500">
-          <div className="space-y-4">
-            <h1 className="text-4xl font-bold text-white">AI/ML Internship at Nexus Info</h1>
-            <p className="text-emerald-400">Summer Internship • AI/ML Intern</p>
+      <div className="container mx-auto px-4 max-w-5xl">
+        {/* Experience Header */}
+        <div className="card-3d relative rounded-2xl overflow-hidden bg-[#1A2333]/50 backdrop-blur-sm border border-purple-500/20 p-12 mb-12 hover:border-purple-500/40 transition-colors duration-500">
+          {/* Floating Elements */}
+          <div className="absolute top-0 left-0 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl"></div>
+          
+          {/* Icon */}
+          <div className="w-20 h-20 rounded-2xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center mb-8 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl"></div>
+            <FaBrain className="text-4xl text-purple-400 relative z-10 animate-float" />
+          </div>
+
+          <div className="flex items-center gap-3 mb-4">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AIML Intern - Nexus
+            </h1>
+            <span className="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">
+              Completed
+            </span>
+          </div>
+          
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl">
+            Worked on developing and implementing machine learning models for various applications, focusing on computer vision and natural language processing tasks.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-purple-400 border border-purple-500/30 hover:border-purple-500/50 transition-colors">
+              Python
+            </span>
+            <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-purple-400 border border-purple-500/30 hover:border-purple-500/50 transition-colors">
+              PyTorch
+            </span>
+            <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-purple-400 border border-purple-500/30 hover:border-purple-500/50 transition-colors">
+              OpenCV
+            </span>
           </div>
         </div>
 
-        {/* Phase 1: Conversational AI */}
-        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 mb-8 transform transition-all duration-500">
-          <h2 className="text-2xl font-bold text-white mb-4">🔹 Phase 1: Conversational AI (Chatbots)</h2>
-          <div className="space-y-6 text-gray-300">
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Projects:</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Developed a general-purpose chatbot using NLP techniques</li>
-                <li>Built a specialized university admission chatbot to answer FAQs for prospective students</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Skills Applied:</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Natural Language Processing (NLP)</li>
-                <li>Intent recognition, entity extraction</li>
-                <li>Dialog management and response generation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Highlights:</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Focused on user-friendly interactions and high accuracy</li>
-                <li>Gained confidence in integrating ML models with real-world use cases</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Phase 2: Disease Prediction */}
-        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 mb-8 transform transition-all duration-500">
-          <h2 className="text-2xl font-bold text-white mb-4">🔹 Phase 2: Disease Prediction System</h2>
-          <div className="space-y-6 text-gray-300">
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Project Overview:</h3>
-              <p>Built an ML-powered tool to predict possible diseases based on user symptoms</p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Approach:</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Collected and preprocessed medical datasets</li>
-                <li>Used classification algorithms (Decision Trees, Random Forests, SVM)</li>
-                <li>Tuned models for performance using evaluation metrics</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Outcome:</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Developed a predictive model with real-world healthcare relevance</li>
-                <li>Learned how to translate domain challenges into AI solutions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Skills & Takeaways */}
-        <div className="card-3d relative bg-[#1A2333]/50 rounded-2xl p-8 border border-emerald-500/20 transform transition-all duration-500">
-          <h2 className="text-2xl font-bold text-white mb-4">🚀 Skills & Takeaways</h2>
-          <div className="space-y-6 text-gray-300">
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Technical Skills:</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Python</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">scikit-learn</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">pandas</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">NLP</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">ML algorithms</span>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* Computer Vision */}
+          <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
+                <FaCode className="text-2xl text-purple-400" />
               </div>
+              <h2 className="text-2xl font-bold">Computer Vision</h2>
             </div>
+            <div className="space-y-4 text-gray-400">
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Image classification and object detection
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Feature extraction and analysis
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Real-time video processing
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Soft Skills:</h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Problem-solving</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Teamwork</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Communication</span>
-                <span className="px-3 py-1 rounded-lg bg-[#0B1121] text-emerald-400 text-sm border border-emerald-500/30">Project management</span>
+          {/* NLP Tasks */}
+          <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
+                <FaRobot className="text-2xl text-purple-400" />
               </div>
+              <h2 className="text-2xl font-bold">NLP Tasks</h2>
             </div>
+            <div className="space-y-4 text-gray-400">
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Text classification and sentiment analysis
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Named entity recognition
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Language modeling
+                </li>
+              </ul>
+            </div>
+          </div>
 
+          {/* Model Development */}
+          <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
+                <FaBrain className="text-2xl text-purple-400" />
+              </div>
+              <h2 className="text-2xl font-bold">Model Development</h2>
+            </div>
+            <div className="space-y-4 text-gray-400">
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Custom model architectures
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Transfer learning implementation
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Model optimization and fine-tuning
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Data Processing */}
+          <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
+                <FaDatabase className="text-2xl text-purple-400" />
+              </div>
+              <h2 className="text-2xl font-bold">Data Processing</h2>
+            </div>
+            <div className="space-y-4 text-gray-400">
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Data cleaning and preprocessing
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Feature engineering
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Dataset augmentation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Technical Implementation */}
+        <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-purple-500/30 flex items-center justify-center">
+              <FaCode className="text-2xl text-purple-400" />
+            </div>
+            <h2 className="text-2xl font-bold">Technical Implementation</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">Impact:</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Strengthened core AI/ML foundations</li>
-                <li>Applied theory to real business challenges</li>
-                <li>Worked in a collaborative, fast-paced environment</li>
-                <li>Built projects from scratch with real-world value</li>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Core Technologies</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Python for ML development
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  PyTorch for deep learning
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  OpenCV for computer vision
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Key Achievements</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Developed custom ML models
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Implemented real-time processing
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400 mt-1">•</span>
+                  Optimized model performance
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   )
 } 

@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { FaGithub, FaArrowLeft, FaBrain, FaCode, FaRobot, FaDatabase, FaMicrophone, FaImage } from 'react-icons/fa';
+import { FaGithub, FaArrowLeft, FaCode, FaBrain, FaRobot, FaDatabase, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function LegalAIPage() {
   useEffect(() => {
@@ -40,14 +40,16 @@ export default function LegalAIPage() {
             <FaArrowLeft />
             <span>Back to Projects</span>
           </Link>
-          <a 
-            href="https://github.com/meghajbhat"
-            target="_blank"
-            className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
-          >
-            <FaGithub className="text-xl" />
-            <span>View on GitHub</span>
-          </a>
+          <div className="flex gap-4">
+            <a 
+              href="https://github.com/meghajbhat/Legal-Document-Understanding-using-GenAI"
+              target="_blank"
+              className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
+            >
+              <FaGithub className="text-xl" />
+              <span>View on GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -66,7 +68,7 @@ export default function LegalAIPage() {
 
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              Legal Document Understanding using GenAI
+              Legal Document AI
             </h1>
             <span className="px-3 py-1 text-sm rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">
               In Progress
@@ -74,7 +76,7 @@ export default function LegalAIPage() {
           </div>
           
           <p className="text-xl text-gray-400 mb-8 max-w-3xl">
-            A sophisticated system leveraging generative AI and advanced NLP techniques to understand and process legal documents, featuring multimodal inputs and fine-tuned language models.
+            A comprehensive system for understanding legal documents using advanced NLP, RAG, and multimodal intelligent agents. Features fine-tuned LLMs and sophisticated prompt engineering techniques.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -87,38 +89,32 @@ export default function LegalAIPage() {
             <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-blue-400 border border-blue-500/30 hover:border-blue-500/50 transition-colors">
               ChromaDB
             </span>
-            <span className="px-4 py-2 rounded-xl bg-[#0B1121] text-blue-400 border border-blue-500/30 hover:border-blue-500/50 transition-colors">
-              QLoRA
-            </span>
           </div>
         </div>
 
-        {/* Completed Phases Grid */}
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* NLP Processing */}
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center">
-                <FaBrain className="text-2xl text-blue-400" />
+                <FaCode className="text-2xl text-blue-400" />
               </div>
               <h2 className="text-2xl font-bold">NLP Processing</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Comprehensive preprocessing of Indian legal documents using advanced NLP techniques and embeddings.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Tokenization and sentence splitting
+                  Preprocessing legal datasets from Indian legal documents
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Word2Vec, GloVe, BERT embeddings
+                  Tokenization and embedding using Word2Vec, GloVe, BERT
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Advanced text cleaning pipeline
+                  Advanced text analysis and feature extraction
                 </li>
               </ul>
             </div>
@@ -128,26 +124,23 @@ export default function LegalAIPage() {
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center">
-                <FaCode className="text-2xl text-blue-400" />
+                <FaRobot className="text-2xl text-blue-400" />
               </div>
               <h2 className="text-2xl font-bold">Prompt Engineering</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Sophisticated prompt engineering techniques for enhanced reasoning and structured outputs.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Chain-of-Thought (CoT)
+                  Chain-of-Thought (CoT) reasoning
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Tree-of-Thought (ToT)
+                  Tree-of-Thought (ToT) analysis
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Graph-of-Thought (GoT)
+                  Graph-of-Thought (GoT) techniques
                 </li>
               </ul>
             </div>
@@ -159,24 +152,21 @@ export default function LegalAIPage() {
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center">
                 <FaDatabase className="text-2xl text-blue-400" />
               </div>
-              <h2 className="text-2xl font-bold">RAG System</h2>
+              <h2 className="text-2xl font-bold">RAG Implementation</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Retrieval-Augmented Generation system using ChromaDB and LLaMA for context-aware responses.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  ChromaDB vector store implementation
+                  ChromaDB vector store
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  LLaMA model integration
+                  LLaMA model for context retrieval
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Kaggle dataset persistence
+                  Efficient document indexing
                 </li>
               </ul>
             </div>
@@ -186,139 +176,71 @@ export default function LegalAIPage() {
           <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center">
-                <FaRobot className="text-2xl text-blue-400" />
+                <FaBrain className="text-2xl text-blue-400" />
               </div>
               <h2 className="text-2xl font-bold">Intelligent Agents</h2>
             </div>
             <div className="space-y-4 text-gray-400">
-              <p>
-                Multimodal intelligent agents capable of processing various input types with GenAI reasoning.
-              </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Text, voice, and image input support
+                  Multimodal input support
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Voice-to-text processing
+                  Text, voice, and image processing
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Image-to-text analysis
+                  Advanced reasoning capabilities
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Current Phase */}
-        <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500 mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center">
-              <FaCode className="text-2xl text-blue-400" />
-            </div>
-            <div className="space-y-1">
-              <h2 className="text-2xl font-bold">Current Phase: Model Fine-tuning</h2>
-              <p className="text-blue-400">Phase 5 in Progress</p>
-            </div>
-          </div>
-          
-          <div className="space-y-6 text-gray-400">
-            <p>
-              Fine-tuning the MosaicML MPT-1B RedPajama model using QLoRA + PEFT with legal instruction-output pairs for enhanced performance on legal queries.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-blue-400 mb-4">Current Focus</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    QLoRA fine-tuning implementation
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    Tokenizer mismatch resolution
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    Inputs_embeds issue debugging
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-blue-400 mb-4">Next Steps</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    Complete full dataset fine-tuning
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    Performance comparison analysis
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    Begin explainability testing
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Technical Stack */}
+        {/* Technical Implementation */}
         <div className="card-3d bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-xl bg-[#0B1121] border border-blue-500/30 flex items-center justify-center">
               <FaCode className="text-2xl text-blue-400" />
             </div>
-            <h2 className="text-2xl font-bold">Technical Stack</h2>
+            <h2 className="text-2xl font-bold">Technical Implementation</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Core Components</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Core Technologies</h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Mistral-7B & MPT-1B Models
+                  PyTorch for deep learning
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  PyTorch & Hugging Face
+                  Hugging Face Transformers
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  ChromaDB Vector Store
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
-                  QLoRA & PEFT
+                  ChromaDB for vector storage
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Submodules</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Current Phase</h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Instruction-Output Generation
+                  Fine-tuning MosaicML MPT-1B RedPajama
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Hallucination Detection
+                  Optimizing RAG pipeline
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
-                  Explainability Tools
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
-                  Multimodal Processing
+                  Enhancing multimodal capabilities
                 </li>
               </ul>
             </div>

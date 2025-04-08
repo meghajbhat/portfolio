@@ -624,7 +624,7 @@ export default function Home() {
                       <p className="text-gray-400">GenAI-Powered Legal Understanding</p>
                     </div>
                     <a 
-                      href="https://github.com/meghajbhat" 
+                      href="https://github.com/meghajbhat/Legal-Document-Understanding-using-GenAI" 
                       target="_blank" 
                       className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-blue-500/30 group-hover:border-blue-500/70 transition-all duration-300 hover:scale-110"
                     >
@@ -639,19 +639,16 @@ export default function Home() {
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-blue-400 border border-blue-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-blue-400 border border-blue-500/30">
                       PyTorch
                     </span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-blue-400 border border-blue-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-blue-400 border border-blue-500/30">
                       Hugging Face
                     </span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-blue-400 border border-blue-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-blue-400 border border-blue-500/30">
                       ChromaDB
                     </span>
                   </div>
-
-                  {/* Hover Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </Link>
@@ -678,7 +675,7 @@ export default function Home() {
                       <p className="text-gray-400">Deep Learning Classification</p>
                     </div>
                     <a 
-                      href="https://github.com/meghajbhat" 
+                      href="https://github.com/meghajbhat/AI-Image-Detection" 
                       target="_blank" 
                       className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-purple-500/30 group-hover:border-purple-500/70 transition-all duration-300 hover:scale-110"
                     >
@@ -693,19 +690,16 @@ export default function Home() {
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-purple-400 border border-purple-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-purple-400 border border-purple-500/30">
                       PyTorch
                     </span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-purple-400 border border-purple-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-purple-400 border border-purple-500/30">
                       ResNet18
                     </span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-purple-400 border border-purple-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-purple-400 border border-purple-500/30">
                       Kaggle
                     </span>
                   </div>
-
-                  {/* Hover Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </Link>
@@ -714,7 +708,7 @@ export default function Home() {
             <Link href="/experience/portfolio" className="group">
               <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
                 {/* Background Gradient Animation */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-cyan-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Project Content */}
                 <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
@@ -729,24 +723,15 @@ export default function Home() {
                           Completed
                         </span>
                       </div>
-                      <p className="text-gray-400">Personal Portfolio & Project Showcase</p>
+                      <p className="text-gray-400">Modern Web Development</p>
                     </div>
-                    <div className="flex gap-2">
-                      <a 
-                        href="https://github.com/meghajbhat/Portfolio" 
-                        target="_blank" 
-                        className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
-                      >
-                        <FaGithub className="text-xl text-gray-400 group-hover:text-emerald-400" />
-                      </a>
-                      <a 
-                        href="https://portfolio-git-main-megha-bhats-projects.vercel.app/" 
-                        target="_blank" 
-                        className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
-                      >
-                        <FaExternalLinkAlt className="text-xl text-gray-400 group-hover:text-emerald-400" />
-                      </a>
-                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/Portfolio" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-emerald-400" />
+                    </a>
                   </div>
 
                   {/* Project Description */}
@@ -756,19 +741,16 @@ export default function Home() {
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">
                       Next.js
                     </span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">
                       Tailwind CSS
                     </span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30">
+                    <span className="px-3 py-1 text-xs rounded-full bg-[#0B1121] text-emerald-400 border border-emerald-500/30">
                       TypeScript
                     </span>
                   </div>
-
-                  {/* Hover Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </Link>
