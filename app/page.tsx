@@ -288,7 +288,6 @@ export default function Home() {
               <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold">Music Playlist Generator</h3>
-                  <span className="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">Completed</span>
                 </div>
                 <p className="text-gray-400 mb-6">A Python application that generates personalized playlists based on user preferences and listening history.</p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -314,7 +313,6 @@ export default function Home() {
               <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold">Photo Editor</h3>
-                  <span className="px-3 py-1 text-sm rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Completed</span>
                 </div>
                 <p className="text-gray-400 mb-6">A Java-based photo editing application with various filters and effects.</p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -340,7 +338,6 @@ export default function Home() {
               <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold">Patient Records Management</h3>
-                  <span className="px-3 py-1 text-sm rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Completed</span>
                 </div>
                 <p className="text-gray-400 mb-6">A comprehensive system for managing patient records and medical history.</p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -366,7 +363,6 @@ export default function Home() {
               <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/40 transition-colors duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold">Simple Chatbot</h3>
-                  <span className="px-3 py-1 text-sm rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Completed</span>
                 </div>
                 <p className="text-gray-400 mb-6">A basic chatbot implementation using Python and natural language processing.</p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -392,7 +388,6 @@ export default function Home() {
               <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-rose-500/20 hover:border-rose-500/40 transition-colors duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold">University Admission Chatbot</h3>
-                  <span className="px-3 py-1 text-sm rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30">Completed</span>
                 </div>
                 <p className="text-gray-400 mb-6">An AI-powered chatbot for university admission queries and guidance.</p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -418,7 +413,6 @@ export default function Home() {
               <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-500/40 transition-colors duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <h3 className="text-2xl font-bold">Book Review System</h3>
-                  <span className="px-3 py-1 text-sm rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">Completed</span>
                 </div>
                 <p className="text-gray-400 mb-6">A web application for managing and reviewing books with user authentication.</p>
                 <div className="flex flex-wrap gap-3 mb-6">
