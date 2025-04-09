@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { FaGithub, FaArrowLeft, FaCode, FaPalette, FaMobileAlt, FaRocket, FaExternalLinkAlt } from 'react-icons/fa';
+import '../../globals.css';
 
 export default function PortfolioPage() {
   useEffect(() => {
