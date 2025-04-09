@@ -283,154 +283,268 @@ export default function Home() {
           {/* 3D Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 perspective-1000">
             {/* Music Playlist Generator */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold">Music Playlist Generator</h3>
+            <Link href="/experience/music-playlist" className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-purple-500/20 group-hover:border-purple-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
+                          Music Playlist Generator
+                        </h3>
+                      </div>
+                      <p className="text-gray-400">AI-Powered Music Recommendations</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/Music-Playlist-Generator.git" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-purple-500/30 group-hover:border-purple-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-purple-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A Python application that generates personalized playlists based on user preferences and listening history using machine learning algorithms.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-purple-400 border border-purple-500/30 group-hover:border-purple-500/70 transition-all duration-300">Python</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-purple-400 border border-purple-500/30 group-hover:border-purple-500/70 transition-all duration-300">Spotify API</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-purple-400 border border-purple-500/30 group-hover:border-purple-500/70 transition-all duration-300">Machine Learning</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400 mb-6">A Python application that generates personalized playlists based on user preferences and listening history.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-purple-400 border border-purple-500/30">Python</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-purple-400 border border-purple-500/30">Spotify API</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-purple-400 border border-purple-500/30">Machine Learning</span>
-                </div>
-                <a 
-                  href="https://github.com/meghajbhat/Music-Playlist-Generator.git" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/30 hover:bg-purple-500/20 hover:border-purple-500/50 transition-colors"
-                >
-                  <FaGithub />
-                  <span>View on GitHub</span>
-                </a>
               </div>
-            </div>
+            </Link>
 
             {/* Photo Editor */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold">Photo Editor</h3>
+            <Link href="/experience/photo-editor" className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                          Photo Editor
+                        </h3>
+                      </div>
+                      <p className="text-gray-400">Image Processing Application</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/Photo-Editor.git" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-blue-500/30 group-hover:border-blue-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-blue-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A Java-based photo editing application with various filters and effects, built using JavaFX for a modern user interface.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-blue-400 border border-blue-500/30 group-hover:border-blue-500/70 transition-all duration-300">Java</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-blue-400 border border-blue-500/30 group-hover:border-blue-500/70 transition-all duration-300">JavaFX</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-blue-400 border border-blue-500/30 group-hover:border-blue-500/70 transition-all duration-300">Image Processing</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400 mb-6">A Java-based photo editing application with various filters and effects.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-blue-400 border border-blue-500/30">Java</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-blue-400 border border-blue-500/30">JavaFX</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-blue-400 border border-blue-500/30">Image Processing</span>
-                </div>
-                <a 
-                  href="https://github.com/meghajbhat/Photo-Editor.git" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500/50 transition-colors"
-                >
-                  <FaGithub />
-                  <span>View on GitHub</span>
-                </a>
               </div>
-            </div>
+            </Link>
 
             {/* Patient Records Management System */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold">Patient Records Management</h3>
+            <Link href="/experience/patient-records" className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-emerald-500/20 group-hover:border-emerald-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                          Patient Records Management
+                        </h3>
+                      </div>
+                      <p className="text-gray-400">Healthcare Information System</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/Patient-Records-Management-System.git" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-emerald-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A comprehensive system for managing patient records and medical history, featuring secure data storage and easy access for healthcare providers.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Java</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">MySQL</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-emerald-400 border border-emerald-500/30 group-hover:border-emerald-500/70 transition-all duration-300">Swing</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400 mb-6">A comprehensive system for managing patient records and medical history.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Java</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-emerald-400 border border-emerald-500/30">MySQL</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-emerald-400 border border-emerald-500/30">Swing</span>
-                </div>
-                <a 
-                  href="https://github.com/meghajbhat/Patient-Records-Management-System.git" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-colors"
-                >
-                  <FaGithub />
-                  <span>View on GitHub</span>
-                </a>
               </div>
-            </div>
+            </Link>
 
             {/* Simple Chatbot */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20 hover:border-amber-500/40 transition-colors duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold">Simple Chatbot</h3>
+            <Link href="/experience/simple-chatbot" className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-orange-500/20 to-yellow-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-amber-500/20 group-hover:border-amber-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+                          Simple Chatbot
+                        </h3>
+                      </div>
+                      <p className="text-gray-400">NLP-Based Conversational AI</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/Simple-Chatbot.git" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-amber-500/30 group-hover:border-amber-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-amber-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A basic chatbot implementation using Python and natural language processing, capable of understanding and responding to user queries.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-amber-400 border border-amber-500/30 group-hover:border-amber-500/70 transition-all duration-300">Python</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-amber-400 border border-amber-500/30 group-hover:border-amber-500/70 transition-all duration-300">NLTK</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-amber-400 border border-amber-500/30 group-hover:border-amber-500/70 transition-all duration-300">NLP</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400 mb-6">A basic chatbot implementation using Python and natural language processing.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-amber-400 border border-amber-500/30">Python</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-amber-400 border border-amber-500/30">NLTK</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-amber-400 border border-amber-500/30">NLP</span>
-                </div>
-                <a 
-                  href="https://github.com/meghajbhat/Simple-Chatbot.git" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/30 hover:bg-amber-500/20 hover:border-amber-500/50 transition-colors"
-                >
-                  <FaGithub />
-                  <span>View on GitHub</span>
-                </a>
               </div>
-            </div>
+            </Link>
 
             {/* University Admission Chatbot */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-rose-500/20 hover:border-rose-500/40 transition-colors duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold">University Admission Chatbot</h3>
+            <Link href="/experience/university-chatbot" className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 via-pink-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-rose-500/20 group-hover:border-rose-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-rose-400 transition-colors duration-300">
+                          University Admission Chatbot
+                        </h3>
+                      </div>
+                      <p className="text-gray-400">AI-Powered Education Assistant</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/University-Admission-Chatbot.git" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-rose-500/30 group-hover:border-rose-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-rose-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    An AI-powered chatbot for university admission queries and guidance, using advanced NLP and machine learning techniques.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-rose-400 border border-rose-500/30 group-hover:border-rose-500/70 transition-all duration-300">Python</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-rose-400 border border-rose-500/30 group-hover:border-rose-500/70 transition-all duration-300">TensorFlow</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-rose-400 border border-rose-500/30 group-hover:border-rose-500/70 transition-all duration-300">NLP</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400 mb-6">An AI-powered chatbot for university admission queries and guidance.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-rose-400 border border-rose-500/30">Python</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-rose-400 border border-rose-500/30">TensorFlow</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-rose-400 border border-rose-500/30">NLP</span>
-                </div>
-                <a 
-                  href="https://github.com/meghajbhat/University-Admission-Chatbot.git" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-rose-500/10 text-rose-400 border border-rose-500/30 hover:bg-rose-500/20 hover:border-rose-500/50 transition-colors"
-                >
-                  <FaGithub />
-                  <span>View on GitHub</span>
-                </a>
               </div>
-            </div>
+            </Link>
 
             {/* Book Review System */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-violet-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-[#1A2333]/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-500/40 transition-colors duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold">Book Review System</h3>
+            <Link href="/experience/book-review" className="group">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden transform-gpu transition-all duration-500 hover:scale-105 hover:rotate-2 hover:translate-y-[-10px] preserve-3d">
+                {/* Background Gradient Animation */}
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-violet-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Project Content */}
+                <div className="relative h-full bg-[#1A2333]/90 backdrop-blur-sm p-8 border border-indigo-500/20 group-hover:border-indigo-500/50 transition-all duration-500">
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
+                          Book Review System
+                        </h3>
+                      </div>
+                      <p className="text-gray-400">Literary Management Platform</p>
+                    </div>
+                    <a 
+                      href="https://github.com/meghajbhat/Book-Review-System.git" 
+                      target="_blank" 
+                      className="w-12 h-12 rounded-xl bg-[#0B1121]/80 flex items-center justify-center border border-indigo-500/30 group-hover:border-indigo-500/70 transition-all duration-300 hover:scale-110"
+                    >
+                      <FaGithub className="text-xl text-gray-400 group-hover:text-indigo-400" />
+                    </a>
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="text-gray-400 mb-8 line-clamp-3">
+                    A web application for managing and reviewing books with user authentication, featuring a modern interface and comprehensive book management system.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-indigo-400 border border-indigo-500/30 group-hover:border-indigo-500/70 transition-all duration-300">Spring Boot</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-indigo-400 border border-indigo-500/30 group-hover:border-indigo-500/70 transition-all duration-300">MySQL</span>
+                      <span className="px-4 py-2 text-sm rounded-xl bg-[#0B1121]/80 text-indigo-400 border border-indigo-500/30 group-hover:border-indigo-500/70 transition-all duration-300">Thymeleaf</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-400 mb-6">A web application for managing and reviewing books with user authentication.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-indigo-400 border border-indigo-500/30">Spring Boot</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-indigo-400 border border-indigo-500/30">MySQL</span>
-                  <span className="px-4 py-2 rounded-lg bg-[#0B1121] text-indigo-400 border border-indigo-500/30">Thymeleaf</span>
-                </div>
-                <a 
-                  href="https://github.com/meghajbhat/Book-Review-System.git" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-500/20 hover:border-indigo-500/50 transition-colors"
-                >
-                  <FaGithub />
-                  <span>View on GitHub</span>
-                </a>
               </div>
-            </div>
+            </Link>
 
             {/* Adaptive Technology for Autism Support */}
             <Link href="/experience/autism-support" className="group">
